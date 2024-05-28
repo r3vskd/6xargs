@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "three": "^0.164.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5"
+  },
+  "name": "poc-landing-page",
+  "description": "PoC for landing page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJoosh/PoC-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JJoosh/PoC-landing-page/issues"
+  },
+  "homepage": "https://github.com/JJoosh/PoC-landing-page#readme"
+}
