@@ -272,6 +272,3 @@ canvas.addEventListener('mousemove', function(e){
     mouse_ball.y = e.pageY;
     // console.log(mouse_ball);
 });
-
-
-

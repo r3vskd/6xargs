@@ -1,0 +1,6 @@
+{
+    "scripts": {
+      "build": "remix build",
+      "start": "remix start"
+    }
+  }
