@@ -1,0 +1,23 @@
+# Excluir dependencias instaladas
+node_modules/
+ 
+# Excluir archivos de configuración sensibles
+.env
+railway.toml
+
+# Excluir configuraciones locales de Git y editor
+.git
+.gitignore
+.vscode/
+.DS_Store
+
+# Excluir archivos innecesarios o temporales
+logs/
+*.log
+*.tmp
+npm-debug.log*
+
+# Archivos específicos de desarrollo
+Dockerfile
+docker-compose.yml
+tests/

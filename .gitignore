@@ -1,3 +1,9 @@
+# basics
+node_modules/
+.env
+.DS_Store
+railway.toml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
