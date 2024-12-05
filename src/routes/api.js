@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Ruta de ejemplo
 router.get('/', (req, res) => {
-    res.send('¡Bienvenido a la APII!');
+    res.send('¡Bienvenido a la APIII!');
 });
 
 module.exports = router;
