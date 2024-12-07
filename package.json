@@ -1,8 +1,9 @@
 {
-  "name": "nombre_del_proyecto",
+  "name": "6xargs_devops",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "project-01",
+  "main": "./html/index.html",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build.js",
@@ -12,9 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.7",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "pg": "^8.13.1"
   },
-  "devDependencies": {},
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 }
