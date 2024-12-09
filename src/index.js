@@ -5,7 +5,7 @@ const app = express();
 
 // Middlewares
 //app.use(express.json()); // Para parsear JSON en el cuerpo de las solicitudes
-app.use(express.static('./src/assets/html/'));
+app.use(express.static('./src/assets/html/index.html'));
 
 // Rutas
 app.use('/api', apiRoutes);
