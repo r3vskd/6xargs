@@ -12,8 +12,11 @@
   "author": "r3vskd",
   "license": "ISC",
   "dependencies": {
+    "@remix-run/node": "^2.15.1",
+    "@remix-run/react": "^2.15.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "openai": "^4.76.0",
     "pg": "^8.13.1"
   },
   "keywords": [],
