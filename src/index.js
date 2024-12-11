@@ -1,17 +1,30 @@
 import express from 'express';
 import apiRoutes from './routes/api.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import.meta.url
 
 const app = express();
+const PORT = process.env.PORT || 3000;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Middlewares
 //app.use(express.json()); // Para parsear JSON en el cuerpo de las solicitudes
-app.use(express.static('public'));
+//app.use('/assets', express.static('assets'));
+app.use('/assets', express.static(path.join(__dirname, 'src')));
+app.use(express.static(path.join(__dirname, 'assets/html')));
 
 // Rutas
 app.use('/api', apiRoutes);
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'index.html'));
+});
+
 // Puerto
-const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
