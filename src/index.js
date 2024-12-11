@@ -13,14 +13,17 @@ const __dirname = path.dirname(__filename);
 // Middlewares
 //app.use(express.json()); // Para parsear JSON en el cuerpo de las solicitudes
 //app.use('/assets', express.static('assets'));
+//app.use(express.static(path.join(path.resolve(), 'assets/css/styles.css')));
 app.use('/assets', express.static(path.join(__dirname, 'src')));
 app.use(express.static(path.join(__dirname, 'assets/html')));
+app.use(express.static(path.join(__dirname, 'assets/css')));
 
 // Rutas
 app.use('/api', apiRoutes);
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'index.html'));
+  res.sendFile(path.join(__dirname, 'css', 'styles.css'));
 });
 
 // Puerto
