@@ -18,15 +18,12 @@ app.use('/assets', express.static(path.join(__dirname, 'src')));
 app.use(express.static(path.join(__dirname, 'assets/html')));
 app.use(express.static(path.join(__dirname, 'assets/css')));
 
-// Rutas
 app.use('/api', apiRoutes);
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'index.html'));
   res.sendFile(path.join(__dirname, 'css', 'styles.css'));
 });
-
-// Puerto
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
