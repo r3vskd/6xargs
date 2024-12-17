@@ -101,7 +101,7 @@ ol {
   background: #0a0a0a;
 }
 
-/* Footer specs */
+/*========================== Footer specs ==========================*/
 p {
   top: 600;
   margin-top: 140;
@@ -147,7 +147,7 @@ h3 {
   color: #ccc;
 }
 
-/* center cards  */
+/*========================== center cards  ==========================*/
 .card-container {
   display: flex;
   justify-content: space-between;
