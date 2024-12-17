@@ -1,23 +1,29 @@
 body {
   font-family: 'Varela Round', sans-serif;
-  background-color: #080808; /* Neutral background color */
+  background-color: #080808;  /*Neutral background color */
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; 
 }
 
 html {
-  background-color: #080808;
-}
 
-header {
-  background: #080808;
-  background-color: #080808;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden; 
 }
 
 .background {
-  position: relative;
-  height: 100vh;
+  position:static;
+  width: 100vw; /* 100% del ancho de la ventana */
+  height: 100vh; /* 100% de la altura de la ventana */
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, rgba(15, 23, 42, 1) 60%);
+  background-image: 
+  linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+  linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   color: white;
   overflow: hidden;
 }
@@ -34,7 +40,8 @@ header {
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px; /* Espaciado de las líneas */
-  z-index: 1;
+  z-index: 0;
+  background-size: 40px 40px;
 }
 
 /* Luces suaves al centro */
@@ -45,9 +52,20 @@ header {
   left: 50%;
   width: 70%;
   height: 70%;
-  background: radial-gradient(circle, rgba(0, 122, 255, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(22, 22, 22, 0.2) 0%, transparent 70%);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   transform: translate(-50%, -50%);
   z-index: 0;
+}
+
+/* Contenido centrado */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
 }
 
 footer {
@@ -509,7 +527,7 @@ li::marker {
 }
 }
 
-/*================= red selection text =====================*/
+/*================= color selection text =====================*/
 ::selection {
   background: #df4157;
 }
