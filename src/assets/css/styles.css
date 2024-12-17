@@ -124,7 +124,7 @@ ol {
   text-decoration: underline;
 }
 
-/* Scrollbar styles */
+/* ============================ Scrollbar styles ============================ */
 ::-webkit-scrollbar {
   width: 12px;
   color: #000000;
@@ -303,7 +303,7 @@ nav {
   z-index: 1;
   -webkit-backdrop-filter: blur(11px);
   backdrop-filter: blur(11px);
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 
 
 }
