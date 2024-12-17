@@ -226,7 +226,7 @@ h3 {
   line-height: 1.4;
 }
 
-/* Navbar */
+/*======================================== Navbar ========================================*/
 .logo {
   position: relative;
   position: fixed;
@@ -348,7 +348,7 @@ nav ul li a:hover {
 }
 
 
-/*============================= GLITCH EFFECT TO NAVBAR BUTTONS ==============================*/
+/*============================= glitch effect on navbar buttons ==============================*/
 li::marker {
   content: "";
 }
@@ -506,4 +506,3 @@ p::selection {
 a::selection {
   background:  #df4157;
 }
-
