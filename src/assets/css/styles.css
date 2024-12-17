@@ -112,14 +112,13 @@ h3 {
   margin-bottom: 40;
 }
 
-/* Main - Card */
 .card {
-  background: rgba(63, 63, 63, 0.2); /* White background with transparency */
-  border-radius: 15px; /* Rounded corners */
-  backdrop-filter: blur(10px); /* Blur effect */
+  background: rgba(63, 63, 63, 0.2); 
+  border-radius: 15px; 
+  backdrop-filter: blur(10px); 
   margin: 5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better appearance */
-  max-width: 40rem; /* Optional: restrict card width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  max-width: 40rem; 
   max-height: 30rem;
   bottom: 2rem;
 }
