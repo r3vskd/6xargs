@@ -14,6 +14,42 @@ header {
   background-color: #080808;
 }
 
+.background {
+  position: relative;
+  height: 100vh;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, rgba(15, 23, 42, 1) 60%);
+  color: white;
+  overflow: hidden;
+}
+
+/* Efecto de líneas cuadradas */
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px; /* Espaciado de las líneas */
+  z-index: 1;
+}
+
+/* Luces suaves al centro */
+.background::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(0, 122, 255, 0.2) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
 footer {
   min-height: 100vh;
   font-family: 'Varela Round';
