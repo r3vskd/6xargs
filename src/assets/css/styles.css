@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #0066ff;
-    --background-color: #0a0f1c;
+    --background-color: #131313;
     --card-background: rgba(255, 255, 255, 0.1);
     --text-color: #ffffff;
 }
@@ -42,7 +42,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: rgba(10, 15, 28, 0.8);
+    background-color: rgba(14, 14, 14, 0.8);
     backdrop-filter: blur(10px);
     padding: 1rem 2rem;
 }
