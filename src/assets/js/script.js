@@ -12,4 +12,3 @@ document.addEventListener('DOMContentLoaded', function() {
         link.setAttribute('data-text', link.textContent);
     });
 });
-
