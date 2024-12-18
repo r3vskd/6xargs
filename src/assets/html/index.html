@@ -6,11 +6,41 @@
     <title>Bug Bounty Platform</title>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+        .logo { /* blink 6xargs logo */
+        font-size: 24px;
+        color: #262074;
+        animation: blink 3s infinite;
+        }
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+                color: #6453ff;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="grid-background"></div>
     <nav>
-        <div class="logo">6xargs</div>
+        <div class="logo">6 x a r g s</div>
+        <script>
+            const logo = document.querySelector('.logo'); /* blink 6xargs logo */
+        
+            logo.addEventListener('mouseover', () => {
+              logo.style.animationPlayState = 'running';
+            });
+    
+            logo.addEventListener('mouseout', () => {
+              logo.style.animationPlayState = 'paused';
+            });
+          </script>
         <div class="menu-icon">
             <i class="fa fa-bars fa-2x"></i>
         </div>
@@ -27,7 +57,6 @@
     </header>
     <main>
         <section class="cards-section">
-            <!-- Left Section -->
             <div class="section-left">
                 <div class="card form-card">
                     <h2>For hackers</h2>
@@ -49,8 +78,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Right Section -->
             <div class="section-right">
                 <div class="card business-card">
                     <h2>for business</h2>

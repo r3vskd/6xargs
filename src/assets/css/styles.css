@@ -47,13 +47,7 @@ nav {
     padding: 1rem 2rem;
 }
 
-.logo {
-    color: var(--text-color);
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 2px;
-    float: left;
-}
+
 
 nav ul {
     list-style: none;
