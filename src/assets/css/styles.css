@@ -15,12 +15,13 @@
 }
 
 body {
-    background-color: var(--background-color);
+    background: linear-gradient(45deg, #0a0f1c, #1a1040, #2a0f3d);
     color: var(--text-color);
     line-height: 1.6;
     min-height: 100vh;
     position: relative;
     font-family: "Varela", serif;
+    overflow-x: hidden;
 }
 
 .grid-background {
@@ -36,6 +37,42 @@ body {
     z-index: -1;
 }
 
+/* Add random silhouettes */
+.silhouettes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.silhouette {
+    position: absolute;
+    filter: blur(40px);
+    opacity: 0.15;
+    animation: float 20s infinite;
+}
+
+.silhouette path {
+    fill: rgba(103, 58, 183, 0.3);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    33% {
+        transform: translate(var(--tx1), var(--ty1)) scale(var(--scale1)) rotate(var(--rotate1));
+    }
+    66% {
+        transform: translate(var(--tx2), var(--ty2)) scale(var(--scale2)) rotate(var(--rotate2));
+    }
+}
+
+
+/* navbar */
 nav {
     width: 100%;
     position: fixed;
@@ -43,13 +80,20 @@ nav {
     left: 0;
     z-index: 1000;
     background-color: rgba(14, 14, 14, 0.8);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     padding: 1rem 2rem;
     font-family: "Varela", serif;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    height: 4.5rem;
+    width: 4.5rem;
+    padding: 0.25rem;
+    border-radius: 30%;
 }
 
 nav ul {
@@ -98,7 +142,6 @@ header {
     line-height: 0.9;
 }
 
-
 /* Main Content Styles */
 main {
     max-width: 1200px;
@@ -121,7 +164,7 @@ main {
 
 .card {
     background: var(--card-background);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     border-radius: 1rem;
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -167,7 +210,7 @@ input[type="email"] {
     border: none;
     border-radius: 0.5rem;
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: rgb(255, 255, 255);
     margin-bottom: 1rem;
     font-family: "Varela", serif;
 }
@@ -298,29 +341,29 @@ footer {
     nav.responsive ul li {
         display: block;
         padding: 10px 0;
-    }
 }
 
 /* Animation for cards */
 @keyframes fadeInUp {
     from {
-        opacity: 0;
+
         transform: translateY(20px);
     }
     to {
-        opacity: 1;
+
         transform: translateY(0);
     }
 }
 
 .card {
-    animation: fadeInUp 0.6s ease-out;
+    animation: fadeInUp 0.9s ease-out;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
-/* Ensure the navbar is always on top */
-nav {
-    z-index: 1000;
-}
 
 /* Add some hover effects to the cards */
 .card:hover {
@@ -333,14 +376,15 @@ form input[type="email"] {
 }
 
 form input[type="email"]:focus {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(78, 52, 151, 0.2);
 }
 
 form button {
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 form button:hover {
     background: #43328f;
     transform: translateY(-2px);
+}
 }
