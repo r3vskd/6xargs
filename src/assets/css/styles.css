@@ -22,6 +22,8 @@ body {
     position: relative;
     font-family: "Varela", serif;
     overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-background {
@@ -35,6 +37,14 @@ body {
         linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
     z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente */
+    align-items: center;    /* Alinea verticalmente */
+    height: 100vh;          /* Altura del contenedor (opcional) */
+    text-align: center;
 }
 
 /* Add random silhouettes */
@@ -135,6 +145,8 @@ header {
 .main-title {
     font-size: 3rem;
     text-align:center;
+    align-self: center;
+    align-content: center;
     letter-spacing: 1px;
     padding: 4rem;
     font-family: "Varela", serif;
