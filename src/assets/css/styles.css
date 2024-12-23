@@ -39,15 +39,6 @@ body {
     z-index: -1;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh; /* Esto permite centrar verticalmente el contenido */
-    margin: 0 auto;
-}
-
 /* Add random silhouettes */
 .silhouettes-container {
     position: fixed;
@@ -56,7 +47,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1;
+    z-index:-1;
 }
 
 .silhouette {
@@ -81,7 +72,6 @@ body {
         transform: translate(var(--tx2), var(--ty2)) scale(var(--scale2)) rotate(var(--rotate2));
     }
 }
-
 
 /* navbar */
 nav {
@@ -123,7 +113,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(71, 71, 71);
+    color: rgb(94, 94, 94);
     transition: color 0.3s;
     position: relative;
     overflow: hidden;
@@ -143,8 +133,6 @@ header {
     position: relative;
     overflow: hidden;
 }
-
-
 
 /* Main Content Styles */
 main {
@@ -194,6 +182,17 @@ main {
     gap: 1rem;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Esto permite centrar verticalmente el contenido */
+    margin: 0 auto;
+    max-width: 85vh;
+    width: 85vh;
+}
+
 h1 {
     display: flex;
     justify-content: left;
@@ -207,7 +206,8 @@ h1 {
     text-transform: none;
     margin: 0 auto;
     text-align: center; /* Centrado del texto */
-    max-width: 100%;
+    max-width: 200vh;
+    width: 200vh;
 }
 
 
