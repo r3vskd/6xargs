@@ -172,6 +172,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    text-transform:none;
 }
 
 .card {
@@ -181,6 +182,8 @@ main {
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease;
+    text-transform:none;
+    text-align: center;
 }
 
 .card:hover {
@@ -189,6 +192,8 @@ main {
 
 .form-card, .business-card {
     background: rgba(255, 255, 255, 0.15);
+    text-transform: none;
+
 }
 
 .cards-container {
@@ -201,7 +206,7 @@ h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    text-transform: lowercase;
+    text-transform: none;
     font-family: "Varela", serif;
 }
 
