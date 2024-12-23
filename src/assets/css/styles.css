@@ -117,11 +117,12 @@ nav ul li {
     display: inline-block;
     padding: 0 1rem;
     font-family: "Varela", serif;
+    color: rgb(71, 71, 71);
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: rgb(71, 71, 71);
     transition: color 0.3s;
     position: relative;
     overflow: hidden;
@@ -129,12 +130,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: rgb(255, 255, 255);
 }
 
 /* Header Styles */
 header {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,8 +148,9 @@ header {
     text-align:center;
     align-self: center;
     align-content: center;
+    justify-items: center;
     letter-spacing: 1px;
-    padding: 4rem;
+    padding: 1rem;
     font-family: "Varela", serif;
     white-space: pre;
     line-height: 0.9;
@@ -200,6 +202,20 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+h1 {
+    display: flex;
+    font-size: 3rem;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    padding: 1rem;
+    font-family: "Varela", serif;
+    white-space: pre;
+    line-height: 0.9;
+    text-transform: none;
 }
 
 h2 {
@@ -309,6 +325,7 @@ footer {
 @media (max-width: 768px) {
     .main-title {
         font-size: 2.5rem;
+        
     }
 
     .cards-section {
