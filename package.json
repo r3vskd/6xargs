@@ -7,10 +7,11 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "remix vite:build",
+    "start": "remix-serve ./build/server/index.js",
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc"
   },
   "dependencies": {
@@ -19,7 +20,11 @@
     "@remix-run/serve": "^2.15.2",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "openai": "^4.76.0",
+    "pg": "^8.13.1"
   },
   "engines": {
     "node": ">=20.0.0"
