@@ -113,7 +113,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(94, 94, 94);
+    color: rgba(204, 204, 204, 0.7);
     transition: color 0.3s;
     position: relative;
     overflow: hidden;
@@ -168,6 +168,7 @@ main {
 
 .card:hover {
     transform: translateY(-5px);
+    cursor: pointer;
 }
 
 .form-card, .business-card {
@@ -295,7 +296,7 @@ footer {
 }
 
 .horizontal-list li a {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(204, 204, 204, 0.7);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -371,47 +372,47 @@ footer {
 }
 
 /* Animation for cards */
-@keyframes fadeInUp {
-    from {
+    @keyframes fadeInUp {
+        from {
 
-        transform: translateY(20px);
+            transform: translateY(20px);
+        }
+        to {
+
+            transform: translateY(0);
+        }
     }
-    to {
 
-        transform: translateY(0);
+    .card {
+        animation: fadeInUp 0.9s ease-out;
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(2px);
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+        overflow: hidden;
     }
-}
-
-.card {
-    animation: fadeInUp 0.9s ease-out;
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-    border-radius: 1rem;
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
 
 
-/* Add some hover effects to the cards */
-.card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+    /* Add some hover effects to the cards */
+    .card:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
 
-/* Style the form input and button */
-form input[type="email"] {
-    transition: all 0.3s ease;
-}
+    /* Style the form input and button */
+    form input[type="email"] {
+        transition: all 0.3s ease;
+    }
 
-form input[type="email"]:focus {
-    background: rgba(78, 52, 151, 0.2);
-}
+    form input[type="email"]:focus {
+        background: rgba(78, 52, 151, 0.2);
+    }
 
-form button {
-    transition: all 0.1s ease;
-}
+    form button {
+        transition: all 0.1s ease;
+    }
 
-form button:hover {
-    background: #43328f;
-    transform: translateY(-2px);
-}
+    form button:hover {
+        background: #43328f;
+        transform: translateY(-2px);
+    }
 }
