@@ -181,18 +181,6 @@ main {
     cursor: pointer;
 }
 
-/* .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent 70%);
-    transition: background 0.3s ease;
-    pointer-events: none;
-} */
-
 .form-card, .business-card {
     background: rgba(32, 22, 49, 0.15);
     text-transform: none;
