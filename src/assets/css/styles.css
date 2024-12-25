@@ -15,10 +15,10 @@
 }
 
 body {
-    background: linear-gradient(45deg, #111111, #3d1868, #111111);
+    background: linear-gradient(45deg, #000000, #26113d, #000000);
     color: var(--text-color);
-    line-height: 1.6;
-    min-height: 100vh;
+    line-height: 1.2;
+    min-height: 80vh;
     position: relative;
     font-family: "Varela", serif;
     overflow-x: hidden;
@@ -41,7 +41,7 @@ body {
 
 /* Add random silhouettes */
 .silhouettes-container {
-    color: #43328f;
+    color: #523db3;
     position: fixed;
     top: 0;
     left: 0;
@@ -96,6 +96,10 @@ nav {
     width: 4.5rem;
     padding: 0.25rem;
     border-radius: 30%;
+}
+
+.logo:hover {
+    cursor: pointer;
 }
 
 nav ul {
@@ -162,7 +166,7 @@ main {
     border-radius: 1.5rem;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(240, 240, 240, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: transform 0.8s ease;
     text-transform:none;
     text-align: center;
@@ -174,9 +178,8 @@ main {
 }
 
 .form-card, .business-card {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(39, 9, 90, 0.15);
     text-transform: none;
-
 }
 
 .cards-container {
@@ -384,18 +387,6 @@ footer {
             transform: translateY(0);
         }
     }
-
-    .card {
-        background-color: #0a0f1c;
-        animation: fadeInUp 0.9s ease-out;
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-radius: 1rem;
-        transition: all 0.3s ease;
-        overflow: hidden;
-    }
-
-
     /* Add some hover effects to the cards */
     .card:hover {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);

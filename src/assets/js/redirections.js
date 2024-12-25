@@ -1,5 +1,6 @@
 function redirections(pagina) {
   const paginas = {
+    home: "/assets/html/index.html",
     login: "/assets/html/login.html",
     contact: "/assets/html/contact.html",
     dashboard: "/assets/html/dashboard.html",

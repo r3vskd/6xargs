@@ -14,10 +14,9 @@
 <body>
     <div class="grid-background"></div>
     <div class="silhouettes-container"></div>
-    <script src="/assets/js/silhouettes.js"></script>
     <script src="/assets/js/redirections.js"></script>
     <nav>
-        <img src="/assets/images/6xargs.png?height=5&width=5" alt="6xargs Logo" class="logo">
+        <img src="/assets/images/6xargs.png?height=5&width=5" alt="6xargs Logo" class="logo" onclick="redirections('home')">
         <div class="menu-icon">
             <i class="fa fa-bars fa-2x"></i>
         </div>
@@ -39,16 +38,16 @@
     </header>
     <main>
         <section class="cards-section">
-            <div class="section-left" onclick="redirections('login.html')">
+            <div class="section-left" onclick="redirections('login')">
                 <div class="card form-card">
-                    <h2>For hackers</h2>
+                    <h2>Hackers</h2>
                     <p class="subtitle">Search for a bug bounty program</p>
                 </div>
             </div>
-            <div class="section-right" onclick="redirections('contact.html')">
+            <div class="section-right" onclick="redirections('contact')">
                 <div class="card business-card">
-                    <h2>For business</h2>
-                    <p class="subtitle">Get in contact</p>
+                    <h2>Enterprises</h2>
+                    <p class="subtitle">Register with us</p>
                 </div>
             </div>
         </section>
