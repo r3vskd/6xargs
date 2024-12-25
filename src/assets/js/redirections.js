@@ -5,7 +5,8 @@ function redirections(pagina) {
     contact: "/assets/html/contact.html",
     dashboard: "/assets/html/dashboard.html",
     profile: "/assets/html/profile.html",
-    orgs: "/assets/html/orgs.html"
+    orgs: "/assets/html/orgs.html",
+    
   };
   
 if (paginas[pagina]) {
