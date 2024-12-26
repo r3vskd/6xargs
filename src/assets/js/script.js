@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nav.classList.toggle('responsive');
     });
 
-    // Add glitch effect to navbar links
+    // Add glitch effect to navbar linkz
     const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
         link.setAttribute('data-text', link.textContent);
