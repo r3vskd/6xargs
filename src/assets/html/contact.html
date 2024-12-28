@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto Empresarial - 6xargs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/contact.css">
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <h3>Formulario de Contacto Empresarial</h3>
+
+            <label for="companyName">Nombre de la Empresa</label>
+            <input type="text" id="companyName" name="companyName" placeholder="Ingrese el nombre de la empresa" required>
+
+            <label for="companyEmail">Correo de la Empresa</label>
+            <input type="email" id="companyEmail" name="companyEmail" placeholder="Ingrese el correo de la empresa" required>
+
+            <label for="country">País de la Empresa</label>
+            <input type="text" id="country" name="country" placeholder="Ingrese el país de la empresa" required>
+
+            <label for="companyType">Tipo de Empresa</label>
+            <select id="companyType" name="companyType" required>
+                <option value="">Seleccione el tipo de empresa</option>
+                <option value="opc1">Opción 1</option>
+                <option value="opc2">Opción 2</option>
+                <option value="opc3">Opción 3</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+
+            <div class="footer">
+                <a href="#">© 6xargs</a>
+                <a href="#">Contáctenos</a>
+                <a href="#">Términos de Servicio</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
