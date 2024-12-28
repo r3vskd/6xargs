@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080808;
+    font-family: "Varela", sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+    padding: 50px 35px;
+}
+
+form * {
+    font-family: "Varela", sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input, select {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(124, 124, 124, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+input::placeholder {
+    color: #e5e5e5;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+button {
+    margin: 30px auto 0;
+    width: 40%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+button:hover {
+    background-color: #bbbbbb;
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.footer a {
+    padding: 4px;
+    color: #808080;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 500px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    form {
+        padding: 30px 20px;
+    }
+
+    form h3 {
+        font-size: 24px;
+    }
+
+    button {
+        width: 60%;
+    }
+}
+
