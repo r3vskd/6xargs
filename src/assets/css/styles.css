@@ -263,6 +263,7 @@ button {
     color: white;
     cursor: pointer;
     transition: background 0.3s ease;
+    text-decoration: none;
 }
 
 button:hover {
@@ -407,6 +408,7 @@ footer {
 
     form button {
         transition: all 0.1s ease;
+        text-decoration: none;
     }
 
     form button:hover {
