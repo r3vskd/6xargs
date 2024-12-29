@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - 6xargs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #121212;
+            --card-background: rgba(30, 30, 30, 0.7);
+            --text-color: #E0E0E0;
+            --accent-color: #BB86FC;
+            --hover-color: #3700B3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Varela Round', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .card:nth-child(1) { grid-column: 1 / span 5; grid-row: 1 / span 2; }
+        .card:nth-child(2) { grid-column: 7 / span 6; grid-row: 1 / span 2; }
+        .card:nth-child(3) { grid-column: 2 / span 5; grid-row: 3 / span 2; }
+        .card:nth-child(4) { grid-column: 8 / span 5; grid-row: 3 / span 2; }
+        .card:nth-child(5) { grid-column: 1 / span 6; grid-row: 5 / span 2; }
+        .card:nth-child(6) { grid-column: 8 / span 5; grid-row: 5 / span 2; }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
+        }
+
+        .fluorescent-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .fluorescent-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+        }
+
+        .shape1 { width: 300px; height: 300px; background-color: #4CAF50; top: 10%; left: -5%; }
+        .shape2 { width: 400px; height: 400px; background-color: #2196F3; bottom: -10%; right: -5%; }
+        .shape3 { width: 250px; height: 250px; background-color: #FFC107; top: 40%; right: 20%; }
+        .shape4 { width: 200px; height: 200px; background-color: #FF5722; top: 60%; left: 10%; }
+        .shape5 { width: 350px; height: 350px; background-color: #9C27B0; bottom: 20%; left: 30%; }
+        .shape6 { width: 180px; height: 180px; background-color: #00BCD4; top: 20%; right: 40%; }
+
+        @media (max-width: 1200px) {
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .card:nth-child(n) {
+                grid-column: auto;
+                grid-row: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fluorescent-bg">
+        <div class="fluorescent-shape shape1"></div>
+        <div class="fluorescent-shape shape2"></div>
+        <div class="fluorescent-shape shape3"></div>
+        <div class="fluorescent-shape shape4"></div>
+        <div class="fluorescent-shape shape5"></div>
+        <div class="fluorescent-shape shape6"></div>
+    </div>
+
+    <header>
+        <h1>Sobre 6xargs</h1>
+        <p class="subtitle">Liderando la nueva era de ciberseguridad con la sinergia entre inteligencia artificial y experiencia humana</p>
+    </header>
+
+    <main class="container">
+        <div class="content-grid">
+            <div class="card">
+                <h2>Nuestra Visión</h2>
+                <p>En 6xargs, visualizamos un futuro digital donde la seguridad no es una barrera, sino un catalizador para la innovación. Creemos en un internet más seguro, donde las empresas pueden crecer y los usuarios pueden navegar con confianza.</p>
+                <p>Nuestra misión es revolucionar la ciberseguridad mediante la fusión perfecta de la inteligencia artificial avanzada y la ingeniosidad humana. Esta sinergia nos permite anticipar, identificar y mitigar amenazas cibernéticas a una velocidad y escala sin precedentes.</p>
+            </div>
+
+            <div class="card">
+                <h2>Valores Fundamentales</h2>
+                <p><strong>Innovación Constante:</strong> Nos esforzamos por estar a la vanguardia de la tecnología de seguridad, desarrollando continuamente nuevas soluciones que se anticipan a las amenazas emergentes.</p>
+                <p><strong>Integridad Inquebrantable:</strong> Mantenemos los más altos estándares éticos en todas nuestras operaciones, garantizando la confianza de nuestros clientes y partners.</p>
+                <p><strong>Colaboración Sinérgica:</strong> Fomentamos un entorno donde las mentes brillantes, tanto humanas como artificiales, trabajan en armonía para lograr resultados extraordinarios.</p>
+                <p><strong>Empoderamiento a través del Conocimiento:</strong> Creemos en compartir nuestros conocimientos y hallazgos con la comunidad, contribuyendo al fortalecimiento colectivo de la ciberseguridad global.</p>
+            </div>
+
+            <div class="card">
+                <h2>La Revolución del Bug Bounty con IA</h2>
+                <p>Nuestro enfoque innovador en los programas de bug bounty marca el comienzo de una nueva era en la detección y mitigación de vulnerabilidades. Al combinar la creatividad y experiencia de los cazadores de bugs humanos con el poder analítico y la velocidad de procesamiento de la IA, hemos creado un ecosistema de seguridad sin precedentes.</p>
+                <p>La IA no solo amplifica las capacidades de los investigadores humanos, sino que también aprende continuamente de sus descubrimientos, mejorando constantemente su capacidad para identificar patrones de vulnerabilidad complejos y sutiles.</p>
+            </div>
+
+            <div class="card">
+                <h2>Ética en la Era Digital</h2>
+                <p>En 6xargs, la ética está en el corazón de todo lo que hacemos. Reconocemos la inmensa responsabilidad que conlleva manejar información sensible y desarrollar tecnologías poderosas. Nuestro compromiso con la ética se manifiesta en:</p>
+                <ul>
+                    <li>Transparencia total en nuestros procesos y metodologías</li>
+                    <li>Protección rigurosa de la privacidad y los datos de nuestros clientes</li>
+                    <li>Uso responsable de la IA, con supervisión humana constante</li>
+                    <li>Compromiso con la divulgación responsable de vulnerabilidades</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Innovación Continua</h2>
+                <p>La innovación es el motor que impulsa a 6xargs hacia adelante. Nuestro equipo de investigación y desarrollo trabaja incansablemente para:</p>
+                <ul>
+                    <li>Desarrollar algoritmos de IA más sofisticados para la detección predictiva de vulnerabilidades</li>
+                    <li>Crear herramientas de automatización que aceleren el proceso de verificación y triaje de informes</li>
+                    <li>Implementar tecnologías de aprendizaje federado para mejorar la seguridad sin comprometer la privacidad</li>
+                    <li>Explorar aplicaciones de computación cuántica en criptografía y análisis de seguridad</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>El Futuro de la Ciberseguridad</h2>
+                <p>Mirando hacia el futuro, vemos un panorama de ciberseguridad transformado por la sinergia entre humanos e IA. Anticipamos:</p>
+                <ul>
+                    <li>Sistemas de defensa autoadaptativos que evolucionan en tiempo real para contrarrestar nuevas amenazas</li>
+                    <li>Plataformas de colaboración global que permiten a expertos en seguridad y sistemas de IA trabajar juntos sin fronteras</li>
+                    <li>Integración profunda de la seguridad en el ciclo de vida del desarrollo de software, impulsada por IA</li>
+                    <li>Educación y capacitación en ciberseguridad potenciada por realidad virtual y aumentada</li>
+                </ul>
+                <p>En 6xargs, no solo nos adaptamos al futuro; lo estamos creando activamente. Únete a nosotros en esta emocionante jornada hacia un mundo digital más seguro y resiliente.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
