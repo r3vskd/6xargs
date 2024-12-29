@@ -303,12 +303,17 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    text-align: center;
 }
 
 .horizontal-list li a {
     color: rgba(204, 204, 204, 0.7);
     text-decoration: none;
     transition: color 0.3s ease;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .horizontal-list li a:hover {
@@ -319,6 +324,28 @@ footer {
     text-align: center;
     padding: 2rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bottom ul li {
+    display: inline; /* Mantén los elementos en línea */
+    margin: 5px;
+}
+
+.footer-bottom ul li a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #007BFF; /* Color del enlace */
+}
+
+.footer-bottom ul li a:hover {
+    color: #0056b3; /* Color al pasar el cursor */
 }
 
 .footer-bottom p {
