@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas - 6xargs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #121212;
+            --card-background: rgba(30, 30, 30, 0.7);
+            --text-color: #E0E0E0;
+            --accent-color: #BB86FC;
+            --hover-color: #3700B3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Varela Round', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin: 2rem 0 1rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        p, ul, ol {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            padding-left: 2rem;
+        }
+
+        .fluorescent-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .fluorescent-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+        }
+
+        .shape1 { width: 300px; height: 300px; background-color: #4CAF50; top: 10%; left: -5%; }
+        .shape2 { width: 400px; height: 400px; background-color: #2196F3; bottom: -10%; right: -5%; }
+        .shape3 { width: 250px; height: 250px; background-color: #FFC107; top: 40%; right: 20%; }
+        .shape4 { width: 200px; height: 200px; background-color: #FF5722; top: 60%; left: 10%; }
+
+        .index {
+            background-color: rgba(50, 50, 50, 0.7);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .index h2 {
+            margin-top: 0;
+        }
+
+        .index ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .index li {
+            margin-bottom: 0.5rem;
+        }
+
+        .index a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .index a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fluorescent-bg">
+        <div class="fluorescent-shape shape1"></div>
+        <div class="fluorescent-shape shape2"></div>
+        <div class="fluorescent-shape shape3"></div>
+        <div class="fluorescent-shape shape4"></div>
+    </div>
+
+    <header>
+        <h1>Políticas de 6xargs</h1>
+        <p class="subtitle">Términos y Condiciones y Política de Privacidad</p>
+    </header>
+
+    <main class="container">
+        <div class="content">
+            <div class="index">
+                <h2>Índice</h2>
+                <ul>
+                    <li><a href="#terminos">Términos y Condiciones</a></li>
+                    <li><a href="#privacidad">Política de Privacidad</a></li>
+                </ul>
+            </div>
+
+            <section id="terminos">
+                <h2>Términos y Condiciones</h2>
+                <p>Por favor, lea detenidamente estos términos y condiciones antes de utilizar nuestros servicios de bug bounty y ciberseguridad.</p>
+
+                <h3>1. Aceptación de los Términos</h3>
+                <p>Al acceder o utilizar los servicios de 6xargs, usted acepta estar sujeto a estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, no podrá acceder al servicio.</p>
+
+                <h3>2. Descripción del Servicio</h3>
+                <p>6xargs proporciona una plataforma de bug bounty que conecta a organizaciones con investigadores de seguridad. Nuestros servicios incluyen, pero no se limitan a:</p>
+                <ul>
+                    <li>Gestión de programas de bug bounty</li>
+                    <li>Verificación y triaje de informes de vulnerabilidades</li>
+                    <li>Análisis de seguridad asistido por IA</li>
+                    <li>Consultoría en ciberseguridad</li>
+                </ul>
+
+                <h3>3. Elegibilidad</h3>
+                <p>Para participar en nuestros programas de bug bounty, debe tener al menos 18 años de edad y poseer las habilidades y conocimientos necesarios en seguridad informática. Nos reservamos el derecho de solicitar prueba de edad y cualificaciones en cualquier momento.</p>
+
+                <h3>4. Conducta del Usuario</h3>
+                <p>Al utilizar nuestros servicios, usted se compromete a:</p>
+                <ul>
+                    <li>No violar ninguna ley o regulación aplicable</li>
+                    <li>Respetar los límites y alcance definidos en cada programa de bug bounty</li>
+                    <li>No realizar pruebas que puedan causar daños o interrupciones en los sistemas objetivo</li>
+                    <li>Mantener la confidencialidad de las vulnerabilidades descubiertas hasta que sean resueltas</li>
+                    <li>No utilizar herramientas o técnicas de hacking automatizadas sin autorización expresa</li>
+                </ul>
+
+                <h3>5. Propiedad Intelectual</h3>
+                <p>Todo el contenido, características y funcionalidad de la plataforma 6xargs, incluyendo pero no limitado a texto, gráficos, logotipos, iconos y software, son propiedad de 6xargs y están protegidos por leyes de propiedad intelectual.</p>
+
+                <h3>6. Pago y Recompensas</h3>
+                <p>Las recompensas por vulnerabilidades válidas se pagarán de acuerdo con las políticas específicas de cada programa de bug bounty. Nos reservamos el derecho de determinar la elegibilidad y el monto de las recompensas. Los pagos están sujetos a verificación de identidad y cumplimiento de las leyes fiscales aplicables.</p>
+
+                <h3>7. Limitación de Responsabilidad</h3>
+                <p>6xargs no será responsable de ningún daño directo, indirecto, incidental, especial o consecuente que resulte del uso o la imposibilidad de usar nuestros servicios. Esto incluye, pero no se limita a, pérdida de datos, pérdida de ingresos o interrupción del negocio.</p>
+
+                <h3>8. Modificaciones del Servicio y los Términos</h3>
+                <p>Nos reservamos el derecho de modificar o discontinuar, temporal o permanentemente, el servicio (o cualquier parte del mismo) con o sin previo aviso. También podemos modificar estos Términos y Condiciones en cualquier momento. Es su responsabilidad revisar periódicamente estos términos para mantenerse informado de las actualizaciones.</p>
+
+                <h3>9. Ley Aplicable</h3>
+                <p>Estos términos se regirán e interpretarán de acuerdo con las leyes del país en el que 6xargs tiene su sede principal, sin tener en cuenta sus disposiciones sobre conflictos de leyes.</p>
+
+                <h3>10. Contacto</h3>
+                <p>Si tiene alguna pregunta sobre estos Términos y Condiciones, por favor contáctenos en: legal@6xargs.com</p>
+            </section>
+
+            <section id="privacidad">
+                <h2>Política de Privacidad</h2>
+                <p>En 6xargs, valoramos y protegemos su privacidad. Esta política describe cómo recopilamos, usamos y protegemos su información personal.</p>
+
+                <h3>1. Información que Recopilamos</h3>
+                <p>Recopilamos varios tipos de información para proporcionar y mejorar nuestros servicios de bug bounty y ciberseguridad:</p>
+                <ul>
+                    <li>Información de identificación personal (nombre, dirección de correo electrónico, número de teléfono)</li>
+                    <li>Información profesional (habilidades, experiencia en seguridad)</li>
+                    <li>Información de pago (para procesar recompensas)</li>
+                    <li>Datos de uso de la plataforma</li>
+                    <li>Información técnica sobre vulnerabilidades reportadas</li>
+                </ul>
+
+                <h3>2. Cómo Utilizamos su Información</h3>
+                <p>Utilizamos la información recopilada para:</p>
+                <ul>
+                    <li>Proporcionar y mantener nuestros servicios de bug bounty</li>
+                    <li>Mejorar y personalizar la experiencia del usuario</li>
+                    <li>Procesar pagos de recompensas</li>
+                    <li>Comunicarnos con usted sobre actualizaciones de servicio y ofertas</li>
+                    <li>Cumplir con obligaciones legales y resolver disputas</li>
+                </ul>
+
+                <h3>3. Protección de Datos</h3>
+                <p>Implementamos medidas de seguridad técnicas y organizativas para proteger su información personal, incluyendo:</p>
+                <ul>
+                    <li>Encriptación de datos en tránsito y en reposo</li>
+                    <li>Acceso restringido a la información personal</li>
+                    <li>Monitoreo continuo de seguridad y auditorías regulares</li>
+                    <li>Formación en privacidad y seguridad para nuestro personal</li>
+                </ul>
+
+                <h3>4. Compartir Información</h3>
+                <p>No vendemos ni alquilamos su información personal a terceros. Sin embargo, podemos compartir información en las siguientes circunstancias:</p>
+                <ul>
+                    <li>Con su consentimiento explícito</li>
+                    <li>Con las organizaciones participantes en los programas de bug bounty, limitado a la información necesaria para la verificación de vulnerabilidades</li>
+                    <li>Con proveedores de servicios que nos ayudan a operar nuestra plataforma</li>
+                    <li>Cuando sea requerido por ley o para proteger nuestros derechos legales</li>
+                </ul>
+
+                <h3>5. Sus Derechos de Privacidad</h3>
+                <p>Usted tiene ciertos derechos con respecto a su información personal, incluyendo:</p>
+                <ul>
+                    <li>Derecho a acceder a su información personal</li>
+                    <li>Derecho a rectificar información inexacta</li>
+                    <li>Derecho a borrar su información (con ciertas limitaciones)</li>
+                    <li>Derecho a oponerse al procesamiento de su información</li>
+                    <li>Derecho a la portabilidad de datos</li>
+                </ul>
+
+                <h3>6. Cookies y Tecnologías Similares</h3>
+                <p>Utilizamos cookies y tecnologías similares para mejorar la experiencia del usuario, analizar el tráfico y personalizar el contenido. Puede controlar el uso de cookies a través de la configuración de su navegador.</p>
+
+                <h3>7. Cambios en esta Política</h3>
+                <p>Podemos actualizar esta política de privacidad periódicamente. Le notificaremos cualquier cambio significativo publicando la nueva política en nuestro sitio web y actualizando la fecha de "última actualización".</p>
+
+                <h3>8. Contacto</h3>
+                <p>Si tiene preguntas o inquietudes sobre nuestra política de privacidad, por favor contá
