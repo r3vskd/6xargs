@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Guidelines - 6xargs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #121212;
+            --card-background: rgba(30, 30, 30, 0.95);
+            --text-color: #E0E0E0;
+            --accent-color: #BB86FC;
+            --hover-color: #3700B3;
+            --success-color: #4CAF50;
+            --warning-color: #FFC107;
+            --danger-color: #FF5722;
+            --critical-color: #FF1744;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Varela Round', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: var(--text-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .metric-card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        .rewards-table {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 4rem;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .severity-low { color: var(--text-color); }
+        .severity-medium { color: var(--warning-color); }
+        .severity-high { color: var(--danger-color); }
+        .severity-critical { color: var(--critical-color); }
+
+        .exclusions {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .exclusion-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .exclusion-item:last-child {
+            border-bottom: none;
+        }
+
+        .exclusion-item h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Program Guidelines</h1>
+        <p class="subtitle">Información detallada sobre nuestro programa de bug bounty</p>
+    </header>
+
+    <main class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Open Scope</h3>
+                <p>Recompensamos reportes para todos los activos propios basados en el impacto, incluso si no están listados en el alcance.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Fast Payment</h3>
+                <p>Garantizamos el pago dentro del primer mes después de recibir un reporte de vulnerabilidad.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Gold Standard</h3>
+                <p>Cumplimos con el Gold Standard Safe Harbor para la protección de investigadores.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Platform Standards</h3>
+                <p>Totalmente compatible con los estándares de la plataforma para garantizar la mejor experiencia.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Coordinated Vulnerability Disclosure</h3>
+                <p>Seguimos las mejores prácticas para la divulgación coordinada de vulnerabilidades.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Top Response Efficiency</h3>
+                <p>La eficiencia de respuesta de este programa está por encima del 90%, garantizando una comunicación rápida y efectiva.</p>
+            </div>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">24h</div>
+                <div class="metric-label">Tiempo promedio de primera respuesta</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">48h</div>
+                <div class="metric-label">Tiempo promedio de triaje</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">7d</div>
+                <div class="metric-label">Tiempo promedio hasta recompensa</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">30d</div>
+                <div class="metric-label">Tiempo promedio hasta resolución</div>
+            </div>
+        </div>
+
+        <div class="rewards-table">
+            <h2>Rewards Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Asset</th>
+                        <th>Low</th>
+                        <th>Medium</th>
+                        <th>High</th>
+                        <th>Critical</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>*.6xargs.com</td>
+                        <td class="severity-low">$500</td>
+                        <td class="severity-medium">$2,500</td>
+                        <td class="severity-high">$7,500</td>
+                        <td class="severity-critical">$15,000</td>
+                    </tr>
+                    <tr>
+                        <td>api.6xargs.com</td>
+                        <td class="severity-low">$1,000</td>
+                        <td class="severity-medium">$2,500</td>
+                        <td class="severity-high">$12,500</td>
+                        <td class="severity-critical">$25,000</td>
+                    </tr>
+                    <tr>
+                        <td>app.6xargs.com</td>
+                        <td class="severity-low">$500</td>
+                        <td class="severity-medium">$2,500</td>
+                        <td class="severity-high">$7,500</td>
+                        <td class="severity-critical">$15,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="exclusions">
+            <h2>Scope Exclusions</h2>
+            <div class="exclusion-item">
+                <h3>Divulgación de Información del Cliente/Organización</h3>
+                <p>Información revelada por un cliente/organización en 6xargs; estos reportes se cerrarán como informativos y le animamos a reportar la divulgación al programa relevante.</p>
+            </div>
+            <div class="exclusion-item">
+                <h3>Información Engañosa de IA</h3>
+                <p>Manipulación de la IA para producir información engañosa o falsa. Trabajamos continuamente para mejorar la precisión de las respuestas.</p>
+            </div>
+            <div class="exclusion-item">
+                <h3>Validación de Encabezados y Problemas de URL</h3>
+                <p>Reportes que se dirigen a la falta de validación de encabezados o que explotan múltiples barras diagonales en la raíz del segmento de ruta de una URL.</p>
+            </div>
+            <div class="exclusion-item">
+                <h3>Enumeración de Usuarios</h3>
+                <p>Reportes que enumeran usuarios y manejadores de programa ya reclamados. Esto no revela información sensible, independientemente de si los perfiles asociados son públicos o privados.</p>
+            </div>
+            <div class="exclusion-item">
+                <h3>Funcionalidad de Insignias</h3>
+                <p>La capacidad de manipular la funcionalidad de insignias cerrando envíos reportados por usted mismo o un miembro del equipo en un programa verificado.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
