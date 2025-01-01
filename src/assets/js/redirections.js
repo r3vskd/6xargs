@@ -12,6 +12,7 @@ function redirections(pagina) {
     privacypolicy: "/assets/html/privacy-policy.html",
     terms: "/assets/html/terms-and-conditions.html",
     guidelines: "/assets/html/program-guidelines.html",
+    register: "/assets/html/register.html",
   };
   
 if (paginas[pagina]) {
