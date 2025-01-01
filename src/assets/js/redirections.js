@@ -13,6 +13,7 @@ function redirections(pagina) {
     terms: "/assets/html/terms-and-conditions.html",
     guidelines: "/assets/html/program-guidelines.html",
     register: "/assets/html/register.html",
+    services: "/assets/html/services.html",
   };
   
 if (paginas[pagina]) {
