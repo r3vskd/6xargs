@@ -10,6 +10,7 @@ function redirections(pagina) {
     about: "/assets/html/about.html",
     policies: "/assets/html/policies.html",
     privacypolicy: "/assets/html/privacy-policy.html",
+    terms: "/assets/html/terms-and-conditions.html",
   };
   
 if (paginas[pagina]) {
