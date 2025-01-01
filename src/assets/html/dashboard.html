@@ -1,72 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6xargs | AI Assisted Bug Bounty Platform</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-
+    <title>Dashboard de Usuario - 6xargs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <div class="grid-background"></div>
-    <div class="silhouettes-container"></div>
-    <script src="/assets/js/redirections.js"></script>
-    <script src="/assets/js/cardcursor.js"></script>
-    <nav>
-        <img src="/assets/images/6xargs.png?height=5&width=5" alt="6xargs Logo" class="logo" onclick="redirections('home')">
-        <div class="menu-icon">
-            <i class="fa fa-bars fa-2x"></i>
-        </div>
-        <ul class="menu">
-            <li><a href="/assets/html/index.html">Home</a></li>
-            <li><a href="/assets/html/about.html">About</a></li>
-            <li><a href="/assets/html/services.html">Services</a></li>
-            <li><a href="/assets/html/contact.html">Contact</a></li>
-        </ul>
-    </nav>
- 
-    <footer>
-        <div class="footer-content" data-href="https://www.6xargs.com" >
-            <div class="footer-section">
-                <h3>Social Media</h3>
-                <ul class="horizontal-list">
-                    <li><a href="https://twitter.com/">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/">Instagram</a></li>
-                    <li><a href="https://www.discord.com/">Discord</a></li>
-                    <li><a href="https://www.github.com/">GitHub</a></li>
-                </ul>
+    <div class="dashboard">
+        <nav class="navbar">
+            <img src="/assets/images/6xargs.png" alt="6xargs Logo" class="logo">
+            <ul class="nav-menu">
+                <li><a href="#dashboard" class="active"><i data-lucide="home"></i> Dashboard</a></li>
+                <li><a href="#programs"><i data-lucide="bell"></i> Programs</a></li>
+                <li><a href="#inbox"><i data-lucide="inbox"></i> Inbox</a></li>
+            </ul>
+        </nav>
+
+        <main class="dashboard-content">
+            <h1>Bienvenido a tu Dashboard</h1>
+            <div class="cards-section">
+                <div class="card">
+                    <h2>Programas Activos</h2>
+                    <p>Tienes 3 programas activos</p>
+                </div>
+                <div class="card">
+                    <h2>Actividad Reciente</h2>
+                    <p>2 nuevos mensajes en tu bandeja de entrada</p>
+                </div>
+                <div class="card">
+                    <h2>Ganancias</h2>
+                    <p>Ganancias totales: $1,500</p>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Menu</h3>
-                <ul class="horizontal-list">
-                    <li><a href="/assets/html/about.html">About Us</a></li>
-                    <li><a href="https://www.discord.com/">Community</a></li>
-                </ul>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="horizontal-list">
+                        <li><a href="#profile">Perfil</a></li>
+                        <li><a href="#settings">Configuración</a></li>
+                        <li><a href="#help">Centro de Ayuda</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul class="horizontal-list">
-                    <li><a href="/assets/html/contact.html">Contact Us</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>©2025 6xargs Todos los derechos reservados</p>
             </div>
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul class="horizontal-list">
-                    <li><a href="/assets/html/terms-and-conditions.html">Terms and Conditions</a></li>
-                    <li><a href="/assets/html/privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="/assets/html/policies.html">Policies</a></li>
-                    <li><a href="/assets/html/program-guidelines.html">Program Guidelines</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>©2025 6xargs All rights reserved</p>
-        </div>
-    </footer>
-    <script src="/assets/js/script.js"></script>
+        </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
