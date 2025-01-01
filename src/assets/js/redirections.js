@@ -9,6 +9,7 @@ function redirections(pagina) {
     inbox: "/assets/html/inbox.html",
     about: "/assets/html/about.html",
     policies: "/assets/html/policies.html",
+    privacypolicy: "/assets/html/privacy-policy.html",
   };
   
 if (paginas[pagina]) {
