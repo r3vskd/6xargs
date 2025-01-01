@@ -6,6 +6,8 @@ function redirections(pagina) {
     dashboard: "/assets/html/dashboard.html",
     profile: "/assets/html/profile.html",
     orgs: "/assets/html/orgs.html",
+    inbox: "/assets/html/inbox.html",
+    about: "/assets/html/about.html",
     
   };
   
