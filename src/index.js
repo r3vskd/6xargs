@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/assets/html/index.html'));
 });
 
-// Iniciar el servidor
+// Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
