@@ -4,8 +4,7 @@ $(document).ready(function() {
     });
 });
 
-// Scrolling Effect
-
+// scrolling
 $(window).on("scroll", function() {
     if($(window).scrollTop()) {
           $('nav').addClass('black');
