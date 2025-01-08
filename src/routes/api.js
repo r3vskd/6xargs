@@ -2,7 +2,7 @@ import express from 'express';
 
 const router = express.Router();
 
-// rtas
+// rutas
 router.get('/status', (req, res) => {
   res.status(200).json({ message: 'API is working fine!!' });
 });
