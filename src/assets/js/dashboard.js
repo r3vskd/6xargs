@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Ejemplo de cómo podrías actualizar dinámicamente el contenido de las tarjetas
+    // Ejemplo de cómo se podria actualizar dinámicamente el contenido de las tarjetas
     function updateCardContent() {
         // Esto es solo un ejemplo. En una aplicación real, obtendrías estos datos de una API
         const activePrograms = Math.floor(Math.random() * 5) + 1;
