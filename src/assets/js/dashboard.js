@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar los iconos de Lucide
     lucide.createIcons();
 
-    // Agregar funcionalidad a los enlaces de navegació
+    // Agregar funcionalidad a los enlaces de navegacióm
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
