@@ -1,22 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Ejemplo de uso de la librería Lucide para el dashborad (es solo un POC)
     // Inicializar los iconos de Lucide
     lucide.createIcons();
 
-    // Agregar funcionalidad a los enlaces de navegacióm
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             navLinks.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
-            // Aquí puedes agregar lógica para cargar el contenido correspondiente
             console.log('Navegando a:', this.getAttribute('href'));
         });
     });
 
-    // Ejemplo de cómo se podria actualizar dinámicamente el contenido de las tarjetas
     function updateCardContent() {
-        // Esto es solo un ejemplo. En una aplicación real, obtendrías estos datos de una API
         const activePrograms = Math.floor(Math.random() * 5) + 1;
         const newMessages = Math.floor(Math.random() * 10);
         const totalEarnings = Math.floor(Math.random() * 5000);
