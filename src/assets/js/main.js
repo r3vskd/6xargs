@@ -1,7 +1,7 @@
 // Import Three.js
 import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
 
-// Create a scene
+// Create a scen
 const scene = new THREE.Scene();
 
 // Create a camera
