@@ -23,6 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.card:nth-child(3) p').textContent = `Ganancias totales: $${totalEarnings}`;
     }
 
-    // Actualizar el contenido cada 30 segundos 
+    // Actualizar el contenido cada 30 segundoss
     setInterval(updateCardContent, 30000);
 });
