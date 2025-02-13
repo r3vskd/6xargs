@@ -24,5 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Actualizar el contenido cada 30 segundoss
+    // Actualizar el contenido cada 30 segundoss
     setInterval(updateCardContent, 30000);
 });
