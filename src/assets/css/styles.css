@@ -128,6 +128,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: rgb(255, 255, 255);
+    font-family: "Varela", serif;
 }
 
 /* Header Styles */
@@ -220,7 +221,6 @@ h1 {
     max-width: 200vh;
     width: 200vh;
 }
-
 
 h2 {
     font-size: 2.5rem;
