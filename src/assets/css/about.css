@@ -160,12 +160,12 @@ main {
     border-radius: 1.5rem;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(182, 182, 182, 0.1);
+    /* border: 1px solid rgba(182, 182, 182, 0.1); */
     transition: transform 0.8s ease, background 0.2s ease;
     text-transform:none;
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
     padding: 4rem;
 }
 
