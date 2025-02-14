@@ -39,7 +39,6 @@ body {
     z-index: -1;
 }
 
-/* Add random silhouettes */
 .silhouettes-container {
     color: #523db3;
     position: fixed;
@@ -74,7 +73,7 @@ body {
     }
 }
 
-/* navbar */
+/** navbar */
 nav {
     width: 100%;
     position: fixed;
@@ -131,7 +130,6 @@ nav ul li a:hover {
     font-family: "Varela", serif;
 }
 
-/* Header Styles */
 header {
     height: 70vh;
     display: flex;
@@ -141,7 +139,6 @@ header {
     overflow: hidden;
 }
 
-/* Main Content Styles */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -190,7 +187,7 @@ main {
     align-content: center;
     align-self: center;
     text-align: center;
-    height: 100vh; /* Esto permite centrar verticalmente el contenido */
+    height: 100vh; /* centrar verticalmente */
     margin: 0 auto;
     max-width: 85vh;
     width: 85vh;
@@ -205,7 +202,7 @@ h1 {
     padding: 0;
     font-family: "Varela", serif;
     white-space: pre;
-    line-height: 1.2; /* Ajusta esto según el espacio que necesites */
+    line-height: 1.2;
     text-transform: none;
     margin: 0 auto;
     text-align: center; /* Centrado del texto */
