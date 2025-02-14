@@ -74,7 +74,7 @@ body {
     }
 }
 
-/* navbar */
+/** navbar */
 nav {
     width: 100%;
     position: fixed;
@@ -131,7 +131,6 @@ nav ul li a:hover {
     font-family: "Varela", serif;
 }
 
-/* Header Styles */
 header {
     height: 70vh;
     display: flex;
@@ -141,7 +140,6 @@ header {
     overflow: hidden;
 }
 
-/* Main Content Styles */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -198,7 +196,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh; /* Esto permite centrar verticalmente el contenido */
+    height: 100vh; 
     margin: 0 auto;
     max-width: 85vh;
     width: 85vh;
@@ -270,7 +268,6 @@ button:hover {
     background: #1a1a1a;
 }
 
-/* Footer Styles */
 footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 3rem;
@@ -353,7 +350,7 @@ footer {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     .main-title {
         font-size: 2.5rem;
