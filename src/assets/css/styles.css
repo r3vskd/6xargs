@@ -15,7 +15,7 @@
 }
 
 body {
-    background: linear-gradient(45deg, #000000, #26113d, #000000);
+    background: #26113d; /* Simplificado del gradiente */
     color: var(--text-color);
     line-height: 1.2;
     min-height: 80vh;
@@ -34,44 +34,12 @@ body {
     height: 100%;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(12, 12, 12, 0.05) 1px, transparent 1px);
+        linear-gradient(90deg, rgba(12, 12, 12, 0.05) 1px, transparent 5px);
     background-size: 20px 20px;
     z-index: -1;
-}
-
-/* Add random silhouettes */
-.silhouettes-container {
-    color: #523db3;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    overflow: hidden;
-    z-index:-1;
-}
-
-.silhouette {
-    position: absolute;
-    filter: blur(40px);
-    opacity: 0.15;
-    animation: float 20s infinite;
-}
-
-.silhouette path {
-    fill: rgba(103, 58, 183, 0.3);
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translate(0, 0) scale(1) rotate(0deg);
-    }
-    33% {
-        transform: translate(var(--tx1), var(--ty1)) scale(var(--scale1)) rotate(var(--rotate1));
-    }
-    66% {
-        transform: translate(var(--tx2), var(--ty2)) scale(var(--scale2)) rotate(var(--rotate2));
-    }
+    /* Optimizado para rendering */
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 /** navbar */
@@ -163,16 +131,17 @@ main {
 .card {
     position: relative;
     background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2.3px);
+    backdrop-filter: none; /* Eliminado el blur */
     border-radius: 1.5rem;
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    /* border: 1px solid rgba(182, 182, 182, 0.1); */
-    transition: transform 0.8s ease, background 0.2s ease;
-    text-transform:none;
+    transition: transform 0.3s ease; /* Reducido tiempo de transición */
+    text-transform: none;
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Reducida la sombra */
+    padding: 4rem;
+    font-weight: bold;
+    will-change: transform; /* Mejora el rendimiento de transform */
 }
 
 .card:hover {
@@ -181,7 +150,7 @@ main {
 }
 
 .form-card, .business-card {
-    background: rgba(32, 22, 49, 0.15);
+    background: rgba(18, 13, 27, 0.15);
     text-transform: none;
 }
 
@@ -407,16 +376,16 @@ footer {
         padding: 10px 0;
 }
 
-    @keyframes fadeInUp {
-        from {
-
-            transform: translateY(20px);
-        }
-        to {
-
-            transform: translateY(0);
-        }
+/* Animation for cards - simplificada */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
     }
+    to {
+        transform: translateY(0);
+    }
+}
+
     .card:hover {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
