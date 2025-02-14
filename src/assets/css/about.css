@@ -149,32 +149,24 @@ main {
 }
 
 .cards-section {
-    display: flex;
-    gap: 4rem;
-    margin-bottom: 4rem;
-}
-
-.section-left, .section-right {
-    flex: 1;
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    text-transform:none;
+    margin-bottom: 4rem;
 }
 
 .card {
-    position: relative;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2.3px);
-    border-radius: 1.5rem;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(182, 182, 182, 0.1);
-    transition: transform 0.8s ease, background 0.2s ease;
-    text-transform:none;
-    text-align: center;
-    overflow: hidden;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
 }
 
 .card:hover {
@@ -194,9 +186,9 @@ main {
 }
 
 .container {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    align-content: center;
+    align-self: center;
     text-align: center;
     height: 100vh; /* Esto permite centrar verticalmente el contenido */
     margin: 0 auto;
@@ -341,12 +333,12 @@ footer {
 }
 
 .footer-bottom ul li a {
-    text-decoration: none; 
-    color: #007BFF; 
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #007BFF; /* Color del enlace */
 }
 
 .footer-bottom ul li a:hover {
-    color: #0056b3; 
+    color: #0056b3; /* Color al pasar el cursor */
 }
 
 .footer-bottom p {

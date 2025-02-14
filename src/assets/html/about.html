@@ -1,160 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6xargs | About</title>
+    <title>6xargs | AI Assisted Bug Bounty Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="icon" type"image/x-icon" href="/assets/images/favicon.ico">
-    <style>
-        :root {
-            --background-color: #121212;
-            --card-background: rgba(30, 30, 30, 0.7);
-            --text-color: #E0E0E0;
-            --accent-color: #BB86FC;
-            --hover-color: #3700B3;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem 0;
-            position: relative;
-        }
-
-        header {
-            text-align: center;
-            padding: 4rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        h1 {
-            font-family: "Varela";
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-            position: relative;
-            z-index: 2;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-            position: relative;
-        }
-
-        .card {
-            background-color: var(--card-background);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-            z-index: 2;
-        }
-
-        .card:nth-child(1) { grid-column: 1 / span 5; grid-row: 1 / span 2; }
-        .card:nth-child(2) { grid-column: 7 / span 6; grid-row: 1 / span 2; }
-        .card:nth-child(3) { grid-column: 2 / span 5; grid-row: 3 / span 2; }
-        .card:nth-child(4) { grid-column: 8 / span 5; grid-row: 3 / span 2; }
-        .card:nth-child(5) { grid-column: 1 / span 6; grid-row: 5 / span 2; }
-        .card:nth-child(6) { grid-column: 8 / span 5; grid-row: 5 / span 2; }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .card h2 {
-            font-size: 1.8rem;
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-
-        .card p {
-            margin-bottom: 1rem;
-        }
-
-        .fluorescent-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .fluorescent-shape {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.15;
-        }
-
-        .shape1 { width: 300px; height: 300px; background-color: #4CAF50; top: 10%; left: -5%; }
-        .shape2 { width: 400px; height: 400px; background-color: #2196F3; bottom: -10%; right: -5%; }
-        .shape3 { width: 250px; height: 250px; background-color: #FFC107; top: 40%; right: 20%; }
-        .shape4 { width: 200px; height: 200px; background-color: #FF5722; top: 60%; left: 10%; }
-        .shape5 { width: 350px; height: 350px; background-color: #9C27B0; bottom: 20%; left: 30%; }
-        .shape6 { width: 180px; height: 180px; background-color: #00BCD4; top: 20%; right: 40%; }
-
-        @media (max-width: 1200px) {
-            .content-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .card:nth-child(n) {
-                grid-column: auto;
-                grid-row: auto;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .card {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/about.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 </head>
 <body>
+    <div class="grid-background"></div>
+    <div class="silhouettes-container"></div>
+    <script src="/assets/js/redirections.js"></script>
+    <script src="/assets/js/cardcursor.js"></script>
     <nav>
         <img src="/assets/images/6xargs.png?height=5&width=5" alt="6xargs Logo" class="logo" onclick="redirections('home')">
         <div class="menu-icon">
@@ -167,42 +27,31 @@
             <li><a href="/assets/html/contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="fluorescent-bg">
-        <div class="fluorescent-shape shape1"></div>
-        <div class="fluorescent-shape shape2"></div>
-        <div class="fluorescent-shape shape3"></div>
-        <div class="fluorescent-shape shape4"></div>
-        <div class="fluorescent-shape shape5"></div>
-        <div class="fluorescent-shape shape6"></div>
-    </div>
-
     <header>
-        <h1>About 6xargs</h1>
-        <p class="subtitle">At 6xargs, we envision a digital future where security is not a barrier, but a catalyst for innovation. We believe in a safer internet, where companies can grow and users can browse with confidence. </p>
+        <div class="container">
+            <h1>6xargs: Revolutionizing Cybersecurity</h1>
+        </div>
     </header>
-
-    <main class="container">
-        <div class="content-grid">
+    <main>
+        <section class="cards-section">
             <div class="card">
-                <h2>The Visión</h2>
-                <p>At 6xargs, we envision a digital future where security is not a barrier, but a catalyst for innovation. We believe in a safer internet, where companies can grow and users can browse with confidence.
-                </p>
-                <p>Our mission is to revolutionize cybersecurity through the seamless fusion of advanced artificial intelligence and human ingenuity. This synergy allows us to anticipate, identify and mitigate cyber threats at unprecedented speed and scale.
-                </p>
+                <h2>The Vision</h2>
+                <p>At 6xargs, we envision a digital future where security is not a barrier, but a catalyst for innovation. We believe in a safer internet, where companies can grow and users can browse with confidence.</p>
+                <p>Our mission is to revolutionize cybersecurity through the seamless fusion of advanced artificial intelligence and human ingenuity. This synergy allows us to anticipate, identify and mitigate cyber threats at unprecedented speed and scale.</p>
             </div>
 
             <div class="card">
                 <h2>Values</h2>
-                <p><strong>Constant Innovation:</strong>We strive to be at the forefront of security technology, continually developing new solutions that stay ahead of emerging threats.                </p>
-                <p><strong>Unbreakable Integrity:</strong>We maintain the highest ethical standards in all our operations, guaranteeing the trust of our clients and partners.</p>
+                <p><strong>Constant Innovation:</strong> We strive to be at the forefront of security technology, continually developing new solutions that stay ahead of emerging threats.</p>
+                <p><strong>Unbreakable Integrity:</strong> We maintain the highest ethical standards in all our operations, guaranteeing the trust of our clients and partners.</p>
                 <p><strong>Synergistic Collaboration:</strong> We foster an environment where brilliant minds, both human and artificial, work in harmony to achieve extraordinary results.</p>
-                <p><strong>Empowerment through Knowledge:</strong>We believe in sharing our knowledge and findings with the community, contributing to the collective strengthening of global cybersecurity.</p>
+                <p><strong>Empowerment through Knowledge:</strong> We believe in sharing our knowledge and findings with the community, contributing to the collective strengthening of global cybersecurity.</p>
             </div>
 
             <div class="card">
                 <h2>The Bug Bounty Revolution with AI</h2>
                 <p>Our innovative approach to bug bounty programs ushers in a new era in vulnerability detection and mitigation. By combining the creativity and expertise of human bug hunters with the analytical power and processing speed of AI, we have created an unprecedented security ecosystem.</p>
-                <p>AI not only amplifies the capabilities of human researchers, but also continually learns from their discoveries, constantly improving its ability to identify complex and subtle patterns of vulnerability.                </p>
+                <p>AI not only amplifies the capabilities of human researchers, but also continually learns from their discoveries, constantly improving its ability to identify complex and subtle patterns of vulnerability.</p>
             </div>
 
             <div class="card">
@@ -236,10 +85,48 @@
                     <li>Deep integration of security into the software development lifecycle, powered by AI</li>
                     <li>Cybersecurity education and training powered by virtual and augmented reality</li>
                 </ul>
-                <p0>At 6xargs, we don't just adapt to the future; we are actively creating it. Join us on this exciting journey towards a safer and more resilient digital world.</p>
+                <p>At 6xargs, we don't just adapt to the future; we are actively creating it. Join us on this exciting journey towards a safer and more resilient digital world.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content" data-href="https://www.6xargs.com" >
+            <div class="footer-section">
+                <h3>Social Media</h3>
+                <ul class="horizontal-list">
+                    <li><a href="https://twitter.com/">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a href="https://www.discord.com/">Discord</a></li>
+                    <li><a href="https://www.github.com/">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Menu</h3>
+                <ul class="horizontal-list">
+                    <li><a href="/assets/html/about.html">About Us</a></li>
+                    <li><a href="https://www.discord.com/">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="horizontal-list">
+                    <li><a href="/assets/html/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="horizontal-list">
+                    <li><a href="/assets/html/terms-and-conditions.html">Terms and Conditions</a></li>
+                    <li><a href="/assets/html/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/assets/html/policies.html">Policies</a></li>
+                    <li><a href="/assets/html/program-guidelines.html">Program Guidelines</a></li>
+                </ul>
             </div>
         </div>
-    </main>
+        <div class="footer-bottom">
+            <p>©2025 6xargs All rights reserved</p>
+        </div>
+    </footer>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
-
