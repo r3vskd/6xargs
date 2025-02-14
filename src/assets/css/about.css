@@ -154,13 +154,18 @@ main {
 }
 
 .card {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2.3px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(182, 182, 182, 0.1);
+    transition: transform 0.8s ease, background 0.2s ease;
+    text-transform:none;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -189,14 +194,16 @@ main {
     text-align: center;
     height: 100vh; /* centrar verticalmente */
     margin: 0 auto;
-    max-width: 85vh;
-    width: 85vh;
+    max-width: 100vh;
+    width: 74vh;
 }
 
 h1 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
     display: flex;
-    justify-content: left;
-    align-items: left;
     font-size: 3rem;
     letter-spacing: 1px;
     padding: 0;
@@ -211,6 +218,10 @@ h1 {
 }
 
 h2 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
