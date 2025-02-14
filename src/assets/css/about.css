@@ -259,7 +259,6 @@ button:hover {
     background: #1a1a1a;
 }
 
-/* Footer Styles */
 footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 3rem;
@@ -319,30 +318,30 @@ footer {
 }
 
 .footer-bottom ul {
-    list-style: none; /* Elimina los puntos de la lista */
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .footer-bottom ul li {
-    display: inline; /* Mantén los elementos en línea */
+    display: inline;
     margin: 5px;
 }
 
 .footer-bottom ul li a {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: #007BFF; /* Color del enlace */
+    text-decoration: none;
+    color: #007BFF;
 }
 
 .footer-bottom ul li a:hover {
-    color: #0056b3; /* Color al pasar el cursor */
+    color: #0056b3;
 }
 
 .footer-bottom p {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     .main-title {
         font-size: 2.5rem;
@@ -410,12 +409,10 @@ footer {
             transform: translateY(0);
         }
     }
-    /* Add some hover effects to the cards */
     .card:hover {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
-    /* Style the form input and button */
     form input[type="email"] {
         transition: all 0.3s ease;
     }

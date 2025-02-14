@@ -410,7 +410,6 @@ footer {
         padding: 10px 0;
 }
 
-/* Animation for cards */
     @keyframes fadeInUp {
         from {
 
@@ -421,12 +420,10 @@ footer {
             transform: translateY(0);
         }
     }
-    /* Add some hover effects to the cards */
     .card:hover {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
-    /* Style the form input and button */
     form input[type="email"] {
         transition: all 0.3s ease;
     }
