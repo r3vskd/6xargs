@@ -166,6 +166,12 @@ main {
     text-align: center;
     overflow: hidden;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    padding: 4rem;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0.5rem;
 }
 
 @media (max-width: 768px) {
