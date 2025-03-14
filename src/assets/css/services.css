@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
-
 :root {
     --background-color: #121212;
-    --card-background: #1E1E1E;
+    --card-background: rgba(30, 30, 30, 0.7);
     --text-color: #E0E0E0;
     --accent-color: #BB86FC;
     --hover-color: #3700B3;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -14,90 +13,95 @@
 }
 
 body {
-    font-family: 'Varela', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
     width: 90%;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 header {
     text-align: center;
-    padding: 2rem 0;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--accent-color);
+    position: relative;
+    z-index: 2;
 }
 
-.services-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.subtitle {
+    font-size: 1.2rem;
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 0 auto 2rem;
+    position: relative;
+    z-index: 2;
 }
 
-.service-card {
+.content {
     background-color: var(--card-background);
     border-radius: 12px;
     padding: 2rem;
-    border: 1px solid rgba(187, 134, 252, 0.1);
-}
-
-
-.service-card h2 {
-    font-size: 1.75rem;
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.5px;
-}
-
-.process-steps {
-    list-style-type: none;
-    counter-reset: step-counter;
-}
-
-.process-steps li {
-    counter-increment: step-counter;
-    margin-bottom: 0.5rem;
-    padding-left: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
     position: relative;
+    z-index: 2;
 }
 
-.process-steps li::before {
-    content: counter(step-counter);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: var(--accent-color);
-    color: var(--background-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
-.ai-features {
-    background-color: rgba(187, 134, 252, 0.1);
-    border-radius: 8px;
-    padding: 1rem;
-    margin-top: 1rem;
-}
-
-.ai-features h3 {
+h2 {
+    font-size: 1.8rem;
     color: var(--accent-color);
-    margin-bottom: 0.5rem;
+    margin: 2rem 0 1rem;
+}
+
+p, ul, ol {
+    margin-bottom: 1rem;
+}
+
+ul, ol {
+    padding-left: 2rem;
+}
+
+.fluorescent-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.fluorescent-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.16;
+}
+
+.shape1 { width: 300px; height: 300px; background-color: #4CAF50; top: 10%; left: -5%; }
+.shape2 { width: 400px; height: 400px; background-color: #2196F3; bottom: -10%; right: -5%; }
+.shape3 { width: 250px; height: 250px; background-color: #FFC107; top: 40%; right: 20%; }
+.shape4 { width: 200px; height: 200px; background-color: #FF5722; top: 60%; left: 10%; }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
 }
