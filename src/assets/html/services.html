@@ -1,110 +1,78 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/services.css">
     <title>6xargs | BugBounty Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="grid-background"></div>
-    
-    <!-- Navbar -->
+    <div class="silhouettes-container"></div>
+    <script src="/assets/js/redirections.js"></script>
+    <script src="/assets/js/cardcursor.js"></script>
     <nav>
-        <img src="/placeholder.svg?height=72&width=72" alt="6xargs Logo" class="logo" onclick="redirections('home')">
+        <img src="/assets/images/6xargs.png?height=5&width=5" alt="6xargs Logo" class="logo" onclick="redirections('home')">
         <div class="menu-icon">
             <i class="fa fa-bars fa-2x"></i>
         </div>
         <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/assets/html/index.html">Home</a></li>
+            <li><a href="/assets/html/about.html">About</a></li>
+            <li><a href="/assets/html/services.html">Services</a></li>
+            <li><a href="/assets/html/contact.html">Contact</a></li>
         </ul>
     </nav>
-    
-    <!-- Header -->
     <header>
         <h1>Servicios de Bugbounty</h1>
-        <p class="subtitle">Descubre cómo podemos proteger tu empresa con nuestros servicios de bugbounty y tecnología de IA</p>
+        <p>Descubre cómo podemos proteger tu empresa con nuestros servicios de bugbounty y tecnología de IA</p>
     </header>
-    
-    <!-- Main Content -->
-    <main>
-        <section class="cards-section">
-            <div class="cards-container">
-                <!-- Card 1 -->
-                <div class="card">
-                    <h2>Programa de Bugbounty</h2>
-                    <p>Nuestro programa de bugbounty conecta a expertos en seguridad con tu plataforma para identificar y resolver vulnerabilidades críticas.</p>
-                    <h3>Proceso:</h3>
-                    <ol class="process-steps">
-                        <li>Registro de tu empresa</li>
-                        <li>Definición del alcance y reglas</li>
-                        <li>Lanzamiento del programa</li>
-                        <li>Recepción y verificación de informes</li>
-                        <li>Corrección de vulnerabilidades</li>
-                        <li>Recompensa a los hackers</li>
-                    </ol>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="card">
-                    <h2>Gestión de Vulnerabilidades</h2>
-                    <p>Ofrecemos una plataforma integral para gestionar el ciclo de vida completo de las vulnerabilidades descubiertas.</p>
-                    <h3>Características:</h3>
-                    <ul>
-                        <li>Dashboard en tiempo real</li>
-                        <li>Priorización automática de vulnerabilidades</li>
-                        <li>Integración con herramientas de desarrollo</li>
-                        <li>Informes detallados y análisis de tendencias</li>
-                    </ul>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="card">
-                    <h2>Valor Agregado con IA</h2>
-                    <p>Potenciamos nuestros servicios con tecnología de Inteligencia Artificial para ofrecer una protección más eficiente y proactiva.</p>
-                    <h3>Características de IA:</h3>
-                    <ul>
-                        <li>Detección predictiva de vulnerabilidades</li>
-                        <li>Análisis de patrones de ataque</li>
-                        <li>Recomendaciones de seguridad</li>
-                        <li>Automatización de triage acompañada con IA</li>
-                    </ul>
-                </div>
+
+    <main class="container">
+        <div class="services-grid">
+            <div class="service-card">
+                <h2>Programa de Bugbounty</h2>
+                <p>Nuestro programa de bugbounty conecta a expertos en seguridad con tu plataforma para identificar y resolver vulnerabilidades críticas.</p>
+                <h3>Proceso:</h3>
+                <ol class="process-steps">
+                    <li>Registro de tu empresa</li>
+                    <li>Definición del alcance y reglas</li>
+                    <li>Lanzamiento del programa</li>
+                    <li>Recepción y verificación de informes</li>
+                    <li>Corrección de vulnerabilidades</li>
+                    <li>Recompensa a los hackers</li>
+                </ol>
             </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Enlaces</h3>
-                <ul class="horizontal-list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contacto</h3>
+
+            <div class="service-card">
+                <h2>Gestión de Vulnerabilidades</h2>
+                <p>Ofrecemos una plataforma integral para gestionar el ciclo de vida completo de las vulnerabilidades descubiertas.</p>
+                <h3>Características:</h3>
                 <ul>
-                    <li>Email: info@6xargs.com</li>
-                    <li>Teléfono: +1 (123) 456-7890</li>
+                    <li>Dashboard en tiempo real</li>
+                    <li>Priorización automática de vulnerabilidades</li>
+                    <li>Integración con herramientas de desarrollo</li>
+                    <li>Informes detallados y análisis de tendencias</li>
+                </ul>
+            </div>
+            <div class="service-card"></div>
+            <h2>Valor Agregado con IA</h2>
+            <p>Potenciamos nuestros servicioss con tecnología de Inteligencia Artificial para ofrecer una protección más eficiente y proactiva.</p>
+            <div class="ai-features">
+                <h3>Características de IA:</h3>
+                <ul>
+                    <li>Detección predictiva de vulnerabilidades</li>
+                    <li>Análisis de patrones de ataque</li>
+                    <li>Recomendaciones de seguridad</li>
+                    <li>Automatización de triage acompañada con ai</li>
                 </ul>
             </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>© 2024 6xargs. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    </div>
+</main>
 </body>
 </html>
