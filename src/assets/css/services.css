@@ -158,30 +158,31 @@ main {
 
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    height: 100vh;
+    height: 100vh; 
     margin: 0 auto;
-    max-width: 100%;
-    width: 100%;
-    padding: 0 2rem;
+    max-width: 85vh;
+    width: 85vh;
   }
 
   h1 {
-    display: block; /* Changed from flex to block */
+    display: flex;
+    justify-content: left;
+    align-items: left;
     font-size: 3rem;
     letter-spacing: 1px;
     padding: 0;
+    font-family: "Varela", serif;
     white-space: pre;
-    line-height: 1.2;
+    line-height: 1.2; /* Ajusta esto según el espacio que necesites */
     text-transform: none;
-    margin: 0 auto; /* This centers horizontally */
-    text-align: center;
-    max-width: 100%; /* Changed from fixed 200vh width */
-    width: auto; /* Changed from fixed 200vh width */
-  }
+    margin: 0 auto;
+    text-align: center; /* Centrado del texto */
+    max-width: 200vh;
+    width: 200vh;
+}
 
 h2 {
     align-items: center;
