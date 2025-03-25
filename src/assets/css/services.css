@@ -157,33 +157,31 @@ main {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
-    align-self: center;
+    justify-content: center;
     text-align: center;
     height: 100vh;
     margin: 0 auto;
-    max-width: 100vh;
-    width: 74vh;
-}
+    max-width: 100%;
+    width: 100%;
+    padding: 0 2rem;
+  }
 
-h1 {
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    text-align: center;
-    display: flex;
+  h1 {
+    display: block; /* Changed from flex to block */
     font-size: 3rem;
     letter-spacing: 1px;
     padding: 0;
     white-space: pre;
     line-height: 1.2;
     text-transform: none;
-    margin: 0 auto;
+    margin: 0 auto; /* This centers horizontally */
     text-align: center;
-    max-width: 200vh;
-    width: 200vh;
-}
+    max-width: 100%; /* Changed from fixed 200vh width */
+    width: auto; /* Changed from fixed 200vh width */
+  }
 
 h2 {
     align-items: center;
