@@ -75,11 +75,13 @@ nav ul {
     list-style: none;
     overflow: hidden;
     float: right;
+    font-family: "Varela", serif;
 }
 
 nav ul li {
     display: inline-block;
     padding: 0 1rem;
+    font-family: "Varela", serif;
     color: rgb(71, 71, 71);
 }
 
@@ -89,10 +91,12 @@ nav ul li a {
     transition: color 0.3s;
     position: relative;
     overflow: hidden;
+    font-family: "Varela", serif;
 }
 
 nav ul li a:hover {
     color: rgb(255, 255, 255);
+    font-family: "Varela", serif;
 }
 
 header {
@@ -107,15 +111,21 @@ header {
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 2rem;
 }
 
 .cards-section {
-    align-items: center;
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.section-left, .section-right {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-bottom: 4rem;
+    text-transform:none;
 }
 
 .card {
@@ -132,11 +142,6 @@ main {
     padding: 4rem;
     font-weight: bold;
     will-change: transform; /* Mejora el rendimiento de transform */
-}
-
-.card ul {
-    list-style: none;
-    padding-left: 0.5rem;
 }
 
 .card:hover {
@@ -164,7 +169,7 @@ main {
     height: 100vh; 
     margin: 0 auto;
     max-width: 85vh;
-    width: 200vh;
+    width: 85vh;
 }
 
 h1 {
@@ -185,25 +190,52 @@ h1 {
 }
 
 h2 {
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     text-transform: none;
-    font-weight: bold;
+    font-family: "Varela", serif;
 }
 
 .subtitle {
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 1.5rem;
+    font-family: "Varela", serif;
 }
 
 form {
     margin-top: 2rem;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    font-family: "Varela", serif;
+}
+
+input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+button:hover {
+    background: #1a1a1a;
 }
 
 footer {
@@ -219,6 +251,7 @@ footer {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 1rem;
+    font-family: "Varela", serif;
 }
 
 .footer-section {
@@ -248,6 +281,7 @@ footer {
     text-align: center;
     justify-content: center;
     align-items: center;
+
 }
 
 .horizontal-list li a:hover {
@@ -263,23 +297,23 @@ footer {
 }
 
 .footer-bottom ul {
-    list-style: none;
+    list-style: none; 
     padding: 0;
     margin: 0;
 }
 
 .footer-bottom ul li {
-    display: inline;
+    display: inline; 
     margin: 5px;
 }
 
 .footer-bottom ul li a {
-    text-decoration: none;
-    color: #007BFF;
+    text-decoration: none; 
+    color: #007BFF; 
 }
 
 .footer-bottom ul li a:hover {
-    color: #0056b3;
+    color: #0056b3; 
 }
 
 .footer-bottom p {
@@ -290,6 +324,7 @@ footer {
 @media (max-width: 768px) {
     .main-title {
         font-size: 2.5rem;
+        
     }
 
     .cards-section {
@@ -310,7 +345,7 @@ footer {
         justify-content: center;
     }
 
-    /** navbar */
+/** navbar */
     nav ul {
         display: none;
     }
@@ -335,12 +370,11 @@ footer {
         position: absolute;
         top: 60px;
         left: 0;
-    } 
+    }
 
     nav.responsive ul li {
         display: block;
         padding: 10px 0;
-    }
 }
 
 /* Animation for cards - simplificada */
@@ -353,24 +387,25 @@ footer {
     }
 }
 
-.card:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Reducida la sombra */
-}
+    .card:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
 
-form input[type="email"] {
-    transition: all 0.3s ease;
-}
+    form input[type="email"] {
+        transition: all 0.3s ease;
+    }
 
-form input[type="email"]:focus {
-    background: rgba(78, 52, 151, 0.2);
-}
+    form input[type="email"]:focus {
+        background: rgba(78, 52, 151, 0.2);
+    }
 
-form button {
-    transition: all 0.1s ease;
-    text-decoration: none;
-}
+    form button {
+        transition: all 0.1s ease;
+        text-decoration: none;
+    }
 
-form button:hover {
-    background: #43328f;
-    transform: translateY(-2px);
+    form button:hover {
+        background: #43328f;
+        transform: translateY(-2px);
+    }
 }
