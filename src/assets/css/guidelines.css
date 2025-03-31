@@ -1,17 +1,17 @@
 :root {
     --background-color: #131313;
-    --card-background: #1a1a1a;
+    --card-background: #1e1e1e;
     --card-hover: #252525;
     --section-background: #111111;
     --text-color: #e0e0e0;
-    --text-secondary: #a0a0a0;
+    --text-secondary: #afafaf;
     --accent-color: #ffffff;
     --accent-hover: #ffffff;
     --border-color: #333333;
-    --low-color: #a0a0a0;
-    --medium-color: #c4c4c4;
-    --high-color: #c4c4c4;
-    --critical-color: #c4c4c4;
+    --low-color: #afafaf;
+    --medium-color: #afafaf;
+    --high-color: #afafaf;
+    --critical-color: #afafaf;
     --grid-color: rgba(68, 68, 68, 0.05);
 }
 
@@ -59,18 +59,19 @@ header {
 
 h1 {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 1rem;
     color: var(--text-color);
     letter-spacing: -0.5px;
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.7rem;
     max-width: 600px;
     margin: 0 auto;
     color: var(--text-secondary);
     font-weight: 300;
+    padding-top: 5.5rem;
 }
 
 /* Section Styling */
@@ -307,4 +308,61 @@ tr:last-child td {
     .metric-value {
         font-size: 1.8rem;
     }
+}
+
+/** navbar */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(2px);
+    padding: 1rem 2rem;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.logo {
+    height: 4.5rem;
+    width: 4.5rem;
+    padding: 0.25rem;
+    border-radius: 30%;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    float: right;
+    font-family: 'Varela Round', sans-serif;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 1rem;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(71, 71, 71);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(204, 204, 204, 0.7);
+    transition: color 0.3s;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Varela Round', sans-serif;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    font-family: 'Varela Round', sans-serif;
 }
