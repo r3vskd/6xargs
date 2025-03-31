@@ -5,13 +5,13 @@
     --section-background: #181818;
     --text-color: #e0e0e0;
     --text-secondary: #a0a0a0;
-    --accent-color: #8e8eff;
-    --accent-hover: #7070ff;
+    --accent-color: #ffffff;
+    --accent-hover: #ffffff;
     --border-color: #333333;
     --low-color: #a0a0a0;
-    --medium-color: #ffda85;
-    --high-color: #ff8a65;
-    --critical-color: #ff5252;
+    --medium-color: #c4c4c4;
+    --high-color: #c4c4c4;
+    --critical-color: #c4c4c4;
 }
 
 * {
