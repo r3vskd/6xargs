@@ -1,8 +1,8 @@
 :root {
-    --background-color: #121212;
-    --card-background: #1e1e1e;
+    --background-color: #131313;
+    --card-background: #1a1a1a;
     --card-hover: #252525;
-    --section-background: #181818;
+    --section-background: #111111;
     --text-color: #e0e0e0;
     --text-secondary: #a0a0a0;
     --accent-color: #ffffff;
@@ -12,7 +12,7 @@
     --medium-color: #c4c4c4;
     --high-color: #c4c4c4;
     --critical-color: #c4c4c4;
-    --grid-color: rgba(255, 255, 255, 0.05);
+    --grid-color: rgba(68, 68, 68, 0.05);
 }
 
 * {
