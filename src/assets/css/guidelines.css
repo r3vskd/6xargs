@@ -367,7 +367,7 @@ nav ul li a:hover {
     font-family: 'Varela Round', sans-serif;
 }
 
-/** footer */
+/** footer **/
 
 footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -475,3 +475,4 @@ footer {
     .horizontal-list {
         justify-content: center;
     }
+}
