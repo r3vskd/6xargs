@@ -69,7 +69,7 @@ h1 {
     font-size: 1.7rem;
     max-width: 600px;
     margin: 0 auto;
-    color: var(--text-secondary);
+    color: var(--text-color);
     font-weight: 300;
     padding-top: 5.5rem;
 }
@@ -166,7 +166,7 @@ h1 {
 .metric-value {
     font-size: 2.2rem;
     font-weight: 600;
-    color: var(--accent-color);
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
 }
 
