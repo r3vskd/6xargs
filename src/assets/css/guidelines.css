@@ -310,7 +310,7 @@ tr:last-child td {
     }
 }
 
-/** navbar */
+/** navbar **/
 nav {
     width: 100%;
     position: fixed;
@@ -366,3 +366,112 @@ nav ul li a:hover {
     color: rgb(255, 255, 255);
     font-family: 'Varela Round', sans-serif;
 }
+
+/** footer */
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-family: "Varela", serif;
+}
+
+.footer-section {
+    margin-bottom: 2rem;
+    margin-left: 2.5rem;
+}
+
+.footer-section h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.horizontal-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+}
+
+.horizontal-list li a {
+    color: rgba(204, 204, 204, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.horizontal-list li a:hover {
+    color: var(--text-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bottom ul li {
+    display: inline; 
+    margin: 5px;
+}
+
+.footer-bottom ul li a {
+    text-decoration: none; 
+    color: #007BFF; 
+}
+
+.footer-bottom ul li a:hover {
+    color: #0056b3; 
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+        
+    }
+
+    .cards-section {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .horizontal-list {
+        justify-content: center;
+    }
