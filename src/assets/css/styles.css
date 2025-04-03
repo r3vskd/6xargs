@@ -52,11 +52,11 @@ nav {
     background-color: rgba(10, 10, 15, 0.2); /* Fondo ligeramente más oscuro pero aún transparente */
     backdrop-filter: blur(4px) brightness(1.5) saturate(1.2); /* Aumentar blur y añadir brillo y saturación */
     -webkit-backdrop-filter: blur(8px) brightness(1.1) saturate(1.2); /* Para compatibilidad con Safari */
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     font-family: 'Varela Round', sans-serif;
-    font-weight: bold;
+    font-weight:lighter;
     display: flex;
-    justify-content: space-between;
+    justify-content:first baseline;
     align-items: center;
     
     /* Efecto de brillo en los bordes */
