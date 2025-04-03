@@ -56,7 +56,7 @@ nav {
     font-family: 'Varela Round', sans-serif;
     font-weight:lighter;
     display: flex;
-    justify-content:first baseline;
+    justify-content: center;
     align-items: center;
     
     /* Efecto de brillo en los bordes */
