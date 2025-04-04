@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Ejemplo de uso de la librería Lucide para el dashborad (es solo un POC, pendiente por modificar)
-    // Inicializar los iconos de Lucide
     lucide.createIcons();
 
     const navLinks = document.querySelectorAll('.nav-menu a');
