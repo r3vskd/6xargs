@@ -61,7 +61,7 @@ nav {
     
     /* Efecto de brillo en los bordes */
     box-shadow: 
-        0 4px 30px rgba(142, 142, 255, 0.1), /* Sombra exterior sutil */
+        0 4px 30px rgba(142, 142, 255, 0.1), 
         inset 0 0 20px rgba(255, 255, 255, 0.05); /* Brillo interior */
     
     /* Borde inferior con brillo */
@@ -74,7 +74,6 @@ nav {
         rgba(255, 255, 255, 0) 100%
     );
     
-    /* Transición suave para efectos hover */
     transition: all 0.3s ease;
 }
 
