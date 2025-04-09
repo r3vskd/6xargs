@@ -311,37 +311,94 @@ footer {
         justify-content: center;
     }
 
-    /** navbar */
-    nav ul {
-        display: none;
-    }
+/** navbar */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(10, 10, 15, 0.2); /* Fondo ligeramente más oscuro pero aún transparente */
+    backdrop-filter: blur(4px) brightness(1.5) saturate(1.2); /* Aumentar blur y añadir brillo y saturación */
+    -webkit-backdrop-filter: blur(8px) brightness(1.1) saturate(1.2); /* Para compatibilidad con Safari */
+    padding: 1rem 1rem;
+    font-family: 'Varela Round', sans-serif;
+    font-weight:lighter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Efecto de brillo en los bordes */
+    box-shadow: 
+        0 4px 30px rgba(142, 142, 255, 0.1), 
+        inset 0 0 20px rgba(255, 255, 255, 0.05); /* Brillo interior */
+    
+    /* Borde inferior con brillo */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Gradiente*/
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    
+    transition: all 0.3s ease;
+}
 
-    .menu-icon {
-        display: block;
-        float: right;
-        font-size: 24px;
-        color: var(--text-color);
-        cursor: pointer;
-    }
+.logo {
+    height: 4.5rem;
+    width: 4.5rem;
+    padding: 0.25rem;
+    border-radius: 30%;
+}
 
-    .menu-icon:hover {
-        color: var(--primary-color);
-    }
+.logo:hover {
+    cursor: pointer;
+}
 
-    nav.responsive ul {
-        display: block;
-        width: 100%;
-        text-align: center;
-        background-color: rgba(10, 15, 28, 0.95);
-        position: absolute;
-        top: 60px;
-        left: 0;
-    } 
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    float: right;
+    font-family: "Varela", serif;
+}
 
-    nav.responsive ul li {
-        display: block;
-        padding: 10px 0;
-    }
+nav ul li {
+    display: inline-block;
+    padding: 0 1rem;
+    font-family: "Varela", serif;
+    color: rgb(71, 71, 71);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(204, 204, 204, 0.7);
+    transition: color 0.3s;
+    position: relative;
+    overflow: hidden;
+    font-family: "Varela", serif;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    font-family: "Varela", serif;
+}
+
+header {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
 }
 
 /* Animation for cards - simplificada */
