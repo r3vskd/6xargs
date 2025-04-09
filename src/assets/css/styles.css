@@ -67,7 +67,7 @@ nav {
     /* Borde inferior con brillo */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     
-    /* Gradiente dimensión */
+    /* Gradiente dimensión*/
     background-image: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.03) 0%,
