@@ -141,7 +141,7 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Reducida la sombra */
     padding: 4rem;
     font-weight: bold;
-    will-change: transform; /* Mejora el rendimiento de tran*/
+    will-change: transform; /* Mejora el rendimiento */
 }
 
 .card:hover {
