@@ -131,7 +131,7 @@ main {
 .card {
     position: relative;
     background: rgba(15, 15, 15, 0.3);
-    backdrop-filter: none; /* Eliminado el blur */
+    backdrop-filter: none; /* Eliminado blur */
     border-radius: 1.5rem;
     padding: 2rem;
     transition: transform 0.3s ease; /* Reducido tiempo de transición */
