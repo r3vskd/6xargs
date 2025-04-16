@@ -134,11 +134,11 @@ main {
     backdrop-filter: none; /* Eliminado blur */
     border-radius: 1.5rem;
     padding: 2rem;
-    transition: transform 0.3s ease; /* Reducido tiempo de transición */
+    transition: transform 0.3s ease; /* Reducir tiempo de transición */
     text-transform: none;
     text-align: justify;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Reducida la sombra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Reducir sombra */
     padding: 4rem;
     font-weight: bold;
     will-change: transform; /* Mejora rendimiento */
