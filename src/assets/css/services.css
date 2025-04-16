@@ -15,7 +15,7 @@
 }
 
 body {
-    background: #26113d; /* Simplificado del gradiente */
+    background: #26113d; /* Simplificion gradiente */
     color: var(--text-color);
     line-height: 1.2;
     min-height: 80vh;
