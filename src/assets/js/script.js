@@ -13,43 +13,63 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function goToIndex() {
+function goindex() {
     window.location.href = '/assets/html/index.html';
 }
 
-function goToAbout() {
+function goabout() {
     window.location.href = '/assets/html/about.html';
 }
 
-function goToProjects() {
-    window.location.href = '/assets/html/projects.html';
+function gocontact() {
+    window.location.href = '/assets/html/contacts.html';
 }
 
-function goToContact() {
-    window.location.href = '/assets/html/contact.html';
+function godashboard() {
+    window.location.href = '/assets/html/dashboard.html';
 }
 
-function goToBlog() {
-    window.location.href = '/assets/html/blog.html';
+function goinbox() {
+    window.location.href = '/assets/html/inbox.html';
 }
 
-function goToResume() {
-    window.location.href = '/assets/html/resume.html';
+function goleaderboard() {
+    window.location.href = '/assets/html/leaderboard.html';
 }
 
-function goToHome() {
-    window.location.href = '/assets/html/home.html';
+function gologin() {
+    window.location.href = '/assets/html/login.html';
 }
 
-function goToServices() {
+function goorgs() {
+    window.location.href = '/assets/html/orgs.html';
+}   
+
+function goprivacy() {
+    window.location.href = '/assets/html/privacy-policy.html';
+}
+
+function goprofile() {
+    window.location.href = '/assets/html/profile.html';
+}
+
+function goguidelines() {
+    window.location.href = '/assets/html/program-guidelines.html';
+}
+
+function goprograms() {  
+    window.location.href = '/assets/html/programs.html';
+}
+
+function goregister() {  
+    window.location.href = '/assets/html/register.html';
+}
+
+function goservices() {
     window.location.href = '/assets/html/services.html';
 }
 
-function goToTestimonials() {
-    window.location.href = '/assets/html/testimonials.html';
-}   
-
-function goToPortfolio() {
-    window.location.href = '/assets/html/portfolio.html';
+function goterms() {
+    window.location.href = '/assets/html/terms-and-conditions.html';
 }
 
