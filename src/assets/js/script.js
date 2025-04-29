@@ -72,4 +72,3 @@ function goservices() {
 function goterms() {
     window.location.href = '/assets/html/terms-and-conditions.html';
 }
-
