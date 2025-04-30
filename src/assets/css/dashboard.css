@@ -13,7 +13,7 @@
   }
   
   body {
-    background: linear-gradient(45deg, #000000, #26113d, #000000);
+    background: linear-gradient(45deg, #000000, #131313, #000000);
     color: var(--text-color);
     line-height: 1.2;
     min-height: 100vh;
@@ -28,7 +28,7 @@
   }
   
   .navbar {
-    background-color: rgba(32, 22, 49, 0.95);
+    background-color: rgba(12, 12, 12, 0.95);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
