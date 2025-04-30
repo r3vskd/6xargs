@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 :root {
-    --primary-color: #370080;
+    --primary-color: #131313;
     --background-color: #f1f1f1;
     --card-background: rgba(36, 36, 36, 0.1);
     --text-color: #ffffff;
@@ -15,7 +15,7 @@
 }
 
 body {
-    background: #26113d; /* Simplificado del gradiente */
+    background: #131313; /* Simplificado del gradiente */
     color: var(--text-color);
     line-height: 1.2;
     min-height: 80vh;
@@ -422,7 +422,7 @@ footer {
     }
 
     form button:hover {
-        background: #43328f;
+        background: #161616;
         transform: translateY(-2px);
     }
 }
