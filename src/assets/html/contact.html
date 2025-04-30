@@ -10,182 +10,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/contact.css">
 
-    <style media="screen">
-        *,
-        *:before,
-        *:after {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background-color: #080808;
-            font-family: "Varela", serif;
-            font-weight: bold;
-        }
-        form {
-            height: 44.6875 rem;
-            width: 500px;
-            background-color: rgba(0, 0, 0, 0.13);
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            left: 50%;
-            border-radius: 10px;
-            backdrop-filter: blur(4px);
-            border: 2px solid rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
-            padding: 50px 35px;
-            font-family: "Varela", serif;
-            font-weight: bold;
-        }
-        form * {
-            font-family: "Varela", serif;
-            font-weight: bold;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-            outline: none;
-            border: none;
-        }
-        form h3 {
-            font-size: 35px;
-            font-weight: 500;
-            line-height: 42px;
-            text-align: center;
-        }
-        label {
-            display: block;
-            margin-top: 30px;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        input {
-            display: block;
-            height: 50px;
-            width: 100%;
-            background-color: rgba(124, 124, 124, 0.07);
-            border-radius: 3px;
-            padding: 0 10px;
-            margin-top: 8px;
-            font-size: 14px;
-            font-weight: 300;
-        }
-        ::placeholder {
-            color: #e5e5e5;
-        }
-        button {
-            margin: 10px auto 0;
-            align-self: center;
-            display: block;
-            margin-top: 30px;
-            width: 40%;
-            background-color: #181818;
-            color: #ffffff;
-            padding: 7px 0;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.5s ease;
-        }
-        button:hover {
-            background-color: #252525;
-        }
-        select {
-            display: block;
-            width: 100%;
-            height: 50px;
-            background-color: #1a1a1a;
-            color: #ffffff;
-            border: 1px solid #333333;
-            border-radius: 3px;
-            padding: 5px 10px;
-            font-size: 14px;
-        }
-        select option {
-            background-color: #1a1a1a;
-            color: #ffffff;
-        }
-        select option:hover {
-            background-color: #333333;
-        }
-        .footer {
-            margin-top: 34px;
-            text-align: center;
-            font-size: 13px;
-        }
-        .footer a {
-            color: #808080;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: #5900ff;
-        }
-    </style>
 </head>
 <body>
     <div id="canvas-container">
         <canvas id="nokey" width="800" height="800"></canvas>
     </div>
-    <script src="/assets/js/neural.js"></script>
-    <div class="form-container">
-        <form>
-            <h3>Organization Contact Form</h3>
+<script src="/assets/js/neural.js"></script>
+<div class="form-container">
+    <form>
+        <h3>Organization Contact Form</h3>
 
-            <label for="companyName">Name</label>
-            <input type="text" id="companyName" name="companyName" placeholder="Enter the name of the organization" required>
-            
-            <label for="companyEmail">Email</label>
-            <input type="email" id="companyEmail" name="companyEmail" placeholder="Enter the email of the organization" required>
-            
-            <label for="country">Country</label>
-            <input type="text" id="country" name="country" placeholder="Enter the country of the organization" required>
-            
+        <label for="companyName">Name</label>
+        <input type="text" id="companyName" name="companyName" placeholder="Enter the name of the organization" required>
+        
+        <label for="companyEmail">Email</label>
+        <input type="email" id="companyEmail" name="companyEmail" placeholder="Enter the email of the organization" required>
+        
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" placeholder="Enter the country of the organization" required>
+        
 
-            <label for="companyType">Category</label>
-            <select id="companyType" name="companyType" required>
-                <option value="">Select the category of the organization </option>
-                <option value="alcoholic-beverages">Alcoholic Beverages</option>
-                <option value="artificial intelligence">Artificial Intelligence</option>
-                <option value="architecture">Architecture</option>
-                <option value="aviation">Aviation</option>
-                <option value="cibersecurity">Cibersecurity</option>
-                <option value="civil-engineering">Construction Industry</option>
-                <option value="content-creation">Content Creation</option>
-                <option value="cosmetics-care">Cosmetics & Personal Care</option>
-                <option value="crypto-blockchain">Crypto or Blockchain</option>
-                <option value="digital-payments">Fintech or Digital Payments</option>
-                <option value="e-commerce">E-commerce</option>
-                <option value="education">Education</option>
-                <option value="energy-environment">Energy or Environmental Industry</option>
-                <option value="federal-institutions">Federal Institution</option>
-                <option value="film-radio-tv">Film, Radio, or Television</option>
-                <option value="food-nutrition">Food or Nutrition</option>
-                <option value="agriculture">Farm, Agriculture, Livestock, or Fishing Industry</option>
-                <option value="human-rights">Public Institution</option>
-                <option value="healthcare">Healthcare</option>
-                <option value="insurance">Insurance</option>
-                <option value="iot">IoT (Internet of Things)</option>
-                <option value="it">IT</option>
-                <option value="real-estate">Real Estate</option>
-                <option value="Security">Intelligence agencies, PMC, PSC or another Security Agencies</option>
-                <option value="sports">Sports</option>
-                <option value="treasury">Treasury Sector</option>
-                <option value="transportation-traffic">Land Transportation</option>
-                <option value="tobacco">Tobacco</option>
-                <option value="waterborne-transportation">Waterborne Transportation</option>
-                <option value="other">Other Category</option>
-            </select>
+        <label for="companyType">Category</label>
+        <select id="companyType" name="companyType" required>
+            <option value="">Select the category of the organization </option>
+            <option value="alcoholic-beverages">Alcoholic Beverages</option>
+            <option value="artificial intelligence">Artificial Intelligence</option>
+            <option value="architecture">Architecture</option>
+            <option value="aviation">Aviation</option>
+            <option value="cibersecurity">Cibersecurity</option>
+            <option value="civil-engineering">Construction Industry</option>
+            <option value="content-creation">Content Creation</option>
+            <option value="cosmetics-care">Cosmetics & Personal Care</option>
+            <option value="crypto-blockchain">Crypto or Blockchain</option>
+            <option value="digital-payments">Fintech or Digital Payments</option>
+            <option value="e-commerce">E-commerce</option>
+            <option value="education">Education</option>
+            <option value="energy-environment">Energy or Environmental Industry</option>
+            <option value="federal-institutions">Federal Institution</option>
+            <option value="film-radio-tv">Film, Radio, or Television</option>
+            <option value="food-nutrition">Food or Nutrition</option>
+            <option value="agriculture">Farm, Agriculture, Livestock, or Fishing Industry</option>
+            <option value="human-rights">Public Institution</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="insurance">Insurance</option>
+            <option value="iot">IoT (Internet of Things)</option>
+            <option value="it">IT</option>
+            <option value="real-estate">Real Estate</option>
+            <option value="Security">Intelligence agencies, PMC, PSC or another Security Agencies</option>
+            <option value="sports">Sports</option>
+            <option value="treasury">Treasury Sector</option>
+            <option value="transportation-traffic">Land Transportation</option>
+            <option value="tobacco">Tobacco</option>
+            <option value="waterborne-transportation">Waterborne Transportation</option>
+            <option value="other">Other Category</option>
+        </select>
 
-            <button type="submit">Send</button>
+        <button type="submit">Send</button>
 
-            <div class="footer">
-                <a href="/assets/html/index.html">©2025 6xargs</a>
-                <li><a href="https://www.github.com/">GitHub</a></li>
-                <li><a href="/assets/html/terms-and-conditions.html">Terms and Conditions</a></li>
-                <li><a href="/assets/html/privacy-policy.html">Privacy & Policy</a></li>
-            </div>
-        </form>
-    </div>
+        <div class="footer">
+            <a href="/assets/html/index.html">©2025 6xargs</a>
+            <li><a href="https://www.github.com/">GitHub</a></li>
+            <li><a href="/assets/html/terms-and-conditions.html">Terms and Conditions</a></li>
+            <li><a href="/assets/html/privacy-policy.html">Privacy & Policy</a></li>
+        </div>
+    </form>
+</div>
 </body>
 </html>
