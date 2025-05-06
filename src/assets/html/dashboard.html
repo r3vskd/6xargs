@@ -4,62 +4,307 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6xargs | Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <div class="dashboard">
-        <nav class="navbar">
-            <img src="/assets/images/6xargs.png" alt="6xargs Logo" class="logo">
-            <ul class="nav-menu">
-                <li><a href="#dashboard" class="active"><i data-lucide="home"></i> Dashboard</a></li>
-                <li><a href="#programs"><i data-lucide="bell"></i> Programs</a></li>
-                <li><a href="inbox.html"><i data-lucide="inbox"></i> Inbox</a></li>
-            </ul>
-        </nav>
+    <div class="grid-background"></div>
+    <div class="fluorescent-bg">
+        <div class="fluorescent-shape shape1"></div>
+        <div class="fluorescent-shape shape2"></div>
+        <div class="fluorescent-shape shape3"></div>
+        <div class="fluorescent-shape shape4"></div>
+    </div>
 
-        <main class="dashboard-content">
-            <h1>Welcome to your Dashboard</h1>
-            <div class="cards-section">
-                <div class="card">
-                    <h2>Active Programs</h2>
-                    <p id="active-programs">Loading...</p>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/50" alt="6xargs Logo">
+                    <h2>6xargs</h2>
                 </div>
-                <div class="card">
-                    <h2>Recent Activity</h2>
-                    <p id="recent-activity">Loading...</p>
+                <button class="mobile-toggle" id="sidebarToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <span class="icon">📊</span>
+                            <span class="text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">🔍</span>
+                            <span class="text">Programs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">✉️</span>
+                            <span class="text">Inbox</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#">
+                    <span class="icon">❓</span>
+                    <span class="text">Help & Support</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search programs, reports, or users...">
+                    <button>🔍</button>
                 </div>
-                <div class="card">
-                    <h2>Earnings</h2>
-                    <p id="earnings">Loading...</p>
+                
+                <div class="user-actions">
+                    <div class="notifications">
+                        <span class="icon">🔔</span>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="messages">
+                        <span class="icon">✉️</span>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://via.placeholder.com/40" alt="User Profile">
+                        <span>John Doe</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <h1>Dashboard Overview</h1>
+                
+                <!-- Stats Overview -->
+                <section class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-info">
+                            <h3>Total Rewards</h3>
+                            <p class="stat-value">$12,450</p>
+                            <p class="stat-change positive">+15% from last month</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-info">
+                            <h3>Submitted Reports</h3>
+                            <p class="stat-value">42</p>
+                            <p class="stat-change positive">+8% from last month</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <h3>Accepted Reports</h3>
+                            <p class="stat-value">28</p>
+                            <p class="stat-change positive">+12% from last month</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Main Dashboard Cards -->
+                <div class="dashboard-grid">
+                    <!-- Active Programs -->
+                    <section class="dashboard-card active-programs">
+                        <div class="section-header">
+                            <h2>Programas Activos</h2>
+                            <a href="#" class="view-all">Ver Todos</a>
+                        </div>
+                        
+                        <div class="programs-list">
+                            <div class="program-item">
+                                <img src="https://via.placeholder.com/50" alt="Company A Logo">
+                                <div class="program-details">
+                                    <h4>Company A</h4>
+                                    <p>Web Application Security</p>
+                                    <div class="program-rewards">
+                                        <span class="reward-tag">$500-$10,000</span>
+                                        <span class="program-tag high">High Activity</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="program-item">
+                                <img src="https://via.placeholder.com/50" alt="Company B Logo">
+                                <div class="program-details">
+                                    <h4>Company B</h4>
+                                    <p>Mobile Application Security</p>
+                                    <div class="program-rewards">
+                                        <span class="reward-tag">$250-$5,000</span>
+                                        <span class="program-tag medium">Medium Activity</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="program-item">
+                                <img src="https://via.placeholder.com/50" alt="Company C Logo">
+                                <div class="program-details">
+                                    <h4>Company C</h4>
+                                    <p>API Security</p>
+                                    <div class="program-rewards">
+                                        <span class="reward-tag">$1,000-$15,000</span>
+                                        <span class="program-tag low">Low Activity</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="program-item">
+                                <img src="https://via.placeholder.com/50" alt="Company D Logo">
+                                <div class="program-details">
+                                    <h4>Company D</h4>
+                                    <p>Cloud Infrastructure</p>
+                                    <div class="program-rewards">
+                                        <span class="reward-tag">$750-$12,500</span>
+                                        <span class="program-tag high">High Activity</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Recent Activity -->
+                    <section class="dashboard-card recent-activity">
+                        <div class="section-header">
+                            <h2>Actividad Reciente</h2>
+                            <a href="#" class="view-all">Ver Todo</a>
+                        </div>
+                        
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon accepted">✅</div>
+                                <div class="activity-details">
+                                    <h4>Report Accepted</h4>
+                                    <p>Your XSS vulnerability report for Company A was accepted</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                                <div class="activity-reward">+$1,500</div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon pending">⏳</div>
+                                <div class="activity-details">
+                                    <h4>Report Under Review</h4>
+                                    <p>Your CSRF vulnerability report for Company B is being reviewed</p>
+                                    <span class="activity-time">1 day ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon rejected">❌</div>
+                                <div class="activity-details">
+                                    <h4>Report Rejected</h4>
+                                    <p>Your SQL Injection report for Company C was rejected</p>
+                                    <span class="activity-time">3 days ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon accepted">✅</div>
+                                <div class="activity-details">
+                                    <h4>Report Accepted</h4>
+                                    <p>Your Authentication Bypass report for Company D was accepted</p>
+                                    <span class="activity-time">5 days ago</span>
+                                </div>
+                                <div class="activity-reward">+$2,200</div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Earnings -->
+                    <section class="dashboard-card earnings">
+                        <div class="section-header">
+                            <h2>Ganancias</h2>
+                            <a href="#" class="view-all">Ver Historial</a>
+                        </div>
+                        
+                        <div class="earnings-overview">
+                            <div class="earnings-total">
+                                <h3>Total Ganancias</h3>
+                                <p class="earnings-value">$18,750</p>
+                                <p class="earnings-period">Últimos 6 meses</p>
+                            </div>
+                            
+                            <div class="earnings-chart">
+                                <div class="chart-container">
+                                    <!-- Placeholder for chart -->
+                                    <div class="line-chart-placeholder">
+                                        <div class="line-point" style="bottom: 20%; left: 10%"></div>
+                                        <div class="line-point" style="bottom: 40%; left: 25%"></div>
+                                        <div class="line-point" style="bottom: 30%; left: 40%"></div>
+                                        <div class="line-point" style="bottom: 60%; left: 55%"></div>
+                                        <div class="line-point" style="bottom: 50%; left: 70%"></div>
+                                        <div class="line-point" style="bottom: 75%; left: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="earnings-details">
+                                <div class="earnings-month">
+                                    <span class="month">Enero</span>
+                                    <span class="amount">$1,200</span>
+                                </div>
+                                <div class="earnings-month">
+                                    <span class="month">Febrero</span>
+                                    <span class="amount">$2,500</span>
+                                </div>
+                                <div class="earnings-month">
+                                    <span class="month">Marzo</span>
+                                    <span class="amount">$1,800</span>
+                                </div>
+                                <div class="earnings-month">
+                                    <span class="month">Abril</span>
+                                    <span class="amount">$3,750</span>
+                                </div>
+                                <div class="earnings-month">
+                                    <span class="month">Mayo</span>
+                                    <span class="amount">$3,200</span>
+                                </div>
+                                <div class="earnings-month">
+                                    <span class="month">Junio</span>
+                                    <span class="amount">$4,800</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </main>
-
-        <footer>
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="horizontal-list">
-                        <li><a href="#profile">Profile</a></li>
-                        <li><a href="#settings">Configuration</a></li>
-                        <li><a href="#help">Help Center</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>©2025 6xargs All rights reserved</p>
-            </div>
-        </footer>
     </div>
-    <script>
-        document.getElementById("active-programs").innerText = "You have 3 active programs";
-        document.getElementById("recent-activity").innerText = "2 new messages in your inbox";
-        document.getElementById("earnings").innerText = "Total earnings: $1,500";
-        lucide.createIcons();
-    </script>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <a href="#">©2025 6xargs</a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Privacy & Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-
