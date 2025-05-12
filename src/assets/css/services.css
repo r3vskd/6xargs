@@ -92,9 +92,8 @@ nav ul li a {
   overflow: hidden;
   font-family: "Varela", serif;
 }
-
 nav ul li a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(163, 105, 255);
   font-family: "Varela", serif;
 }
 

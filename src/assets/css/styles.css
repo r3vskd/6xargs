@@ -15,7 +15,7 @@
 }
 
 body {
-  background: #131313; /* Simplificado del gradiente */
+  background: #070707; /* Simplificado del gradiente */
   color: var(--text-color);
   line-height: 1.2;
   min-height: 80vh;
@@ -48,9 +48,9 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgba(10, 10, 15, 0.2); /* Fondo ligeramente más oscuro pero aún transparente */
-  backdrop-filter: blur(4px) brightness(1.5) saturate(1.2); /* Aumentar blur y añadir brillo y saturación */
-  -webkit-backdrop-filter: blur(8px) brightness(1.1) saturate(1.2); /* Para compatibilidad con Safari */
+  background-color: rgba(7, 7, 7, 0.2);
+  backdrop-filter: blur(8px) brightness(1.5) saturate(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(1.1) saturate(1.2);
   padding: 1rem 1rem;
   font-family: "Varela Round", sans-serif;
   font-weight: lighter;
@@ -105,7 +105,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(163, 105, 255);
   font-family: "Varela", serif;
 }
 
@@ -141,7 +141,7 @@ main {
 
 .card {
   position: relative;
-  background: rgba(12, 12, 14, 0.7);
+  background: rgba(29, 29, 29, 0.7);
   border-radius: 0.75rem;
   padding: 3rem;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -181,7 +181,7 @@ main {
 
 .form-card,
 .business-card {
-  background: rgba(10, 10, 15, 0.7);
+  background: rgba(14, 14, 14, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
