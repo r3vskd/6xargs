@@ -338,7 +338,7 @@ footer {
 }
 
 .horizontal-list li a:hover {
-  color: var(--text-color);
+  color: #976aff;
 }
 
 .footer-bottom {

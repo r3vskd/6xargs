@@ -306,7 +306,7 @@ button:hover {
 }
 
 footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(236, 236, 236, 0.1);
   padding-top: 3rem;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -351,7 +351,7 @@ footer {
 }
 
 .horizontal-list li a:hover {
-  color: var(--text-color);
+  color: #976aff;
 }
 
 .footer-bottom {
@@ -379,11 +379,11 @@ footer {
 }
 
 .footer-bottom ul li a:hover {
-  color: #0056b3;
+  color: #a680ff;
 }
 
 .footer-bottom p {
-  color: rgba(255, 255, 255, 0.5);
+  color: #bbbbbb;
 }
 
 /* Responsive */
