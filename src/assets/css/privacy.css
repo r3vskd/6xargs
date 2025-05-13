@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
 :root {
-    --primary-color: #131313;
-    --background-color: #26113d;
+    --primary-color: #161616;
+    --background-color: #131313;
     --card-background: rgba(36, 36, 36, 0.1);
     --text-color: #ffffff;
 }
@@ -9,16 +11,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Varela Round", sans-serif;
+    font-family: "Varela Round", serif;
 }
 
 body {
-    background: #131313;
+    background: #070707;
     color: var(--text-color);
     line-height: 1.6;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    font-family: "Varela Round", serif;
+}
+
+::selection {
+  background-color: #6c5ce7; /* color de fondo al seleccionar */
+  color: #ffffff;            /* color del texto seleccionado */
 }
 
 .grid-background {
@@ -36,85 +44,61 @@ body {
     transform: translateZ(0);
 }
 
-/* Fluorescent background effect */
-.fluorescent-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    overflow: hidden;
-}
-
-.fluorescent-shape {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.15;
-}
-
-
-
-/* Navigation */
+/** navbar */
 nav {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: rgba(10, 10, 15, 0.2);
-    backdrop-filter: blur(4px) brightness(1.5) saturate(1.2);
-    -webkit-backdrop-filter: blur(4px) brightness(1.5) saturate(1.2);
-    padding: 1rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 
-        0 4px 30px rgba(142, 142, 255, 0.1), 
-        inset 0 0 20px rgba(255, 255, 255, 0.05);
-    background-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.03) 0%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    transition: all 0.3s ease;
-}
-
-.nav-container {
-    width: 100%;
-    max-width: 1600px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(7, 7, 7, 0.2);
+  backdrop-filter: blur(8px) brightness(1.5) saturate(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(1.1) saturate(1.2);
+  padding: 1rem 1rem;
+  font-family: "Varela Round", serif;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-    height: 4.5rem;
-    width: 4.5rem;
-    padding: 0.25rem;
-    border-radius: 30%;
-    cursor: pointer;
+  height: 4.5rem;
+  width: 4.5rem;
+  padding: 0.25rem;
+  border-radius: 30%;
+}
+
+.logo:hover {
+  cursor: pointer;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  overflow: hidden;
+  float: right;
+  font-family: "Varela Round", serif;
 }
 
 nav ul li {
-    margin: 0 1rem;
+  display: inline-block;
+  padding: 0 1rem;
+  font-family: "Varela Round", serif;
+  color: rgb(71, 71, 71);
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: rgba(204, 204, 204, 0.7);
-    transition: color 0.3s;
+  text-decoration: none;
+  color: rgba(204, 204, 204, 0.7);
+  transition: color 0.3s;
+  position: relative;
+  overflow: hidden;
+  font-family: "Varela Round", serif;
 }
 
 nav ul li a:hover {
-    color: #ffffff;
+  color: rgb(163, 105, 255);
+  font-family: "Varela Round", serif;
 }
 
 /* Header */
@@ -149,7 +133,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 16px;
     padding: 2.5rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -167,12 +151,6 @@ h2:first-child {
     margin-top: 0;
 }
 
-h3 {
-    font-size: 1.4rem;
-    margin: 1.5rem 0 1rem;
-    color: rgba(255, 255, 255, 0.9);
-}
-
 p {
     margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.8);
@@ -185,43 +163,6 @@ ul {
 ul li {
     margin-bottom: 0.5rem;
     color: rgba(255, 255, 255, 0.8);
-}
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-thead {
-    background-color: rgba(55, 0, 128, 0.5);
-}
-
-th, td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-th {
-    color: #ffffff;
-    font-weight: 600;
-}
-
-td {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-tr:hover {
-    background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Footer */
@@ -267,7 +208,7 @@ footer {
 }
 
 .horizontal-list li a:hover {
-    color: var(--text-color);
+  color: #976aff;
 }
 
 .footer-bottom {
@@ -288,11 +229,6 @@ footer {
 
     .content {
         padding: 1.5rem;
-    }
-
-    table {
-        display: block;
-        overflow-x: auto;
     }
 
     nav ul {
@@ -320,4 +256,40 @@ footer {
     .horizontal-list {
         justify-content: center;
     }
+}
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: rgba(27, 27, 27, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: rgba(5, 5, 5, 0.5);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+td {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }

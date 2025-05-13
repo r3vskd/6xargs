@@ -23,6 +23,11 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  background-color: #6c5ce7; /* color de fondo al seleccionar */
+  color: #ffffff;            /* color del texto seleccionado */
+}
+
 .grid-background {
   position: fixed;
   top: 0;
