@@ -5,6 +5,13 @@
     --background-color: #131313;
     --card-background: rgba(36, 36, 36, 0.1);
     --text-color: #ffffff;
+    --selection-color-background: #6450ff;
+  --selection-color-text: #bdb4ff;
+}
+
+::selection {
+  background-color: var(--selection-color-background);
+  color: var(--selection-color-text);
 }
 
 * {
@@ -22,11 +29,6 @@ body {
     position: relative;
     overflow-x: hidden;
     font-family: "Varela Round", serif;
-}
-
-::selection {
-  background-color: #6c5ce7; /* color de fondo al seleccionar */
-  color: #ffffff;            /* color del texto seleccionado */
 }
 
 .grid-background {
