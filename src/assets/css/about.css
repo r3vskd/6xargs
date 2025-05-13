@@ -141,7 +141,7 @@ main {
 }
 
 .card:hover {
-  background: rgba(15, 15, 18, 0.85);
+  background: rgba(8, 8, 8, 0.85);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
   cursor: pointer;
@@ -157,7 +157,7 @@ main {
   height: 100%;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 50%);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.1s ease;
   pointer-events: none;
 }
 
