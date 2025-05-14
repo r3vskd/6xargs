@@ -504,23 +504,6 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
-  form input[type="email"] {
-    transition: all 0.3s ease;
-  }
-
-  form input[type="email"]:focus {
-    background: rgba(78, 52, 151, 0.2);
-  }
-
-  form button {
-    transition: all 0.1s ease;
-    text-decoration: none;
-  }
-
-  form button:hover {
-    background: #161616;
-    transform: translateY(-2px);
-  }
 }
 
 @media (max-width: 480px) {
