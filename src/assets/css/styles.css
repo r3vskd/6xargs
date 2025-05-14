@@ -310,7 +310,7 @@ h1 {
   line-height: 1.2;
   text-transform: none;
   margin: 0 auto;
-  text-align: center;
+  text-align: justify;
   width: 100%;
   max-width: 100%;
 }
@@ -338,36 +338,6 @@ h2 {
 
 form {
   margin-top: 2rem;
-}
-
-input[type="email"] {
-  width: 100%;
-  padding: 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: rgb(255, 255, 255);
-  margin-bottom: 1rem;
-  font-family: "Varela", serif;
-}
-
-input[type="email"]::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-button {
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  background: var(--primary-color);
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  text-decoration: none;
-}
-
-button:hover {
-  background: #1a1a1a;
 }
 
 footer {
@@ -466,11 +436,12 @@ footer {
   .cards-section {
     flex-direction: column;
   }
-  
-  /* Responsive para la nueva sección */
+
+  /** Responsive para la nueva sección */
   .how-it-works-container {
     flex-direction: column;
     gap: 2rem;
+    max-height: 10rem;
   }
 
   .footer-content {
