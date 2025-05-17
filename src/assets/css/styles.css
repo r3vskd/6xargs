@@ -507,7 +507,7 @@ footer {
   }
 
   .cards-section {
-    flex-direction: column;
+    flex-direction:row;
   }
 
   /** Responsive para la nueva sección */
