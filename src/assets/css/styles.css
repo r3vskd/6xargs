@@ -125,6 +125,7 @@ header {
   margin: 5rem auto;
   /* Añadir bordes redondeados */
   border-radius: 1rem;
+  border: 2px solid rgb(53, 53, 53);
   /* Añadir sombra para efecto flotante */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* Mantener el contenido centrado */
@@ -206,6 +207,7 @@ header {
   margin: 5rem auto;
   /* Añadir bordes redondeados */
   border-radius: 1rem;
+  border: 2px solid rgb(53, 53, 53);
   /* Añadir sombra para efecto flotante */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* Mantener el contenido centrado */
@@ -391,6 +393,21 @@ main {
   margin: 0 auto;
   max-width: 85vh;
   width: 85vh;
+}
+
+.mini-container {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  height: 5vh;
+  margin: 0 auto;
+  max-width: 85vh;
+  width: 85vh;
+}
+
+.mini-section {
+
 }
 
 h1 {
