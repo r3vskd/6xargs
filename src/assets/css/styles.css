@@ -105,7 +105,7 @@ nav ul li a:hover {
 }
 
 header {
-  height: 70vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,11 +116,22 @@ header {
 /*************** how-it-works-section ************/
 .how-it-works-section {
   background-color: #000000;
-  padding: 20rem 20rem;
+  /* Reducir el padding para que no sea tan grande */
+  padding: 5rem;
+  /* Establecer un ancho máximo */
+  max-width: 1880px;
+  /* Centrar horizontalmente con márgenes automáticos */
+  margin: 5rem auto;
+  /* Añadir bordes redondeados */
+  border-radius: 1rem;
+  /* Añadir sombra para efecto flotante */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Mantener el contenido centrado */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 .how-it-works-container {
   max-width: 1200px;
@@ -186,8 +197,18 @@ header {
 
 .agent-sneak-peek-section {
   background-color: #000000;
-  padding: 20rem 20rem;
-  display:flex;
+  /* Reducir el padding para que no sea tan grande */
+  padding: 5rem;
+  /* Establecer un ancho máximo */
+  max-width: 1880px;
+  /* Centrar horizontalmente con márgenes automáticos */
+  margin: 5rem auto;
+  /* Añadir bordes redondeados */
+  border-radius: 1rem;
+  /* Añadir sombra para efecto flotante */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Mantener el contenido centrado */
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -252,9 +273,9 @@ header {
   line-height: 1.6;
 }
 
-/** MAIN */
+/*** MAIN **/
 main {
-  padding: 20rem 20rem;
+  padding: 13rem 13rem;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -273,13 +294,13 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
   text-transform: none;
 }
 
 .card {
   position: relative;
-  background: rgba(29, 29, 29, 0.7);
+  background: rgba(17, 17, 17, 0.7);
   border-radius: 0.75rem;
   padding: 3rem;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -290,6 +311,7 @@ main {
   font-weight: 500;
   will-change: transform;
   border: 1px solid rgba(255, 255, 255, 0.03);
+  max-height: 12rem;
 }
 
 .card:hover {
@@ -364,7 +386,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  height: 500vh;
   margin: 0 auto;
   max-width: 85vh;
   width: 85vh;
@@ -377,7 +399,7 @@ h1 {
   align-items: center;
   font-size: 3rem;
   letter-spacing: 1px;
-  padding: 0 1rem;
+  padding: 0rem 1rem;
   font-family: "Varela", serif;
   white-space: pre-line;
   line-height: 1.2;
