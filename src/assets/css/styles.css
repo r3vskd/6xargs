@@ -107,10 +107,11 @@ nav ul li a:hover {
 header {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding-right: 50rem;
 }
 
 /*************** how-it-works-section ************/
@@ -395,14 +396,15 @@ main {
 h1 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   font-size: 3rem;
   letter-spacing: 1px;
   padding: 0rem 1rem;
   font-family: "Varela", serif;
   white-space: pre-line;
   line-height: 1.2;
+  font-size: 5rem;
   text-transform: none;
   margin: 0 auto;
   text-align: justify;
