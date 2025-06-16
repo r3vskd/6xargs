@@ -397,9 +397,9 @@ main {
 
 .mini-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
   height: 5vh;
   margin: 0 auto;
   max-width: 85vh;
