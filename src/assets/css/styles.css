@@ -386,9 +386,10 @@ main {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: justify;
   height: 500vh;
   margin: 0 auto;
   max-width: 85vh;
