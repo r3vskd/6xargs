@@ -470,14 +470,14 @@ h2 {
 
 /* Clase independiente para el h2 del hero */
 .hero-subtitle {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   text-transform: none;
   font-family: "Varela", serif;
   line-height: 1.4;
   cursor: default;
-  margin-left: -28rem;
+  margin-left: -38rem;
 }
 
 /* Estilo para cada letra individual */
