@@ -405,7 +405,6 @@ main {
   margin: 0 auto;
   max-width: 85vh;
   width: 85vh;
-  
 }
 
 .mini-section {
@@ -437,6 +436,42 @@ h2 {
   margin-bottom: 0.5rem;
   text-transform: none;
   font-family: "Varela", serif;
+}
+
+/* Clase independiente para el h2 del hero */
+.hero-subtitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: none;
+  font-family: "Varela", serif;
+  line-height: 1.4;
+  cursor: default;
+  margin-left: 4rem;
+}
+
+/* Estilo para cada letra individual */
+.hero-subtitle .letter {
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.hero-subtitle .letter:hover {
+  color: #a855f7;
+  text-shadow: 
+    0 0 5px #a855f7,
+    0 0 10px #a855f7,
+    0 0 15px #a855f7,
+    0 0 20px #a855f7;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Mantener espacios */
+.hero-subtitle .space {
+  display: inline-block;
+  width: 0.3em;
 }
 
 .subtitle {

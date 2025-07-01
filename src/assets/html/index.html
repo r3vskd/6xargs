@@ -38,7 +38,7 @@
             </h1>
             <br>
             <br>
-            <h2>
+            <h2 class="hero-subtitle" id="hero-subtitle">
                 Agentic-AI Powered Bug Bounty.
                 Faster Hacking.
                 Faster Triage times.
@@ -130,5 +130,28 @@
         </div>
     </footer>
     <script src="/assets/js/script.js"></script>
+    <script>
+        // Script para envolver cada letra del hero subtitle en spans
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            if (heroSubtitle) {
+                const text = heroSubtitle.textContent;
+                let wrappedText = '';
+                
+                for (let i = 0; i < text.length; i++) {
+                    const char = text[i];
+                    if (char === ' ') {
+                        wrappedText += '<span class="space"> </span>';
+                    } else if (char === '\n' || char === '\r') {
+                        wrappedText += '<br>';
+                    } else {
+                        wrappedText += `<span class="letter">${char}</span>`;
+                    }
+                }
+                
+                heroSubtitle.innerHTML = wrappedText;
+            }
+        });
+    </script>
 </body>
 </html>
