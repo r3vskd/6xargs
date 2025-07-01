@@ -31,7 +31,7 @@
     </nav>
     <header>
         <div class="container">
-            <h1>
+            <h1 class="hero-title-hover" id="hero-title">
                 Hack.
                 Disrupt.
                 Command-Driven. Bugbounty.
@@ -131,8 +131,38 @@
     </footer>
     <script src="/assets/js/script.js"></script>
     <script>
-        // Script para envolver cada letra del hero subtitle en spans
+        // Script para envolver cada letra del hero title y subtitle en spans
         document.addEventListener('DOMContentLoaded', function() {
+            // Procesar h1 manteniendo la estructura de líneas
+            const heroTitle = document.getElementById('hero-title');
+            if (heroTitle) {
+                const text = heroTitle.textContent;
+                const lines = text.trim().split('\n');
+                let wrappedHTML = '';
+                
+                lines.forEach((line, index) => {
+                    if (line.trim() !== '') {
+                        const trimmedLine = line.trim();
+                        let lineHTML = '<div class="title-line">';
+                        
+                        for (let i = 0; i < trimmedLine.length; i++) {
+                            const char = trimmedLine[i];
+                            if (char === ' ') {
+                                lineHTML += '<span class="space"> </span>';
+                            } else {
+                                lineHTML += `<span class="letter">${char}</span>`;
+                            }
+                        }
+                        
+                        lineHTML += '</div>';
+                        wrappedHTML += lineHTML;
+                    }
+                });
+                
+                heroTitle.innerHTML = wrappedHTML;
+            }
+            
+            // Procesar h2
             const heroSubtitle = document.getElementById('hero-subtitle');
             if (heroSubtitle) {
                 const text = heroSubtitle.textContent;

@@ -438,6 +438,35 @@ h2 {
   font-family: "Varela", serif;
 }
 
+/* Efecto hover por letra para el h1 del hero */
+.hero-title-hover .title-line {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-title-hover .letter {
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.hero-title-hover .letter:hover {
+  color: #a855f7;
+  text-shadow: 
+    0 0 5px #a855f7,
+    0 0 10px #a855f7,
+    0 0 15px #a855f7,
+    0 0 20px #a855f7;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.hero-title-hover .space {
+  display: inline-block;
+  width: 0.3em;
+}
+
 /* Clase independiente para el h2 del hero */
 .hero-subtitle {
   font-size: 2.5rem;
