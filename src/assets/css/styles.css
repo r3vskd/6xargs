@@ -55,14 +55,15 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgba(7, 7, 7, 0.2);
-  backdrop-filter: blur(12px) brightness(1.5) saturate(1.2);
-  -webkit-backdrop-filter: blur(8px) brightness(1.1) saturate(1.2);
+  background-color: rgba(7, 7, 7, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 0.5rem 0.5rem;
   font-family: "Varela Round", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo {
@@ -453,12 +454,12 @@ h2 {
 }
 
 .hero-title-hover .letter:hover {
-  color: #a855f7;
+  color: #6450ff;
   text-shadow: 
-    0 0 5px #a855f7,
-    0 0 10px #a855f7,
-    0 0 15px #a855f7,
-    0 0 20px #a855f7;
+    0 0 5px #6450ff,
+    0 0 10px #6450ff,
+    0 0 15px #6450ff,
+    0 0 20px #6450ff;
   transform: translateY(-2px) scale(1.05);
 }
 
@@ -488,12 +489,12 @@ h2 {
 }
 
 .hero-subtitle .letter:hover {
-  color: #a855f7;
+  color: #6450ff;
   text-shadow: 
-    0 0 5px #a855f7,
-    0 0 10px #a855f7,
-    0 0 15px #a855f7,
-    0 0 20px #a855f7;
+    0 0 5px #6450ff,
+    0 0 10px #6450ff,
+    0 0 15px #6450ff,
+    0 0 20px #6450ff;
   transform: translateY(-2px) scale(1.05);
 }
 
