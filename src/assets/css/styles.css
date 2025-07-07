@@ -737,24 +737,24 @@ footer {
 .workflow-step[data-step="7"] { grid-column: 2; grid-row: 3; }
 
 .workflow-box {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #000000 0%, #000000 100%);
   border: 2px solid #6450ff;
   border-radius: 12px;
   padding: 1.5rem;
   min-width: 200px;
-  max-width: 300px;
+  max-width: 200px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(100, 80, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .workflow-box:hover {
   transform: translateY(-5px) scale(1.02);
   border-color: #7d6bff;
-  box-shadow: 0 8px 25px rgba(100, 80, 255, 0.2);
-  background: linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 100%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(12, 12, 12, 0.1) 0%, rgba(10, 10, 10, 0.1) 100%);
 }
 
 .workflow-box::before {
@@ -764,7 +764,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(100, 80, 255, 0.1) 0%, transparent 50%);
+  background: linear-gradient(135deg, #0a0a0a 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -820,6 +820,11 @@ footer {
   filter: drop-shadow(0 0 5px rgba(100, 80, 255, 0.5));
 }
 
+.workflow-arrow[data-from="5"] svg {
+  width: 150px;
+  height: 60px;
+}
+
 .workflow-arrow path {
   stroke: #6450ff;
   stroke-width: 3;
@@ -838,31 +843,31 @@ footer {
 /* Posicionamiento específico de cada flecha */
 .workflow-arrow[data-from="1"] {
   top: 50%;
-  left: 100%;
+  left: calc(100% + -3rem);
   transform: translateY(-50%);
 }
 
 .workflow-arrow[data-from="2"] {
   top: 50%;
-  left: 100%;
+  left: calc(100% + 4rem);
   transform: translateY(-50%);
 }
 
 .workflow-arrow[data-from="3"] {
-  top: 100%;
+  top: calc(100% + 4rem);
   left: 50%;
   transform: translateX(-50%) rotate(90deg);
 }
 
 .workflow-arrow[data-from="4"] {
   top: 50%;
-  right: 100%;
+  right: calc(100% - 4rem);
   transform: translateY(-50%) rotate(180deg);
 }
 
 .workflow-arrow[data-from="5"] {
   top: 50%;
-  right: 100%;
+  right: calc(100% - 4rem);
   transform: translateY(-50%) rotate(180deg);
 }
 
