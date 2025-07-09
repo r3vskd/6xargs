@@ -843,14 +843,19 @@ footer {
 /* Posicionamiento específico de cada flecha */
 .workflow-arrow[data-from="1"] {
   top: 50%;
-  left: calc(100% + -3rem);
+  left: calc(100% + -2.5rem);
   transform: translateY(-50%);
 }
 
 .workflow-arrow[data-from="2"] {
   top: 50%;
-  left: calc(100% - 2.5rem);
+  left: calc(100% - 4rem); /* Cambiado de -2.5rem a -4rem para extender más */
   transform: translateY(-50%);
+}
+
+.workflow-arrow[data-from="2"] svg {
+  width: 150px; /* Aumentado de 100px a 150px */
+  height: 60px;
 }
 
 .workflow-arrow[data-from="3"] {
