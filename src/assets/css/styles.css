@@ -161,9 +161,9 @@ header {
 }
 
 .how-it-works-card:hover {
-  background: rgba(8, 8, 8, 0.85);
+  background: rgba(0, 0, 0, 0.85);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px);
+  transform: translateY(0px);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
@@ -325,11 +325,11 @@ main {
 }
 
 .card:hover {
-  background: rgba(8, 8, 8, 0.85);
+  background: rgba(0, 0, 0, 0.85);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 .card:after {
@@ -737,7 +737,7 @@ footer {
 .workflow-step[data-step="7"] { grid-column: 2; grid-row: 3; }
 
 .workflow-box {
-  background: linear-gradient(135deg, #000000 0%, #000000 100%);
+  background: linear-gradient(135deg, #0e0e0e 0%, #0e0e0e 100%);
   border: 2px solid #6450ff;
   border-radius: 12px;
   padding: 1.5rem;
@@ -754,7 +754,7 @@ footer {
   transform: translateY(-5px) scale(1.02);
   border-color: #7d6bff;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, rgba(12, 12, 12, 0.1) 0%, rgba(10, 10, 10, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(12, 12, 12, 0.1) 0%, rgba(12, 12, 12, 0.1) 100%);
 }
 
 .workflow-box::before {
@@ -764,7 +764,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #0a0a0a 0%, transparent 50%);
+  background: linear-gradient(135deg, #181818 0%, transparent 0%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -843,31 +843,62 @@ footer {
 /* Posicionamiento específico de cada flecha */
 .workflow-arrow[data-from="1"] {
   top: 50%;
-  left: calc(100% + -2.5rem);
+  left: calc(95% + -4.5rem);
   transform: translateY(-50%);
+}
+
+.workflow-arrow[data-from="1"] svg {
+  width: 180px; /* Flecha del mismo largo que la 4 */
+  height: 60px;
+}
+
+.workflow-arrow[data-from="1"] path {
+  stroke-width: 3; /* Mantener el mismo grosor */
 }
 
 .workflow-arrow[data-from="2"] {
   top: 50%;
-  left: calc(100% - 4rem); /* Cambiado de -2.5rem a -4rem para extender más */
+  left: calc(100% - 5rem);
   transform: translateY(-50%);
 }
 
 .workflow-arrow[data-from="2"] svg {
-  width: 150px; /* Aumentado de 100px a 150px */
+  width: 180px; /* Flecha del mismo largo que la 4 */
   height: 60px;
 }
 
+.workflow-arrow[data-from="2"] path {
+  stroke-width: 3; /* Mantener el mismo grosor */
+}
+
 .workflow-arrow[data-from="3"] {
-  top: calc(100% - 1rem);
-  left: 50%;
-  transform: translateX(-50%) rotate(90deg);
+  bottom: -1.5rem;
+  left: 94.5%;
+  transform: translateX(-50%) rotate(98deg);
+}
+
+.workflow-arrow[data-from="3"] svg {
+  width: 500px; /* Flecha vertical más compacta */
+  height: 600;
+}
+
+.workflow-arrow[data-from="3"] path {
+  stroke-width: 2; /* Mismo grosor que las flechas 1 y 2 */
 }
 
 .workflow-arrow[data-from="4"] {
   top: 50%;
-  right: calc(100% - 2.5rem);
+  right: calc(100% - 5rem);
   transform: translateY(-50%);
+}
+
+.workflow-arrow[data-from="4"] svg {
+  width: 180px; /* Flecha súper larga con múltiples curvas */
+  height: 50px;
+}
+
+.workflow-arrow[data-from="4"] path {
+  stroke-width: 3; /* Mantener el mismo grosor que las otras flechas */
 }
 
 .workflow-arrow[data-from="5"] {
@@ -876,15 +907,28 @@ footer {
   transform: translateY(-50%);
 }
 
+.workflow-arrow[data-from="5"] svg {
+  width: 180px; /* Flecha muy larga con curva amplia */
+  height: 60px;
+}
+
+.workflow-arrow[data-from="5"] path {
+  stroke-width: 1.5; /* Mantener el mismo grosor */
+}
+
 .workflow-arrow[data-from="6"] {
-  top: calc(100% - 1rem);
-  right: -4rem;
+  top: calc(100% - 0.1rem);
+  right: -6.5rem;
   transform: rotate(45deg);
 }
 
 .workflow-arrow[data-from="6"] svg {
-  width: 150px;
-  height: 80px;
+  width: 220px; /* Flecha diagonal mucho más larga */
+  height: 90px;
+}
+
+.workflow-arrow[data-from="6"] path {
+  stroke-width: 2; /* Mantener el mismo grosor */
 }
 
 @keyframes pulse {
