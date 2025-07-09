@@ -835,9 +835,9 @@ footer {
   stroke-dasharray: 8 4;
 }
 
+/* Ocultar las puntas de las flechas del workflow */
 .workflow-arrow polygon {
-  fill: #6450ff;
-  filter: drop-shadow(0 0 3px rgba(100, 80, 255, 0.8));
+  display: none;
 }
 
 /* Posicionamiento específico de cada flecha */
@@ -867,19 +867,24 @@ footer {
 .workflow-arrow[data-from="4"] {
   top: 50%;
   right: calc(100% - 2.5rem);
-  transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%);
 }
 
 .workflow-arrow[data-from="5"] {
   top: 50%;
   right: calc(100% - 4rem);
-  transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%);
 }
 
 .workflow-arrow[data-from="6"] {
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) rotate(-90deg);
+  top: calc(100% - 1rem);
+  right: -4rem;
+  transform: rotate(45deg);
+}
+
+.workflow-arrow[data-from="6"] svg {
+  width: 150px;
+  height: 80px;
 }
 
 @keyframes pulse {
