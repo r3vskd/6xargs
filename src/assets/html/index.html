@@ -41,10 +41,6 @@
                 Do Bugbounty.
             </h1>
 
-            <br>
-            <br>
-            <br>
-
             <h2 class="hero-subtitle" id="hero-subtitle">
                 Agentic-AI Powered Bug Bounty.
                 Faster Hacking.
@@ -68,8 +64,8 @@
                     <div class="workflow-step" data-step="1">
                         <div class="workflow-box">
                             <div class="step-number">1</div>
-                            <div class="step-title">Registro</div>
-                            <div class="step-description">Usuario se registra en la plataforma</div>
+                            <div class="step-title">Report a bug</div>
+                            <div class="step-description">The hacker can choose bewtween agentic AI or manual report to submit a bug.</div>
                         </div>
                         <div class="workflow-arrow" data-from="1">
                             <svg viewBox="0 0 250 60">
@@ -83,8 +79,8 @@
                     <div class="workflow-step" data-step="2">
                         <div class="workflow-box">
                             <div class="step-number">2</div>
-                            <div class="step-title">Búsqueda</div>
-                            <div class="step-description">Explora programas de bug bounty</div>
+                            <div class="step-title">Report received</div>
+                            <div class="step-description">The report will be received by the company and 6xargs.</div>
                         </div>
                         <div class="workflow-arrow" data-from="2">
                             <svg viewBox="0 0 250 60">
@@ -98,8 +94,8 @@
                     <div class="workflow-step" data-step="3">
                         <div class="workflow-box">
                             <div class="step-number">3</div>
-                            <div class="step-title">Análisis</div>
-                            <div class="step-description">Hacking y análisis de vulnerabilidades</div>
+                            <div class="step-title">Initial response</div>
+                            <div class="step-description">First response from the company.</div>
                         </div>
                         <div class="workflow-arrow" data-from="3">
                             <svg viewBox="0 0 120 55">
@@ -113,8 +109,8 @@
                     <div class="workflow-step" data-step="4">
                         <div class="workflow-box">
                             <div class="step-number">4</div>
-                            <div class="step-title">Reporte</div>
-                            <div class="step-description">Envía reporte de vulnerabilidad</div>
+                            <div class="step-title">Vulnerability validation</div>
+                            <div class="step-description">6xargs will validate the vulnerability and  will be able to triage it.</div>
                         </div>
                         <div class="workflow-arrow" data-from="4">
                             <svg viewBox="0 10 250 50">
@@ -128,8 +124,8 @@
                     <div class="workflow-step" data-step="5">
                         <div class="workflow-box">
                             <div class="step-number">5</div>
-                            <div class="step-title">AI Triage</div>
-                            <div class="step-description">Análisis automático con IA</div>
+                            <div class="step-title">Response to hacker</div>
+                            <div class="step-description">6xargs will inform to the hacker about the vulnerability triage process.</div>
                         </div>
                         <div class="workflow-arrow" data-from="5">
                             <svg viewBox="0 10 180 50">
@@ -143,8 +139,8 @@
                     <div class="workflow-step" data-step="6">
                         <div class="workflow-box">
                             <div class="step-number">6</div>
-                            <div class="step-title">Validación</div>
-                            <div class="step-description">Validación por expertos</div>
+                            <div class="step-title">Remediation</div>
+                            <div class="step-description">The company will start remediating the vulnerability.</div>
                         </div>
                         <div class="workflow-arrow" data-from="6">
                             <svg viewBox="0 0 220 90">
@@ -158,8 +154,8 @@
                     <div class="workflow-step" data-step="7">
                         <div class="workflow-box">
                             <div class="step-number">7</div>
-                            <div class="step-title">Recompensa</div>
-                            <div class="step-description">Pago de bounty al hacker</div>
+                            <div class="step-title">Reward</div>
+                            <div class="step-description">The Company and 6xargs will inform and perform the reward to the hacker.</div>
                         </div>
                     </div>
                 </div>
@@ -295,143 +291,6 @@
                 
                 heroSubtitle.innerHTML = wrappedText;
             }
-        });
-    </script>
-    
-    <script>
-        // Funcionalidad para hacer editables los cuadros del workflow
-        document.addEventListener('DOMContentLoaded', function() {
-            const workflowBoxes = document.querySelectorAll('.workflow-box');
-            
-            workflowBoxes.forEach(box => {
-                let isEditing = false;
-                let originalTitle = '';
-                let originalDescription = '';
-                
-                // Doble clic para editar
-                box.addEventListener('dblclick', function() {
-                    if (!isEditing) {
-                        enterEditMode(box);
-                    }
-                });
-                
-                // Escape para cancelar edición
-                box.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && isEditing) {
-                        cancelEdit(box);
-                    }
-                    if (e.key === 'Enter' && isEditing && e.shiftKey) {
-                        saveEdit(box);
-                    }
-                });
-                
-                function enterEditMode(box) {
-                    isEditing = true;
-                    box.classList.add('editing');
-                    
-                    const titleElement = box.querySelector('.step-title');
-                    const descriptionElement = box.querySelector('.step-description');
-                    
-                    // Guardar contenido original
-                    originalTitle = titleElement.textContent;
-                    originalDescription = descriptionElement.textContent;
-                    
-                    // Hacer editables
-                    titleElement.contentEditable = true;
-                    descriptionElement.contentEditable = true;
-                    
-                    // Seleccionar el título para empezar a editar
-                    titleElement.focus();
-                    
-                    // Mostrar mensaje de ayuda
-                    showEditHelp(box);
-                    
-                    // Agregar evento para guardar al hacer clic fuera
-                    setTimeout(() => {
-                        document.addEventListener('click', outsideClickHandler);
-                    }, 100);
-                }
-                
-                function saveEdit(box) {
-                    isEditing = false;
-                    box.classList.remove('editing');
-                    
-                    const titleElement = box.querySelector('.step-title');
-                    const descriptionElement = box.querySelector('.step-description');
-                    
-                    // Desactivar edición
-                    titleElement.contentEditable = false;
-                    descriptionElement.contentEditable = false;
-                    
-                    // Remover evento de clic fuera
-                    document.removeEventListener('click', outsideClickHandler);
-                    
-                    // Efecto visual de guardado
-                    showSaveConfirmation(box);
-                    
-                    hideEditHelp();
-                }
-                
-                function cancelEdit(box) {
-                    isEditing = false;
-                    box.classList.remove('editing');
-                    
-                    const titleElement = box.querySelector('.step-title');
-                    const descriptionElement = box.querySelector('.step-description');
-                    
-                    // Restaurar contenido original
-                    titleElement.textContent = originalTitle;
-                    descriptionElement.textContent = originalDescription;
-                    
-                    // Desactivar edición
-                    titleElement.contentEditable = false;
-                    descriptionElement.contentEditable = false;
-                    
-                    // Remover evento de clic fuera
-                    document.removeEventListener('click', outsideClickHandler);
-                    
-                    hideEditHelp();
-                }
-                
-                function outsideClickHandler(e) {
-                    if (isEditing && !box.contains(e.target)) {
-                        saveEdit(box);
-                    }
-                }
-                
-                function showEditHelp(box) {
-                    const helpElement = document.createElement('div');
-                    helpElement.className = 'edit-help';
-                    helpElement.innerHTML = `
-                        <div style="background: rgba(100, 80, 255, 0.9); color: white; padding: 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-top: 0.5rem; text-align: center;">
-                            💡 Doble clic para editar<br>
-                            <span style="font-size: 0.7rem;">Escape para cancelar | Shift+Enter para guardar</span>
-                        </div>
-                    `;
-                    box.appendChild(helpElement);
-                }
-                
-                function hideEditHelp() {
-                    const helpElements = document.querySelectorAll('.edit-help');
-                    helpElements.forEach(el => el.remove());
-                }
-                
-                function showSaveConfirmation(box) {
-                    const confirmElement = document.createElement('div');
-                    confirmElement.className = 'save-confirmation';
-                    confirmElement.innerHTML = `
-                        <div style="background: rgba(100, 80, 255, 0.9); color: white; padding: 0.3rem; border-radius: 4px; font-size: 0.8rem; margin-top: 0.5rem; text-align: center;">
-                            ✅ Guardado
-                        </div>
-                    `;
-                    box.appendChild(confirmElement);
-                    
-                    // Remover después de 2 segundos
-                    setTimeout(() => {
-                        confirmElement.remove();
-                    }, 2000);
-                }
-            });
         });
     </script>
 </body>

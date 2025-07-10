@@ -121,7 +121,7 @@ header {
   /* Reducir el padding para que no sea tan grande */
   padding: 2rem;
   /* Establecer un ancho máximo */
-  max-width: 1880px;
+  max-width: 1520px;
   /* Centrar horizontalmente con márgenes automáticos */
   margin: 2rem auto;
   /* Añadir bordes redondeados */
@@ -131,7 +131,7 @@ header {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* Mantener el contenido centrado */
   display: flex;
-  justify-content: justify;
+  justify-content: left;
   align-items: center;
 }
 
@@ -146,22 +146,22 @@ header {
 
 .how-it-works-card {
   flex: 2; /* Aumentar el ancho del card */
-  background: rgba(14, 14, 14, 0.7);
+  background: rgba(4, 3, 7, 0.7);
   border-radius: 1rem;
   padding: 2rem;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(31, 31, 31, 0.03);
   min-height: 300px;
-  max-width: none; /* Quitar limitación de ancho */
+  max-width: 900px; /* Quitar limitación de ancho */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .how-it-works-card:hover {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(7, 5, 10, 0.7);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(0px);
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -339,7 +339,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 50%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 50%);
   opacity: 0;
   transition: opacity 0.1s ease;
   pointer-events: none;
@@ -484,6 +484,7 @@ h2 {
   line-height: 1.4;
   cursor: default;
   margin-left: -38rem;
+  color: rgb(160, 160, 160);
 }
 
 /* Estilo para cada letra individual */
@@ -737,8 +738,8 @@ footer {
 .workflow-step[data-step="7"] { grid-column: 2; grid-row: 3; }
 
 .workflow-box {
-  background: linear-gradient(135deg, #0e0e0e 0%, #0e0e0e 100%);
-  border: 2px solid #6450ff;
+  background: linear-gradient(135deg, #08050e 0%, #08050e 100%);
+  border: 3px dotted #6450ff;
   border-radius: 12px;
   padding: 1.5rem;
   min-width: 200px;
@@ -752,9 +753,9 @@ footer {
 
 .workflow-box:hover {
   transform: translateY(-5px) scale(1.02);
-  border-color: #7d6bff;
+  border-color: #6450ff;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, rgba(12, 12, 12, 0.1) 0%, rgba(12, 12, 12, 0.1) 100%);
+  background: linear-gradient(135deg, #08050e 0%, #08050e 100%);
 }
 
 .workflow-box::before {
@@ -776,7 +777,7 @@ footer {
 .step-number {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #6450ff;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 0.5rem;
   background: rgba(100, 80, 255, 0.1);
@@ -787,7 +788,7 @@ footer {
   align-items: center;
   justify-content: center;
   margin: 0 auto 0.5rem;
-  border: 1px solid #6450ff;
+  border: 3px thick #6450ff;
 }
 
 .step-title {
@@ -815,13 +816,13 @@ footer {
 }
 
 .workflow-arrow svg {
-  width: 100px;
+  width: 80px;
   height: 60px;
   filter: drop-shadow(0 0 5px rgba(100, 80, 255, 0.5));
 }
 
 .workflow-arrow[data-from="5"] svg {
-  width: 150px;
+  width: 120px;
   height: 60px;
 }
 
@@ -848,7 +849,7 @@ footer {
 }
 
 .workflow-arrow[data-from="1"] svg {
-  width: 180px; /* Flecha del mismo largo que la 4 */
+  width: 150px; /* Flecha acortada */
   height: 60px;
 }
 
@@ -863,7 +864,7 @@ footer {
 }
 
 .workflow-arrow[data-from="2"] svg {
-  width: 180px; /* Flecha del mismo largo que la 4 */
+  width: 150px; /* Flecha acortada */
   height: 60px;
 }
 
@@ -878,7 +879,7 @@ footer {
 }
 
 .workflow-arrow[data-from="3"] svg {
-  width: 500px; /* Flecha vertical más compacta */
+  width: 400px; /* Flecha vertical acortada */
   height: 600;
 }
 
@@ -893,7 +894,7 @@ footer {
 }
 
 .workflow-arrow[data-from="4"] svg {
-  width: 180px; /* Flecha súper larga con múltiples curvas */
+  width: 150px; /* Flecha acortada */
   height: 50px;
 }
 
@@ -908,7 +909,7 @@ footer {
 }
 
 .workflow-arrow[data-from="5"] svg {
-  width: 180px; /* Flecha muy larga con curva amplia */
+  width: 150px; /* Flecha acortada */
   height: 60px;
 }
 
@@ -923,7 +924,7 @@ footer {
 }
 
 .workflow-arrow[data-from="6"] svg {
-  width: 220px; /* Flecha diagonal mucho más larga */
+  width: 180px; /* Flecha diagonal acortada */
   height: 90px;
 }
 
@@ -1008,7 +1009,7 @@ footer {
   }
   
   .workflow-arrow svg {
-    width: 60px;
+    width: 50px;
     height: 40px;
   }
 }
@@ -1050,7 +1051,7 @@ footer {
   }
   
   .workflow-arrow svg {
-    width: 40px;
+    width: 35px;
     height: 30px;
   }
 }
