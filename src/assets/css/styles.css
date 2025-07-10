@@ -115,6 +115,46 @@ header {
   padding-right: 50rem;
 }
 
+.hero-logo {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  width: 350px;
+  height: auto;
+  opacity: 1;
+  border-radius: 35px;
+  border: 3px dotted #6450ff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: contrast(1.2) brightness(1.1);
+}
+
+.hero-logo:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.03);
+  cursor: pointer;
+  filter: contrast(1.2) brightness(1.1);
+}
+
+.hero-logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(100, 80, 255, 0.1) 0%, rgba(139, 92, 246, 0.05) 50%, transparent 100%);
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-logo:hover::before {
+  opacity: 1;
+}
+
 /*************** how-it-works-section ************/
 .how-it-works-section {
   background-color: #000000;
@@ -632,6 +672,14 @@ footer {
     max-height: 10rem;
   }
 
+  /* Responsive para hero logo */
+  .hero-logo {
+    width: 250px;
+    right: 5%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
   .footer-content {
     flex-direction: column;
     align-items: center;
@@ -705,6 +753,19 @@ footer {
   
   .how-it-works-text p {
     font-size: 1rem;
+  }
+
+  /* Responsive para hero logo en móviles */
+  .hero-logo {
+    width: 180px;
+    right: 2%;
+    top: 60%;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-logo:hover {
+    transform: translateY(-60%) scale(1.02);
   }
 }
 
