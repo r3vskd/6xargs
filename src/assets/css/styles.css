@@ -136,6 +136,21 @@ header {
   filter: contrast(1.2) brightness(1.1);
 }
 
+.hero-logo:hover ~ .mental-map-container .mental-map-arrow path {
+  animation: dashFlow 1.5s linear infinite;
+}
+
+.hero-logo:hover ~ .mental-map-container .mental-map-arrow polygon {
+  animation: mentalMapPulse 1s ease-in-out infinite;
+}
+
+.hero-logo:hover ~ .mental-map-container .mental-map-card {
+  border-color: #7d6bff;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    0 0 25px rgba(100, 80, 255, 0.4);
+}
+
 .hero-logo::before {
   content: '';
   position: absolute;
@@ -153,6 +168,258 @@ header {
 
 .hero-logo:hover::before {
   opacity: 1;
+}
+
+/* Mental Map Styles */
+.mental-map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mental-map-card {
+  position: absolute;
+  background: linear-gradient(135deg, #08050e 0%, #08050e 100%);
+  border: 3px dotted #6450ff;
+  border-radius: 12px;
+  padding: 0.8rem;
+  min-width: 180px;
+  max-width: 200px;
+  pointer-events: all;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  transform: scale(0.8);
+  animation: mentalMapFadeIn 0.8s ease-out forwards, mentalMapBreathing 6s ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.mental-map-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: #6450ff;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(100, 80, 255, 0.3);
+  background: linear-gradient(135deg, #08050e 0%, #08050e 100%);
+}
+
+.mental-map-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(100, 80, 255, 0.1) 0%, transparent 50%);
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.mental-map-card:hover::before {
+  opacity: 1;
+}
+
+.mental-map-card .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: "Varela", serif;
+}
+
+.mental-map-card .card-content {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  line-height: 1.4;
+  font-family: "Varela", serif;
+}
+
+/* Card Positioning - Closer to logo */
+.mental-map-card[data-position="top-left"] {
+  top: 20%;
+  left: 35%;
+  animation-delay: 0s;
+}
+
+.mental-map-card[data-position="top-right"] {
+  top: 20%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.mental-map-card[data-position="center-left"] {
+  top: 45%;
+  left: 25%;
+  transform: translateY(-50%) scale(0.8);
+  animation: mentalMapFadeIn 0.8s ease-out forwards, mentalMapBreathingCentered 6s ease-in-out infinite;
+  animation-delay: 0s, 0s;
+}
+
+.mental-map-card[data-position="center-right"] {
+  top: 45%;
+  right: 10%;
+  transform: translateY(-50%) scale(0.8);
+  animation: mentalMapFadeIn 0.8s ease-out forwards, mentalMapBreathingCentered 6s ease-in-out infinite;
+  animation-delay: 0s, 0s;
+}
+
+.mental-map-card[data-position="bottom-left"] {
+  bottom: 20%;
+  left: 35%;
+  animation-delay: 0s;
+}
+
+.mental-map-card[data-position="bottom-right"] {
+  bottom: 20%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+/* Connection Arrows - Like workflow arrows */
+.mental-map-arrow {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  animation: lineAppear 1s ease-out forwards;
+  z-index: 5;
+}
+
+.mental-map-arrow[data-connect="top-left"] {
+  top: 25%;
+  left: 48%;
+  animation-delay: 0s;
+}
+
+.mental-map-arrow[data-connect="top-right"] {
+  top: 25%;
+  right: 32%;
+  animation-delay: 0s;
+}
+
+.mental-map-arrow[data-connect="center-left"] {
+  top: 50%;
+  left: 40%;
+  transform: translateY(-50%);
+  animation-delay: 0s;
+}
+
+.mental-map-arrow[data-connect="center-right"] {
+  top: 50%;
+  right: 32%;
+  transform: translateY(-50%);
+  animation-delay: 0s;
+}
+
+.mental-map-arrow[data-connect="bottom-left"] {
+  bottom: 25%;
+  left: 48%;
+  animation-delay: 0s;
+}
+
+.mental-map-arrow[data-connect="bottom-right"] {
+  bottom: 25%;
+  right: 32%;
+  animation-delay: 0s;
+}
+
+.mental-map-arrow svg {
+  width: 120px;
+  height: 80px;
+  filter: drop-shadow(0 0 5px rgba(100, 80, 255, 0.5));
+}
+
+.mental-map-arrow path {
+  stroke: #6450ff;
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: dashFlow 0s linear infinite;
+  stroke-dasharray: 8 4;
+}
+
+.mental-map-arrow polygon {
+  fill: #6450ff;
+}
+
+/* Animations */
+@keyframes mentalMapFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes lineAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mentalMapPulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+@keyframes mentalMapBreathing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes mentalMapBreathingCentered {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.01);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+/* Hover effects for centered cards */
+.mental-map-card[data-position="center-left"]:hover {
+  transform: translateY(-50%) translateY(-5px) scale(1.02);
+  animation: none;
+}
+
+.mental-map-card[data-position="center-right"]:hover {
+  transform: translateY(-50%) translateY(-5px) scale(1.02);
+  animation: none;
 }
 
 /*************** how-it-works-section ************/
@@ -680,6 +947,80 @@ footer {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   }
 
+  /* Responsive Mental Map - Tablets */
+  .mental-map-card {
+    min-width: 140px;
+    max-width: 160px;
+    padding: 0.6rem;
+  }
+
+  .mental-map-card .card-title {
+    font-size: 0.8rem;
+  }
+
+  .mental-map-card .card-content {
+    font-size: 0.65rem;
+  }
+
+  /* Adjust positions for tablets */
+  .mental-map-card[data-position="top-left"] {
+    top: 15%;
+    left: 30%;
+  }
+
+  .mental-map-card[data-position="top-right"] {
+    top: 15%;
+    right: 5%;
+  }
+
+  .mental-map-card[data-position="center-left"] {
+    left: 20%;
+  }
+
+  .mental-map-card[data-position="center-right"] {
+    right: 5%;
+  }
+
+  .mental-map-card[data-position="bottom-left"] {
+    bottom: 15%;
+    left: 30%;
+  }
+
+  .mental-map-card[data-position="bottom-right"] {
+    bottom: 15%;
+    right: 5%;
+  }
+
+  /* Adjust arrows for tablets */
+  .mental-map-arrow[data-connect="top-left"] {
+    left: 42%;
+  }
+
+  .mental-map-arrow[data-connect="top-right"] {
+    right: 27%;
+  }
+
+  .mental-map-arrow[data-connect="center-left"] {
+    left: 35%;
+  }
+
+  .mental-map-arrow[data-connect="center-right"] {
+    right: 27%;
+  }
+
+  .mental-map-arrow[data-connect="bottom-left"] {
+    left: 42%;
+  }
+
+  .mental-map-arrow[data-connect="bottom-right"] {
+    right: 27%;
+  }
+
+  .mental-map-arrow svg {
+    width: 100px;
+    height: 60px;
+  }
+
   .footer-content {
     flex-direction: column;
     align-items: center;
@@ -766,6 +1107,55 @@ footer {
 
   .hero-logo:hover {
     transform: translateY(-60%) scale(1.02);
+  }
+
+  /* Simplified mental map on mobile */
+  .mental-map-card {
+    min-width: 120px;
+    max-width: 140px;
+    padding: 0.5rem;
+  }
+
+  .mental-map-card .card-title {
+    font-size: 0.7rem;
+  }
+
+  .mental-map-card .card-content {
+    font-size: 0.6rem;
+  }
+
+  /* Hide arrows on mobile for cleaner look */
+  .mental-map-arrow {
+    display: none;
+  }
+
+  /* Adjust positions for mobile */
+  .mental-map-card[data-position="top-left"] {
+    top: 10%;
+    left: 25%;
+  }
+
+  .mental-map-card[data-position="top-right"] {
+    top: 10%;
+    right: 2%;
+  }
+
+  .mental-map-card[data-position="center-left"] {
+    left: 15%;
+  }
+
+  .mental-map-card[data-position="center-right"] {
+    right: 2%;
+  }
+
+  .mental-map-card[data-position="bottom-left"] {
+    bottom: 10%;
+    left: 25%;
+  }
+
+  .mental-map-card[data-position="bottom-right"] {
+    bottom: 10%;
+    right: 2%;
   }
 }
 
