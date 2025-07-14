@@ -223,7 +223,6 @@
                         </div>
                         <div class="workflow-arrow" data-from="6">
                             <svg viewBox="0 0 220 90">
-                                <!-- Flecha diagonal mucho más larga -->
                                 <path d="M 10 20 Q 60 5 120 30 Q 180 55 210 45" />
                                 <polygon points="205,40 215,45 205,50" />
                             </svg>
@@ -320,9 +319,8 @@
     </footer>
     <script src="/assets/js/script.js"></script>
     <script>
-        // Script para envolver cada letra del hero title y subtitle en spans
+        // Script para envolver cada letra del hero
         document.addEventListener('DOMContentLoaded', function() {
-            // Procesar h1 manteniendo la estructura de líneas
             const heroTitle = document.getElementById('hero-title');
             if (heroTitle) {
                 const text = heroTitle.textContent;
