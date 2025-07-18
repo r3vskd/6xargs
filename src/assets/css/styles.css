@@ -152,7 +152,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(100, 80, 255, 0.1) 0%, rgba(139, 92, 246, 0.05) 50%, transparent 100%);
+  background: linear-gradient(135deg, rgba(99, 78, 255, 0.1) 0%, rgba(139, 92, 246, 0.05) 50%, transparent 100%);
   border-radius: 15px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -194,7 +194,7 @@ header {
 
 .mental-map-card:hover {
   transform: translateY(-5px) scale(1.02);
-  border-color: #6450ff;
+  border-color: #6c59ff;
   background: #08050e;
 }
 
@@ -337,7 +337,7 @@ header {
 }
 
 .mental-map-arrow polygon {
-  fill: #6450ff;
+  fill: #6753ff;
 }
 
 /* Animations */
