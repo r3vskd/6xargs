@@ -340,7 +340,6 @@ header {
   fill: #6753ff;
 }
 
-/* Animations */
 @keyframes mentalMapFadeIn {
   0% {
     opacity: 0;
