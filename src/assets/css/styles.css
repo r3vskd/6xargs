@@ -422,13 +422,13 @@ header {
 .how-it-works-container {
   max-width: 140.75rem;
   display: flex;
-  gap: 3rem; /* Aumentar el gap para mejor separación */
+  gap: 3rem; 
   align-items: center;
-  justify-content: space-between; /* Mejor distribución del espacio */
+  justify-content: space-between; 
 }
 
 .how-it-works-card {
-  flex: 2; /* Aumentar el ancho del card */
+  flex: 2; 
   background: rgba(4, 3, 7, 0.7);
   border-radius: 1rem;
   padding: 2rem;
@@ -437,7 +437,7 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(31, 31, 31, 0.03);
   min-height: 300px;
-  max-width: 900px; /* Quitar limitación de ancho */
+  max-width: 900px; 
   display: flex;
   align-items: center;
   justify-content: center;
