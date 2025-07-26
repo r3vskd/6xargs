@@ -467,7 +467,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 65rem; /* Limitar el ancho máximo del texto */
+  max-width: 65rem; 
 }
 
 .how-it-works-text h2 {
