@@ -272,7 +272,6 @@ header {
   animation-delay: 0s;
 }
 
-/* Connection Arrows - Like workflow arrows */
 .mental-map-arrow {
   position: absolute;
   pointer-events: none;
