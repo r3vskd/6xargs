@@ -231,7 +231,7 @@ header {
   font-family: "Varela", serif;
 }
 
-/* Card Positioning - Closer to logo */
+
 .mental-map-card[data-position="top-left"] {
   top: 20%;
   left: 35%;
