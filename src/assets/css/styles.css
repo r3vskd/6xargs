@@ -164,7 +164,6 @@ header {
   opacity: 1;
 }
 
-/* Mental Map Styles */
 .mental-map-container {
   position: absolute;
   top: 0;
@@ -489,7 +488,6 @@ header {
 
 .agent-sneak-peek-section {
   background-color: #000000;
-  /* Reducir el padding para que no sea tan grande */
   padding: 5rem;
   /* Establecer un ancho máximo */
   max-width: 1880px;
