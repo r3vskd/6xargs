@@ -1392,7 +1392,7 @@ footer {
   background: rgba(100, 80, 255, 0.2);
 }
 
-/* Responsive para workflow */
+/* Responsive workflow */
 @media (max-width: 768px) {
   .workflow-container {
     grid-template-columns: repeat(2, 1fr);
