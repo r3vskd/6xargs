@@ -1089,7 +1089,7 @@ footer {
     font-size: 0.6rem;
   }
 
-  /* Hide arrows on mobile for cleaner look */
+  /* Hide arrows on responsive */
   .mental-map-arrow {
     display: none;
   }
@@ -1124,7 +1124,7 @@ footer {
   }
 }
 
-/* Estilos para el workflow */
+/* workflow */
 .workflow-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
