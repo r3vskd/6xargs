@@ -485,16 +485,11 @@ header {
 .agent-sneak-peek-section {
   background-color: #000000;
   padding: 5rem;
-  /* Establecer un ancho máximo */
   max-width: 1880px;
-  /* Centrar horizontalmente con márgenes automáticos */
   margin: 5rem auto;
-  /* Añadir bordes redondeados */
   border-radius: 1rem;
   border: 2px solid rgb(53, 53, 53);
-  /* Añadir sombra para efecto flotante */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  /* Mantener el contenido centrado */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -722,7 +717,7 @@ h2 {
   font-family: "Varela", serif;
 }
 
-/* Efecto hover por letra para el h1 del hero */
+/* Efecto hover hero 1*/
 .hero-title-hover .title-line {
   display: block;
   margin: 0;
@@ -751,7 +746,7 @@ h2 {
   width: 0.3em;
 }
 
-/* Clase independiente para el h2 del hero */
+/* Clase independiente para el h2 hero */
 .hero-subtitle {
   font-size: 1.5rem;
   font-weight: 700;
