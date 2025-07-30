@@ -5,15 +5,12 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Servir archivos estáticos desde la carpeta public
-app.use(express.static('public'));
+app.use(express.static('public')); // Servir archivos estáticos desde la carpeta public
 
-// Middleware para procesar JSON
-app.use(express.json());
+app.use(express.json()); // (Middleware JSON processing)
 
 // API routes para el perfil de usuario
-app.get('/api/profile', (req, res) => {
-  // Aquí implementarías la lógica para obtener el perfil del usuario
+app.get('/api/profile', (req, res) => {   // lógica para obtener el perfil de cada usuario
   res.json({
     username: "HackerUser",
     email: "hacker@example.com",
@@ -21,24 +18,23 @@ app.get('/api/profile', (req, res) => {
   });
 });
 
-app.put('/api/profile', (req, res) => {
-  // Aquí implementarías la lógica para actualizar el perfil
+app.put('/api/profile', (req, res) => {   // lógica para modificaciones en el perfil de cada usuario
   res.json({ success: true, message: "Perfil actualizado correctamente" });
 });
 
 app.put('/api/profile/password', (req, res) => {
-  // Lógica para cambiar la contraseña
+  // cambiar la contraseña
   res.json({ success: true, message: "Contraseña actualizada correctamente" });
 });
 
 app.put('/api/profile/2fa', (req, res) => {
-  // Lógica para activar/desactivar 2FA
+  // activar/desactivar 2FA
   const { enabled } = req.body;
   res.json({ success: true, message: `2FA ${enabled ? 'activado' : 'desactivado'} correctamente` });
 });
 
 app.get('/api/wallet', (req, res) => {
-  // Lógica para obtener información de la billetera
+  // obtener información de wallet
   res.json({
     balance: 1250.75,
     transactions: [
@@ -49,7 +45,7 @@ app.get('/api/wallet', (req, res) => {
 });
 
 app.get('/api/programs/active', (req, res) => {
-  // Lógica para obtener programas activos
+  // obtener programas activos
   res.json([
     { id: 1, name: "Empresa A", status: "active", reward: "$100-$5000", category: "Web" },
     { id: 2, name: "Empresa B", status: "pending", reward: "$500-$10000", category: "Mobile" }
