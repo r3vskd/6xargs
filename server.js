@@ -23,18 +23,18 @@ app.put('/api/profile', (req, res) => {   // lógica para modificaciones en el p
 });
 
 app.put('/api/profile/password', (req, res) => {
-  // cambiar la contraseña
+  // cambiar la contraseña para el dashboard de configuracion
   res.json({ success: true, message: "Contraseña actualizada correctamente" });
 });
 
 app.put('/api/profile/2fa', (req, res) => {
-  // activar/desactivar 2FA
+  // activar/desactivar 2FA para el dashboard de configuracion
   const { enabled } = req.body;
   res.json({ success: true, message: `2FA ${enabled ? 'activado' : 'desactivado'} correctamente` });
 });
 
 app.get('/api/wallet', (req, res) => {
-  // obtener información de wallet
+  // obtener información de wallet para el dashboard de configuracion
   res.json({
     balance: 1250.75,
     transactions: [
@@ -45,7 +45,7 @@ app.get('/api/wallet', (req, res) => {
 });
 
 app.get('/api/programs/active', (req, res) => {
-  // obtener programas activos
+  // obtener programas activos para el dashboard de configuracion
   res.json([
     { id: 1, name: "Empresa A", status: "active", reward: "$100-$5000", category: "Web" },
     { id: 2, name: "Empresa B", status: "pending", reward: "$500-$10000", category: "Mobile" }
@@ -53,14 +53,14 @@ app.get('/api/programs/active', (req, res) => {
 });
 
 app.get('/api/bounties', (req, res) => {
-  // Lógica para obtener recompensas
+  // logica de bounties para el dashboard de configuracion
   res.json([
     { id: 1, program: "Empresa A", status: "paid", amount: 500, date: "2023-05-15" },
     { id: 2, program: "Empresa B", status: "pending", amount: 750, date: "2023-06-22" }
   ]);
 });
 
-// Manejador de Remix para las rutas de la aplicación
+// routes manager de Remix de la aplicación 
 app.all(
   '*',
   createRequestHandler({
