@@ -234,20 +234,20 @@ header {
 
 
 .mental-map-card[data-position="top-left"] {
-  top: 25%;
-  left: 20%;
+  top: 20%;
+  left: 30%;
   animation-delay: 0s;
 }
 
 .mental-map-card[data-position="top-right"] {
-  top: 25%;
-  right: 40%;
+  top: 20%;
+  right: 35%;
   animation-delay: 0s;
 }
 
 .mental-map-card[data-position="center-left"] {
   top: 50%;
-  left: 15%;
+  left: 20%;
   transform: translateY(-50%) scale(0.8);
   animation: mentalMapFadeIn 0.8s ease-out forwards, mentalMapBreathingCentered 6s ease-in-out infinite;
   animation-delay: 0s, 0s;
@@ -255,21 +255,21 @@ header {
 
 .mental-map-card[data-position="center-right"] {
   top: 50%;
-  right: 40%;
+  right: 35%;
   transform: translateY(-50%) scale(0.8);
   animation: mentalMapFadeIn 0.8s ease-out forwards, mentalMapBreathingCentered 6s ease-in-out infinite;
   animation-delay: 0s, 0s;
 }
 
 .mental-map-card[data-position="bottom-left"] {
-  bottom: 25%;
-  left: 20%;
+  bottom: 20%;
+  left: 30%;
   animation-delay: 0s;
 }
 
 .mental-map-card[data-position="bottom-right"] {
-  bottom: 25%;
-  right: 40%;
+  bottom: 20%;
+  right: 35%;
   animation-delay: 0s;
 }
 
@@ -282,40 +282,40 @@ header {
 }
 
 .mental-map-arrow[data-connect="top-left"] {
-  top: 30%;
-  left: 30%;
+  top: 25%;
+  left: 40%;
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="top-right"] {
-  top: 30%;
-  right: 35%;
+  top: 25%;
+  right: 30%;
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="center-left"] {
   top: 50%;
-  left: 25%;
+  left: 30%;
   transform: translateY(-50%);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="center-right"] {
   top: 50%;
-  right: 35%;
+  right: 30%;
   transform: translateY(-50%);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="bottom-left"] {
-  bottom: 30%;
-  left: 30%;
+  bottom: 25%;
+  left: 40%;
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="bottom-right"] {
-  bottom: 30%;
-  right: 35%;
+  bottom: 25%;
+  right: 30%;
   animation-delay: 0s;
 }
 
