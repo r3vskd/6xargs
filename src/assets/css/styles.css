@@ -283,39 +283,39 @@ header {
 
 .mental-map-arrow[data-connect="top-left"] {
   top: 25%;
-  left: 45%;
+  left: 42%;
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="top-right"] {
   top: 25%;
-  right: 25%;
+  right: 17%;
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="center-left"] {
   top: 50%;
-  left: 35%;
+  left: 32%;
   transform: translateY(-50%);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="center-right"] {
   top: 50%;
-  right: 25%;
+  right: 17%;
   transform: translateY(-50%);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="bottom-left"] {
   bottom: 25%;
-  left: 45%;
+  left: 42%;
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="bottom-right"] {
   bottom: 25%;
-  right: 25%;
+  right: 17%;
   animation-delay: 0s;
 }
 
