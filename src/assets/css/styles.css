@@ -290,7 +290,7 @@ header {
 .mental-map-arrow[data-connect="top-right"] {
   top: 25%;
   right: 25%;
-  animation-delay: 0s;
+  animation-delay: 0.5s;
 }
 
 .mental-map-arrow[data-connect="center-left"] {
