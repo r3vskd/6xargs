@@ -314,6 +314,7 @@ header {
   bottom: 25%;
   left: calc(42% + 45rem);
   animation-delay: 0s;
+  transform: translate(-10px, 10px) rotate(30deg);
 }
 
 .mental-map-arrow[data-connect="bottom-right"] {
