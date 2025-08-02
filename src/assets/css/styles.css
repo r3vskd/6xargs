@@ -284,10 +284,10 @@ header {
 }
 
 .mental-map-arrow[data-connect="top-left"] {
-  top: 25%;
-  left: calc(42% + 45rem);
+  top: 27%; /* Aumentado ligeramente para moverlo hacia abajo */
+  left: calc(41% + 45rem); /* Reducido ligeramente para moverlo hacia la izquierda */
   animation-delay: 0s;
-  transform: rotate(90deg) translateX(0px);
+  transform: translate(-10px, 10px) rotate(30deg);
 }
 
 .mental-map-arrow[data-connect="top-right"] {
