@@ -235,19 +235,21 @@ header {
 
 .mental-map-card[data-position="top-left"] {
   top: 20%;
-  left: calc(32% + 30rem);
+
+  transform: translateY(2rem);
+  left: calc(32% + 45rem);
   animation-delay: 0s;
 }
 
 .mental-map-card[data-position="top-right"] {
   top: 20%;
-  right: 22%;
+  right: calc(22% - 25rem);
   animation-delay: 0s;
 }
 
 .mental-map-card[data-position="center-left"] {
   top: 50%;
-  left: calc(22% + 30rem);
+  left: calc(22% + 45rem);
   transform: translateY(-50%) scale(0.8);
   animation: mentalMapFadeIn 0.8s ease-out forwards, mentalMapBreathingCentered 6s ease-in-out infinite;
   animation-delay: 0s, 0s;
@@ -255,7 +257,7 @@ header {
 
 .mental-map-card[data-position="center-right"] {
   top: 50%;
-  right: 22%;
+  right: calc(22% - 25rem);
   transform: translateY(-50%) scale(0.8);
   animation: mentalMapFadeIn 0.8s ease-out forwards, mentalMapBreathingCentered 6s ease-in-out infinite;
   animation-delay: 0s, 0s;
@@ -263,13 +265,13 @@ header {
 
 .mental-map-card[data-position="bottom-left"] {
   bottom: 20%;
-  left: calc(32% + 30rem);
+  left: calc(32% + 45rem);
   animation-delay: 0s;
 }
 
 .mental-map-card[data-position="bottom-right"] {
   bottom: 20%;
-  right: 22%;
+  right: calc(22% - 25rem);
   animation-delay: 0s;
 }
 
@@ -277,45 +279,46 @@ header {
   position: absolute;
   pointer-events: none;
   opacity: 0;
-  animation: lineAppear 1s ease-out forwards;
+  animation: lineAppear 0s ease-out forwards;
   z-index: 5;
 }
 
 .mental-map-arrow[data-connect="top-left"] {
   top: 25%;
-  left: calc(42% + 30rem);
+  left: calc(42% + 45rem);
   animation-delay: 0s;
+  transform: rotate(90deg) translateX(0px);
 }
 
 .mental-map-arrow[data-connect="top-right"] {
   top: 25%;
-  right: 17%;
+  right: calc(22% - 25rem);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="center-left"] {
   top: 50%;
-  left: calc(32% + 30rem);
+  left: calc(32% + 45rem);
   transform: translateY(-50%);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="center-right"] {
   top: 50%;
-  right: 17%;
+  right: calc(22% - 25rem);
   transform: translateY(-50%);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="bottom-left"] {
   bottom: 25%;
-  left: calc(42% + 30rem);
+  left: calc(42% + 45rem);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="bottom-right"] {
   bottom: 25%;
-  right: 17%;
+  right: calc(22% - 25rem);
   animation-delay: 0s;
 }
 
