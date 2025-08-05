@@ -308,7 +308,7 @@ header {
 
 .mental-map-arrow[data-connect="center-right"] {
   top: 47%;
-  right: calc(22% - 15rem); /* Cambiado de -20rem a -25.5rem para alinearse con la tarjeta */
+  right: calc(22% - 15rem);
   transform: translateY(-50%);
   animation-delay: 0s;
 }
