@@ -1039,7 +1039,6 @@ footer {
   }
 }
 
-/* Tablets pequeñas (600px - 768px) - Mejorado */
 @media screen and (max-width: 768px) {
   /* Hero Section */
   .hero-title-hover {
@@ -1052,7 +1051,6 @@ footer {
     max-width: 90%;
   }
   
-  /* Mental Map Cards - Tamaños reducidos */
   .mental-map-card {
     min-width: 130px;
     max-width: 150px;
