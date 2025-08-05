@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 @media (max-width: 900px) {
-  /* Estilos para pantallas pequeñas */
 }
 
 :root {
@@ -1234,7 +1233,6 @@ footer {
     padding: 10px 0;
   }
 
-  /* Animation for cards - simplificada */
   @keyframes fadeInUp {
     from {
       transform: translateY(20px);
@@ -1249,7 +1247,6 @@ footer {
   }
 }
 
-/* Móviles grandes (480px - 600px) - Mejorado */
 @media screen and (max-width: 600px) {
   /* Navigation */
   .logo {
