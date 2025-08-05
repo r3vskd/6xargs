@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
+@media (max-width: 900px) {
+  /* Estilos para pantallas pequeñas */
+}
+
 :root {
   --primary-color: #131313;
   --background-color: #f1f1f1;
@@ -118,7 +122,7 @@ header {
 .hero-logo {
   position: absolute;
   top: 50%;
-  right: calc(30% - 23rem); /* Resta 3rem al valor actual */
+  right: calc(30% - 18rem); /* Cambiado de calc(30% - 23rem) para mover hacia la izquierda */
   transform: translateY(-50%);
   width: 350px;
   height: auto;
@@ -132,7 +136,6 @@ header {
 
 .hero-logo:hover {
   opacity: 1;
-  transform: translateY(-50%) scale(1.03);
   cursor: pointer;
   filter: contrast(1.2) brightness(1.1);
 }
@@ -232,24 +235,24 @@ header {
   font-family: "Varela", serif;
 }
 
+/*  Hero Logo cards */
 
 .mental-map-card[data-position="top-left"] {
   top: 20%;
-
   transform: translateY(2rem);
-  left: calc(32% + 45rem);
+  left: calc(32% + 35rem);
   animation-delay: 0s;
 }
 
 .mental-map-card[data-position="top-right"] {
   top: 20%;
-  right: calc(22% - 25rem);
+  right: calc(22% - 20rem);
   animation-delay: 0s;
 }
 
 .mental-map-card[data-position="center-left"] {
   top: 50%;
-  left: calc(22% + 45rem);
+  left: calc(22% + 37rem);
   transform: translateY(-50%) scale(0.8);
   animation: mentalMapFadeIn 0.8s ease-out forwards, mentalMapBreathingCentered 6s ease-in-out infinite;
   animation-delay: 0s, 0s;
@@ -257,7 +260,7 @@ header {
 
 .mental-map-card[data-position="center-right"] {
   top: 50%;
-  right: calc(22% - 25rem);
+  right: calc(22% - 25.5rem);
   transform: translateY(-50%) scale(0.8);
   animation: mentalMapFadeIn 0.8s ease-out forwards, mentalMapBreathingCentered 6s ease-in-out infinite;
   animation-delay: 0s, 0s;
@@ -265,13 +268,13 @@ header {
 
 .mental-map-card[data-position="bottom-left"] {
   bottom: 20%;
-  left: calc(32% + 45rem);
+  left: calc(32% + 35rem);
   animation-delay: 0s;
 }
 
 .mental-map-card[data-position="bottom-right"] {
   bottom: 20%;
-  right: calc(22% - 25rem);
+  right: calc(22% - 20rem);
   animation-delay: 0s;
 }
 
@@ -284,43 +287,46 @@ header {
 }
 
 .mental-map-arrow[data-connect="top-left"] {
-  top: 27%; /* Aumentado ligeramente para moverlo hacia abajo */
-  left: calc(41% + 45rem); /* Reducido ligeramente para moverlo hacia la izquierda */
+  top: 27%;
+  left: calc(41% + 35rem);
   animation-delay: 0s;
   transform: translate(-10px, 10px) rotate(30deg);
 }
 
 .mental-map-arrow[data-connect="top-right"] {
-  top: 25%;
-  right: calc(22% - 25rem);
+  top: 30%;
+  right: calc(22% - 12rem);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="center-left"] {
-  top: 50%;
-  left: calc(32% + 45rem);
+  top: 47%;
+  left: calc(32% + 37rem);
   transform: translateY(-50%);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="center-right"] {
-  top: 50%;
-  right: calc(22% - 25rem);
+  top: 47%;
+  right: calc(22% - 15rem); /* Cambiado de -20rem a -25.5rem para alinearse con la tarjeta */
   transform: translateY(-50%);
   animation-delay: 0s;
 }
 
 .mental-map-arrow[data-connect="bottom-left"] {
-  bottom: 25%;
-  left: calc(42% + 45rem);
+  bottom: 27%;
+  left: calc(41% + 35rem);
   animation-delay: 0s;
-  transform: translate(-10px, 10px) rotate(30deg);
+  transform: translate(-15px, 5px) rotate(30deg);
 }
 
 .mental-map-arrow[data-connect="bottom-right"] {
-  bottom: 25%;
-  right: calc(22% - 25rem);
+  bottom: 30%;
+  right: calc(22% - 20rem);
   animation-delay: 0s;
+  right: calc(22% - 13.5rem);
+  transform: rotate(-90deg);
+  transform-origin: 60px 40px;
 }
 
 .mental-map-arrow svg {
@@ -760,7 +766,7 @@ h2 {
   font-family: "Varela", serif;
   line-height: 1.4;
   cursor: default;
-  margin-left: -38rem;
+  margin-left: -40rem;
   color: rgb(160, 160, 160);
 }
 
@@ -886,8 +892,228 @@ footer {
   color: #bbbbbb;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE DESIGN COMPLETO ===== */
+
+/* Pantallas grandes (1200px+) - Optimización */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .hero-title-hover {
+    font-size: 4.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+/* Tablets grandes (1024px - 1200px) */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .hero-title-hover {
+    font-size: 3.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+  
+  /* Workflow section */
+  .workflow-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .workflow-step:nth-child(7) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+/* Tablets medianas (768px - 1024px) - Mejorado */
+@media screen and (max-width: 1024px) {
+  /* Navigation */
+  nav {
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  
+  /* Hero Section */
+  .hero-title-hover {
+    font-size: 3.2rem;
+    padding: 0 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  
+  /* Cards Section */
+  .cards-section {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  
+  .section-left, .section-right {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* How it works section */
+  .how-it-works-container {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 1rem;
+  }
+  
+  .how-it-works-card {
+    width: 100%;
+  }
+  
+  .workflow-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .workflow-arrow {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+  
+  /* Agent sneak peek */
+  .agent-sneak-peek-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  /* Footer */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .hero-logo {
+    width: 280px;
+    right: calc(25% - 18rem);
+  }
+  
+  .mental-map-card[data-position="top-left"],
+  .mental-map-card[data-position="bottom-left"] {
+    left: calc(28% + 30rem);
+  }
+  
+  .mental-map-card[data-position="center-left"] {
+    left: calc(18% + 30rem);
+  }
+  
+  .mental-map-card[data-position="top-right"],
+  .mental-map-card[data-position="center-right"],
+  .mental-map-card[data-position="bottom-right"] {
+    right: calc(18% - 15rem);
+  }
+  
+  .mental-map-arrow[data-connect="top-left"],
+  .mental-map-arrow[data-connect="bottom-left"] {
+    left: calc(37% + 30rem);
+  }
+  
+  .mental-map-arrow[data-connect="center-left"] {
+    left: calc(28% + 30rem);
+  }
+  
+  .mental-map-arrow[data-connect="top-right"],
+  .mental-map-arrow[data-connect="center-right"],
+  .mental-map-arrow[data-connect="bottom-right"] {
+    right: calc(18% - 15rem);
+  }
+}
+
+/* Tablets pequeñas (600px - 768px) - Mejorado */
+@media screen and (max-width: 768px) {
+  /* Hero Section */
+  .hero-title-hover {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  
+  /* Mental Map Cards - Tamaños reducidos */
+  .mental-map-card {
+    min-width: 130px;
+    max-width: 150px;
+    padding: 0.7rem;
+  }
+  
+  .mental-map-card .card-title {
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .mental-map-card .card-content {
+    font-size: 0.6rem;
+    line-height: 1.3;
+  }
+  
+  /* How it works */
+  .how-it-works-text h2 {
+    font-size: 2.2rem;
+  }
+  
+  .how-it-works-text p {
+    font-size: 0.95rem;
+  }
+  
+  .workflow-box {
+    padding: 1rem;
+  }
+  
+  .step-number {
+    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .step-title {
+    font-size: 0.9rem;
+  }
+  
+  .step-description {
+    font-size: 0.8rem;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .card h2 {
+    font-size: 1.8rem;
+  }
+  
+  .card .subtitle {
+    font-size: 0.9rem;
+  }
+  
   .main-title {
     font-size: 2.5rem;
   }
@@ -911,8 +1137,8 @@ footer {
 
   /* Responsive para hero logo */
   .hero-logo {
-    width: 250px;
-    right: 5%;
+    width: 220px;
+    right: calc(20% - 10rem);
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   }
@@ -933,62 +1159,40 @@ footer {
   }
 
   /* positions for tablets */
-  .mental-map-card[data-position="top-left"] {
-    top: 15%;
-    left: 30%;
+  .mental-map-card[data-position="top-left"],
+  .mental-map-card[data-position="bottom-left"] {
+    left: calc(25% + 15rem);
   }
 
-  .mental-map-card[data-position="top-right"] {
-    top: 15%;
-    right: 5%;
+  .mental-map-card[data-position="top-right"],
+  .mental-map-card[data-position="center-right"],
+  .mental-map-card[data-position="bottom-right"] {
+    right: calc(15% - 8rem);
   }
 
   .mental-map-card[data-position="center-left"] {
-    left: 20%;
-  }
-
-  .mental-map-card[data-position="center-right"] {
-    right: 5%;
-  }
-
-  .mental-map-card[data-position="bottom-left"] {
-    bottom: 15%;
-    left: 30%;
-  }
-
-  .mental-map-card[data-position="bottom-right"] {
-    bottom: 15%;
-    right: 5%;
+    left: calc(15% + 15rem);
   }
 
   /* arrows for tablets */
-  .mental-map-arrow[data-connect="top-left"] {
-    left: 42%;
+  .mental-map-arrow[data-connect="top-left"],
+  .mental-map-arrow[data-connect="bottom-left"] {
+    left: calc(35% + 15rem);
   }
 
-  .mental-map-arrow[data-connect="top-right"] {
-    right: 27%;
+  .mental-map-arrow[data-connect="top-right"],
+  .mental-map-arrow[data-connect="center-right"],
+  .mental-map-arrow[data-connect="bottom-right"] {
+    right: calc(15% - 8rem);
   }
 
   .mental-map-arrow[data-connect="center-left"] {
-    left: 35%;
-  }
-
-  .mental-map-arrow[data-connect="center-right"] {
-    right: 27%;
-  }
-
-  .mental-map-arrow[data-connect="bottom-left"] {
-    left: 42%;
-  }
-
-  .mental-map-arrow[data-connect="bottom-right"] {
-    right: 27%;
+    left: calc(25% + 15rem);
   }
 
   .mental-map-arrow svg {
     width: 100px;
-    height: 60px;
+    height: 65px;
   }
 
   .footer-content {
@@ -1050,10 +1254,235 @@ footer {
   .card:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
-
 }
 
-@media (max-width: 480px) {
+/* Móviles grandes (480px - 600px) - Mejorado */
+@media screen and (max-width: 600px) {
+  /* Navigation */
+  .logo {
+    height: 3rem;
+    width: 3rem;
+  }
+  
+  /* Hero Section */
+  .hero-title-hover {
+    font-size: 2.4rem;
+    padding: 0 0.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+  
+  /* Mental Map - Más compacto */
+  .mental-map-card {
+    min-width: 110px;
+    max-width: 130px;
+    padding: 0.6rem;
+  }
+  
+  .mental-map-card .card-title {
+    font-size: 0.7rem;
+  }
+  
+  .mental-map-card .card-content {
+    font-size: 0.55rem;
+  }
+  
+  /* How it works */
+  .how-it-works-text h2 {
+    font-size: 2rem;
+  }
+  
+  .how-it-works-text p {
+    font-size: 0.85rem;
+    padding: 0 1rem;
+  }
+  
+  .workflow-box {
+    padding: 0.8rem;
+  }
+  
+  .step-number {
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .step-title {
+    font-size: 0.8rem;
+  }
+  
+  .step-description {
+    font-size: 0.7rem;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 1.2rem;
+  }
+  
+  .card h2 {
+    font-size: 1.6rem;
+  }
+  
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .horizontal-list li {
+    font-size: 0.9rem;
+  }
+  
+  .hero-logo {
+    width: 180px;
+    right: calc(15% - 5rem);
+  }
+  
+  .mental-map-card[data-position="top-left"],
+  .mental-map-card[data-position="bottom-left"] {
+    left: calc(20% + 5rem);
+  }
+  
+  .mental-map-card[data-position="center-left"] {
+    left: calc(10% + 5rem);
+  }
+  
+  .mental-map-card[data-position="top-right"],
+  .mental-map-card[data-position="center-right"],
+  .mental-map-card[data-position="bottom-right"] {
+    right: calc(10% - 3rem);
+  }
+  
+  .mental-map-arrow[data-connect="top-left"],
+  .mental-map-arrow[data-connect="bottom-left"] {
+    left: calc(30% + 5rem);
+  }
+  
+  .mental-map-arrow[data-connect="center-left"] {
+    left: calc(20% + 5rem);
+  }
+  
+  .mental-map-arrow[data-connect="top-right"],
+  .mental-map-arrow[data-connect="center-right"],
+  .mental-map-arrow[data-connect="bottom-right"] {
+    right: calc(10% - 3rem);
+  }
+  
+  .mental-map-arrow svg {
+    width: 80px;
+    height: 50px;
+  }
+}
+
+/* Móviles pequeños (320px - 480px) - Mejorado */
+@media screen and (max-width: 480px) {
+  /* Hero Section */
+  .hero-title-hover {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  /* Mental Map - Muy compacto */
+  .mental-map-card {
+    min-width: 100px;
+    max-width: 120px;
+    padding: 0.5rem;
+  }
+  
+  .mental-map-card .card-title {
+    font-size: 0.65rem;
+  }
+  
+  .mental-map-card .card-content {
+    font-size: 0.5rem;
+  }
+  
+  /* How it works */
+  .how-it-works-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .how-it-works-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .how-it-works-text p {
+    font-size: 0.8rem;
+  }
+  
+  .workflow-box {
+    padding: 0.7rem;
+  }
+  
+  .step-number {
+    font-size: 0.9rem;
+    width: 28px;
+    height: 28px;
+  }
+  
+  .step-title {
+    font-size: 0.75rem;
+  }
+  
+  .step-description {
+    font-size: 0.65rem;
+  }
+  
+  /* Cards */
+  .cards-section {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .card h2 {
+    font-size: 1.4rem;
+  }
+  
+  .card .subtitle {
+    font-size: 0.8rem;
+  }
+  
+  /* Agent sneak peek */
+  .agent-sneak-peek-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .agent-sneak-peek-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .agent-sneak-peek-text p {
+    font-size: 0.8rem;
+  }
+  
+  /* Footer */
+  .footer-section {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding: 1rem 0.5rem;
+  }
+  
   h1 {
     font-size: 1.5rem;
   }
@@ -1068,8 +1497,8 @@ footer {
 
   /* Responsive para hero logo */
   .hero-logo {
-    width: 180px;
-    right: 2%;
+    width: 150px;
+    right: calc(10% - 2rem);
     top: 60%;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -1094,38 +1523,94 @@ footer {
     font-size: 0.6rem;
   }
 
-  /* Hide arrows on responsive */
-  .mental-map-arrow {
-    display: none;
-  }
-
   /* Adjust positions for mobile */
-  .mental-map-card[data-position="top-left"] {
-    top: 10%;
-    left: 25%;
+  .mental-map-card[data-position="top-left"],
+  .mental-map-card[data-position="bottom-left"] {
+    left: calc(15% + 2rem);
   }
 
-  .mental-map-card[data-position="top-right"] {
-    top: 10%;
-    right: 2%;
+  .mental-map-card[data-position="top-right"],
+  .mental-map-card[data-position="center-right"],
+  .mental-map-card[data-position="bottom-right"] {
+    right: calc(5% - 1rem);
   }
 
   .mental-map-card[data-position="center-left"] {
-    left: 15%;
+    left: calc(5% + 2rem);
   }
 
-  .mental-map-card[data-position="center-right"] {
-    right: 2%;
+  .mental-map-arrow[data-connect="top-left"],
+  .mental-map-arrow[data-connect="bottom-left"] {
+    left: calc(25% + 2rem);
   }
-
-  .mental-map-card[data-position="bottom-left"] {
-    bottom: 10%;
-    left: 25%;
+  
+  .mental-map-arrow[data-connect="center-left"] {
+    left: calc(15% + 2rem);
   }
+  
+  .mental-map-arrow[data-connect="top-right"],
+  .mental-map-arrow[data-connect="center-right"],
+  .mental-map-arrow[data-connect="bottom-right"] {
+    right: calc(5% - 1rem);
+  }
+  
+  .mental-map-arrow svg {
+    width: 60px;
+    height: 40px;
+  }
+}
 
-  .mental-map-card[data-position="bottom-right"] {
-    bottom: 10%;
-    right: 2%;
+/* Móviles muy pequeños (menos de 320px) */
+@media screen and (max-width: 320px) {
+  .hero-title-hover {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.75rem;
+  }
+  
+  .mental-map-card {
+    min-width: 90px;
+    max-width: 110px;
+    padding: 0.4rem;
+  }
+  
+  .mental-map-card .card-title {
+    font-size: 0.6rem;
+  }
+  
+  .mental-map-card .card-content {
+    font-size: 0.45rem;
+  }
+  
+  .card h2 {
+    font-size: 1.2rem;
+  }
+  
+  .how-it-works-text h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Orientación landscape para móviles */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero-title-hover {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .hero-logo {
+    width: 120px;
+    top: 45%;
+  }
+  
+  .mental-map-card {
+    min-width: 100px;
+    max-width: 120px;
   }
 }
 
