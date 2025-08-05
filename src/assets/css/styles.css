@@ -893,8 +893,6 @@ footer {
 }
 
 /* ===== RESPONSIVE DESIGN COMPLETO ===== */
-
-/* Pantallas grandes (1200px+) - Optimización */
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1400px;
@@ -910,7 +908,6 @@ footer {
   }
 }
 
-/* Tablets grandes (1024px - 1200px) */
 @media screen and (max-width: 1200px) {
   .container {
     padding: 0 2rem;
@@ -937,9 +934,7 @@ footer {
   }
 }
 
-/* Tablets medianas (768px - 1024px) - Mejorado */
 @media screen and (max-width: 1024px) {
-  /* Navigation */
   nav {
     padding: 0.5rem 1rem;
   }
