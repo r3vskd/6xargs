@@ -1917,7 +1917,7 @@ footer {
     gap: 0.8rem;
   }
   
-  /* Layout vertical ajustado (responsive)*/
+  /*********** Layout vertical responsive *********/
   .workflow-step[data-step="1"] { grid-column: 1; grid-row: 1; }
   .workflow-step[data-step="2"] { grid-column: 1; grid-row: 2; }
   .workflow-step[data-step="3"] { grid-column: 1; grid-row: 3; }
