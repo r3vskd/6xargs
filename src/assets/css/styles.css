@@ -1676,7 +1676,7 @@ footer {
   font-size: 12px;
   text-align: center;
   flex: 1;
-  margin-left: -60px; /* Compensate for controls width */
+  margin-left: -60px; 
 }
 
 .terminal-body {
