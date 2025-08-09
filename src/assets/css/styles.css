@@ -1685,7 +1685,8 @@ footer {
   background: #0a0a0a;
   overflow-y: auto;
   color: #e5e5e5;
-  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  /* Fuente actualizada para coincidir con macOS M4 terminal */
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', 'Menlo', 'Consolas', monospace;
 }
 
 .terminal-line {
@@ -1693,6 +1694,8 @@ footer {
   display: flex;
   align-items: center;
   gap: 8px;
+  /* Asegurar que todas las líneas usen la misma fuente */
+  font-family: inherit;
 }
 
 .terminal-line.command {
@@ -1729,6 +1732,18 @@ footer {
   color: #8b5cf6;
   font-weight: bold;
   min-width: 16px;
+  /* Heredar la fuente para consistencia */
+  font-family: inherit;
+}
+
+/* Cursor morado que parpadea - ahora posicionado antes del input */
+.cursor {
+  color: #8b5cf6;
+  animation: blink 1s infinite;
+  font-weight: bold;
+  order: 1;
+  /* Heredar la fuente para consistencia */
+  font-family: inherit;
 }
 
 .terminal-input {
@@ -1737,19 +1752,15 @@ footer {
   border: none;
   outline: none;
   color: #e5e5e5;
+  /* Heredar la fuente del terminal-body para consistencia */
   font-family: inherit;
   font-size: inherit;
-  caret-color: #8b5cf6;
+  caret-color: transparent;
+  order: 2;
 }
 
 .terminal-input::placeholder {
   color: #6b7280;
-}
-
-.cursor {
-  color: #8b5cf6;
-  animation: blink 1s infinite;
-  font-weight: bold;
 }
 
 @keyframes blink {

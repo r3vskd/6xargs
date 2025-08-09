@@ -151,6 +151,8 @@ export default function TerminalCLI() {
         {!isTyping && (
           <div className="terminal-input-line">
             <span className="prompt">$</span>
+            {/* Cursor */}
+            <span className="cursor">|</span>
             <input
               ref={inputRef}
               type="text"
@@ -161,7 +163,6 @@ export default function TerminalCLI() {
               placeholder="Enter command..."
               disabled={isTyping}
             />
-            <span className="cursor">|</span>
           </div>
         )}
         
