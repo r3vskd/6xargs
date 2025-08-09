@@ -85,6 +85,8 @@ nav ul {
   overflow: hidden;
   float: right;
   font-family: "Varela", serif;
+  font-weight: 500;
+
 }
 
 nav ul li {
@@ -92,6 +94,7 @@ nav ul li {
   padding: 0 1.5rem;
   font-family: "Varela", serif;
   color: rgb(71, 71, 71);
+  font-weight: 500;
 }
 
 nav ul li a {
@@ -101,11 +104,15 @@ nav ul li a {
   position: relative;
   overflow: hidden;
   font-family: "Varela", serif;
+  /* Agregar grosor a las letras de la navbar */
+  font-weight: 700; /* Cambiado de 500 a 700 para más grosor */
 }
 
 nav ul li a:hover {
   color: rgb(162, 128, 255);
   font-family: "Varela", serif;
+  /* Mantener el grosor en hover */
+  font-weight: 700;
 }
 
 header {
@@ -1213,6 +1220,10 @@ footer {
   }
 
   /** navbar */
+  .menu ul{
+    font-weight: 500;
+  }
+
   nav ul {
     display: none;
   }
@@ -1223,6 +1234,8 @@ footer {
     font-size: 24px;
     color: var(--text-color);
     cursor: pointer;
+    font-weight: 500;
+
   }
 
   .menu-icon:hover {
