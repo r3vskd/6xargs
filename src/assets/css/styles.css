@@ -111,7 +111,6 @@ nav ul li a {
 nav ul li a:hover {
   color: rgb(162, 128, 255);
   font-family: "Varela", serif;
-  /* Mantener el grosor en hover */
   font-weight: 700;
 }
 
