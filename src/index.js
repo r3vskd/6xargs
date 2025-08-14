@@ -1,17 +1,14 @@
-// Importar las dependencias necesarias
 import express from 'express';
 import path from 'path';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Configuración de la ruta absoluta
 const __dirname = path.resolve();
 
-// Servir archivos estáticos de la carpeta "assets"
 app.use('/assets', express.static(path.join(__dirname, 'src/assets')));
+app.use('/app', express.static(path.join(__dirname, 'public/build')));
 
-// Ruta para servir el archivo index.html desde la carpeta 'html'
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/assets/html/index.html'));
 });
