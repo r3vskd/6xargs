@@ -174,6 +174,12 @@ button:hover{
       color: #5900ff;
     }
 
+    .message {
+      margin-top: 10px;
+      text-align: center;
+      color: #5900ff;
+      font-size: 14px;
+    }
     </style>
 </head>
 <body>
@@ -185,22 +191,24 @@ button:hover{
       </div>
       <!-- JavaScript code -->
 <script src="/assets/js/neural.js"></script>
-    <form>
+    <form action="/register" method="POST">
         <h3>Sign up Here</h3>
 
-        <label for="Email">Email</label>
-        <input type="text" placeholder="email" id="email" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="email" id="email" required>
       
-        <label for="Username">Username</label>
-        <input type="text" placeholder="username" id="username" required>
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username" id="username" required>
       
         <label for="password">Password</label>
-        <input type="password" placeholder="password" id="password" required>
+        <input type="password" name="password" placeholder="password" id="password" required>
 
-        <label for="password">Comfirm Password</label>
-        <input type="password" placeholder="password" id="password" required>
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" name="confirmPassword" placeholder="confirm password" id="confirmPassword" required>
 
-        <button>Register</button>
+        <div id="message" class="message"></div>
+
+        <button type="submit">Register</button>
 
         <a href="/assets/html/login.html">
           <button class="signin-button" type="button">Sign In</button>
@@ -213,6 +221,26 @@ button:hover{
             <a href="#">Privacy Policy</a>
         </div>
     </form>
-    <script src="/app/routes/register.tsx"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const message = document.getElementById('message');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+
+            form.addEventListener('submit', function(event) {
+                // Validar que las contraseñas coincidan
+                if (password.value !== confirmPassword.value) {
+                    event.preventDefault();
+                    message.textContent = 'Las contraseñas no coinciden';
+                    return false;
+                }
+                
+                message.textContent = 'Registrando usuario...';
+                return true;
+            });
+        });
+    </script>
 </body>
 </html>
