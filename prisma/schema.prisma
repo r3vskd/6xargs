@@ -15,38 +15,150 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
+  id        Int      @id @default(autoincrement())
   email     String   @unique
-  password  String
-  nickname  String
+  nickname  String   @unique
+  password  String   // hashed
   role      Role     @default(HACKER)
   createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
+  // Relación
   reports   Report[]
+  earnings  Earning[]
+  programs  ProgramMember[]
+}
+
+enum Role {
+  VISITOR
+  HACKER
+  CLIENT
+  CONTRACTOR
+  STAFF
+  ADMIN
+}
+
+model Company {
+  id          Int       @id @default(autoincrement())
+  name        String
+  email       String    @unique
+  country     String
+  url         String
+  createdAt   DateTime  @default(now())
+
+  // Relación
+  programs    Program[]
 }
 
 model Program {
-  id          String   @id @default(cuid())
-  name        String
+  id          Int       @id @default(autoincrement())
+  title       String
   description String
-  url         String
+  status      ProgramStatus @default(ACTIVE)
+  companyId   Int
   createdAt   DateTime @default(now())
 
+  company     Company   @relation(fields: [companyId], references: [id])
   reports     Report[]
+  members     ProgramMember[]
+}
+
+enum ProgramStatus {
+  ACTIVE
+  PAUSED
+  CLOSED
+}
+
+model ProgramMember {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  programId Int
+  joinedAt  DateTime @default(now())
+
+  user      User    @relation(fields: [userId], references: [id])
+  program   Program @relation(fields: [programId], references: [id])
 }
 
 model Report {
-  id        String   @id @default(cuid())
-  title     String
-  severity  String
-  resolved  Boolean  @default(false)
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  severity    Severity
+  status      ReportStatus @default(PENDING)
+  createdAt   DateTime @default(now())
+  
+  userId      Int
+  programId   Int
+
+  user        User    @relation(fields: [userId], references: [id])
+  program     Program @relation(fields: [programId], references: [id])
+  triage      Triage?
+}
+
+enum Severity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum ReportStatus {
+  PENDING
+  IN_TRIAGE
+  ACCEPTED
+  REJECTED
+  PAID
+}
+
+model Report {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  severity    Severity
+  status      ReportStatus @default(PENDING)
+  createdAt   DateTime @default(now())
+  
+  userId      Int
+  programId   Int
+
+  user        User    @relation(fields: [userId], references: [id])
+  program     Program @relation(fields: [programId], references: [id])
+  triage      Triage?
+}
+
+enum Severity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum ReportStatus {
+  PENDING
+  IN_TRIAGE
+  ACCEPTED
+  REJECTED
+  PAID
+}
+
+model Earning {
+  id        Int      @id @default(autoincrement())
+  amount    Float
+  currency  String   @default("USD")
+  status    EarningStatus @default(PENDING)
   createdAt DateTime @default(now())
 
-  userId    String
-  programId String
+  userId    Int
+  reportId  Int?
 
-  user      User     @relation(fields: [userId], references: [id])
-  program   Program  @relation(fields: [programId], references: [id])
+  user      User    @relation(fields: [userId], references: [id])
+  report    Report? @relation(fields: [reportId], references: [id])
+}
+
+enum EarningStatus {
+  PENDING
+  PAID
+  FAILED
 }
 
 enum Role {
