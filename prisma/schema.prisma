@@ -93,37 +93,24 @@ model Report {
   user        User    @relation(fields: [userId], references: [id])
   program     Program @relation(fields: [programId], references: [id])
   triage      Triage?
+  earnings    Earning[]
 }
 
-enum Severity {
-  LOW
-  MEDIUM
-  HIGH
-  CRITICAL
-}
-
-enum ReportStatus {
-  PENDING
-  IN_TRIAGE
-  ACCEPTED
-  REJECTED
-  PAID
-}
-
-model Report {
+model Triage {
   id          Int       @id @default(autoincrement())
-  title       String
-  description String
-  severity    Severity
-  status      ReportStatus @default(PENDING)
+  notes       String?
+  status      TriageStatus @default(IN_PROGRESS)
   createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
   
-  userId      Int
-  programId   Int
+  reportId    Int      @unique
+  report      Report   @relation(fields: [reportId], references: [id])
+}
 
-  user        User    @relation(fields: [userId], references: [id])
-  program     Program @relation(fields: [programId], references: [id])
-  triage      Triage?
+enum TriageStatus {
+  IN_PROGRESS
+  COMPLETED
+  REJECTED
 }
 
 enum Severity {
@@ -159,11 +146,4 @@ enum EarningStatus {
   PENDING
   PAID
   FAILED
-}
-
-enum Role {
-  HACKER
-  STAFF
-  ADMIN
-  CLIENT
 }
