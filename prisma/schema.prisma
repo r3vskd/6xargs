@@ -46,7 +46,6 @@ model Company {
   url         String
   createdAt   DateTime  @default(now())
 
-  // Relación
   programs    Program[]
 }
 
