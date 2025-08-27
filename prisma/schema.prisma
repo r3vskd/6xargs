@@ -24,7 +24,6 @@ model User {
   earnings  Earning[]
   programs  ProgramMember[]
 }
-
 enum Role {
   VISITOR
   HACKER
