@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-
+/* IMPORTANT ADVICE: THIS COMPONENTS AND ROUTES WILL BE MEGRATED FROM APP FOLDER TO SRC TO BE EXPRESS.JS CORE API OF THE PROJECT*/
 interface TerminalLine {
   id: number;
   type: 'command' | 'output' | 'error';
