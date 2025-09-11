@@ -1,23 +1,81 @@
-# Excluir dependencias instaladas
-node_modules/
- 
-# Excluir archivos de configuración sensibles
-.env
-railway.toml
+# Dependencies
+node_modules
+*/node_modules
+**/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Excluir configuraciones locales de Git y editor
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build outputs
+dist
+build
+out
+.next
+.nuxt
+.cache
+.parcel-cache
+.serverless
+coverage
+.nyc_output
+
+# Development files
+.DS_Store
+.vscode
+.idea
+*.log
 .git
 .gitignore
-.vscode/
+README.md
+*.md
+!apps/*/README.md
+!packages/*/README.md
+
+# Test files
+tests
+**/*.test.*
+**/*.spec.*
+__tests__
+
+# Docker files
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Temporary files
+.tmp
+.temp
+*.tmp
+*.temp
+
+# OS files
+Thumbs.db
 .DS_Store
 
-# Excluir archivos innecesarios o temporales
-logs/
-*.log
-*.tmp
-npm-debug.log*
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
 
-# Archivos específicos de desarrollo
-Dockerfile
-docker-compose.yml
-tests/
+# Monorepo specific
+.trae
+scripts
+docs
+banner.txt
+users.txt
+FOLDER_STRUCTURE_RECOMMENDATION.md
+LICENSE
+railway.*
+
+# CAI module (git submodule)
+packages/cai/*
+!packages/cai/README.md
+!packages/cai/.gitkeep
+!packages/cai/cai.config.example.json
