@@ -1,58 +1,92 @@
 {
-  "name": "6xargs_devops",
+  "name": "6xargs",
   "version": "1.0.0",
-  "description": "project-01",
-  "main": "./html/index.html",
+  "description": "6xargs - Revolutionary Bug Bounty Platform with AI-Powered Triage",
   "private": true,
-  "sideEffects": false,
   "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "remix vite:build",
-    "start": "remix-serve ./build/server/index.js",
-    "dev": "remix vite:dev",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "typecheck": "tsc"
+    "dev": "npm run dev --workspaces",
+    "dev:backend": "npm run dev --workspace=@6xargs/backend",
+    "dev:frontend": "npm run dev --workspace=@6xargs/frontend",
+    "dev:docker": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
+    "dev:script": "powershell -ExecutionPolicy Bypass -File ./scripts/dev.ps1",
+    "build": "npm run build --workspaces",
+    "build:shared": "npm run build --workspace=@6xargs/types && npm run build --workspace=@6xargs/utils && npm run build --workspace=@6xargs/constants",
+    "build:backend": "npm run build --workspace=@6xargs/backend",
+    "build:frontend": "npm run build --workspace=@6xargs/frontend",
+    "build:docker": "docker-compose build",
+    "build:script": "bash ./scripts/build.sh",
+    "build:prod": "bash ./scripts/build.sh --production",
+    "start": "npm run start --workspaces",
+    "start:backend": "npm run start --workspace=@6xargs/backend",
+    "start:frontend": "npm run start --workspace=@6xargs/frontend",
+    "start:docker": "docker-compose up",
+    "test": "npm run test --workspaces --if-present",
+    "test:backend": "npm run test --workspace=@6xargs/backend",
+    "test:frontend": "npm run test --workspace=@6xargs/frontend",
+    "lint": "npm run lint --workspaces --if-present",
+    "lint:fix": "npm run lint:fix --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present && rimraf node_modules apps/*/node_modules packages/*/node_modules",
+    "clean:build": "rimraf apps/*/dist apps/*/build packages/*/dist packages/*/lib",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:clean": "docker-compose down -v --remove-orphans && docker system prune -f",
+    "postinstall": "echo 'Skipping build:shared - workspaces not available'"
   },
-  "dependencies": {
-    "@prisma/client": "^6.14.0",
-    "@remix-run/node": "^2.15.2",
-    "@remix-run/react": "^2.15.2",
-    "@remix-run/serve": "^2.15.2",
-    "bcryptjs": "^3.0.2",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "fs": "^0.0.1-security",
-    "isbot": "^4.1.0",
-    "openai": "^4.76.0",
-    "pg": "^8.13.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "zod": "^3.25.76"
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   },
-  "keywords": [],
-  "devDependencies": {
-    "@remix-run/dev": "^2.15.2",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "@typescript-eslint/parser": "^6.7.4",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^8.38.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "nodemon": "3.1.7",
-    "postcss": "^8.4.38",
-    "prisma": "^6.14.0",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.1.6",
-    "vite": "^5.1.0",
-    "vite-tsconfig-paths": "^4.2.1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/6xargs/6xargs.git"
+  },
+  "keywords": [
+    "bug-bounty",
+    "security",
+    "pentesting",
+    "ai",
+    "triage",
+    "vulnerability",
+    "cybersecurity",
+    "saas"
+  ],
+  "author": "6xargs Team",
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run typecheck && npm run test"
+    }
   }
 }
