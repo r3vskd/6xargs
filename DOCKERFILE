@@ -1,6 +1,101 @@
-FROM node:18
+# Multi-stage build for 6xargs monorepo
+
+# Base stage with Node.js
+FROM node:18-alpine AS base
 WORKDIR /app
-COPY . .
-RUN npm install
-RUN npm run build
-CMD ["npm", "start"]
+
+# Install dependencies for the entire workspace
+COPY package*.json ./
+COPY apps/backend/package*.json ./apps/backend/
+COPY apps/frontend/package*.json ./apps/frontend/
+COPY packages/shared/types/package*.json ./packages/shared/types/
+COPY packages/shared/utils/package*.json ./packages/shared/utils/
+
+RUN npm ci --workspaces
+
+# Build shared packages
+COPY packages/ ./packages/
+RUN npm run build --workspace=@6xargs/shared-types
+RUN npm run build --workspace=@6xargs/shared-utils
+
+# Backend build stage
+FROM base AS backend-build
+COPY apps/backend/ ./apps/backend/
+RUN npm run build --workspace=backend
+
+# Frontend build stage
+FROM base AS frontend-build
+COPY apps/frontend/ ./apps/frontend/
+RUN npm run build --workspace=frontend
+
+# Production backend stage
+FROM node:18-alpine AS backend-production
+WORKDIR /app
+
+# Copy package files and install production dependencies
+COPY package*.json ./
+COPY apps/backend/package*.json ./apps/backend/
+COPY packages/shared/types/package*.json ./packages/shared/types/
+COPY packages/shared/utils/package*.json ./packages/shared/utils/
+
+RUN npm ci --workspaces --only=production
+
+# Copy built applications
+COPY --from=backend-build /app/packages/ ./packages/
+COPY --from=backend-build /app/apps/backend/dist/ ./apps/backend/dist/
+COPY --from=backend-build /app/apps/backend/package.json ./apps/backend/
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S backend -u 1001
+
+# Change ownership and switch to non-root user
+RUN chown -R backend:nodejs /app
+USER backend
+
+# Expose backend port
+EXPOSE 3001
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD node -e "require('http').get('http://localhost:3001/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
+
+# Start backend
+CMD ["npm", "start", "--workspace=backend"]
+
+# Production frontend stage
+FROM node:18-alpine AS frontend-production
+WORKDIR /app
+
+# Copy package files and install production dependencies
+COPY package*.json ./
+COPY apps/frontend/package*.json ./apps/frontend/
+COPY packages/shared/types/package*.json ./packages/shared/types/
+COPY packages/shared/utils/package*.json ./packages/shared/utils/
+
+RUN npm ci --workspaces --only=production
+
+# Copy built applications
+COPY --from=frontend-build /app/packages/ ./packages/
+COPY --from=frontend-build /app/apps/frontend/build/ ./apps/frontend/build/
+COPY --from=frontend-build /app/apps/frontend/public/ ./apps/frontend/public/
+COPY --from=frontend-build /app/apps/frontend/package.json ./apps/frontend/
+COPY --from=frontend-build /app/apps/frontend/remix.config.js ./apps/frontend/
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S frontend -u 1001
+
+# Change ownership and switch to non-root user
+RUN chown -R frontend:nodejs /app
+USER frontend
+
+# Expose frontend port
+EXPOSE 3000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD node -e "require('http').get('http://localhost:3000', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
+
+# Start frontend
+CMD ["npm", "start", "--workspace=frontend"]
