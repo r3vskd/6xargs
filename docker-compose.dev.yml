@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: backend-build
+    ports:
+      - "3000:3000"
+      - "9229:9229" # Node.js debugger port
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@db:5432/sixargs_dev
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=dev-jwt-secret
+      - API_KEY_SECRET=dev-api-key-secret
+    volumes:
+      - ./apps/backend:/app/apps/backend
+      - ./packages:/app/packages
+      - /app/node_modules
+      - /app/apps/backend/node_modules
+    command: npm run dev --workspace=@sixargs/backend
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - sixargs-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend-build
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - API_URL=http://backend:3000
+    volumes:
+      - ./apps/frontend:/app/apps/frontend
+      - ./packages:/app/packages
+      - /app/node_modules
+      - /app/apps/frontend/node_modules
+    command: npm run dev --workspace=@sixargs/frontend
+    depends_on:
+      - backend
+    networks:
+      - sixargs-network
+    restart: unless-stopped
+
+  db:
+    environment:
+      - POSTGRES_DB=sixargs_dev
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+      - ./apps/backend/prisma:/docker-entrypoint-initdb.d:ro
+
+  # Enable adminer for development
+  adminer:
+    profiles: []
+
+volumes:
+  postgres_dev_data:
+    driver: local
