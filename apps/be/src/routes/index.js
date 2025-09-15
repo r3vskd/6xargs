@@ -1,12 +1,12 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 
 // Import B2B API route modules
-const clientRoutes = require('./clients.routes');
-const triageRoutes = require('./triage.routes');
-const webhookRoutes = require('./webhooks.routes');
-const usageRoutes = require('./usage.routes');
-const leadRoutes = require('./leads.routes');
+import clientRoutes from './clients.routes.js';
+import triageRoutes from './triage.routes.js';
+import webhookRoutes from './webhooks.routes.js';
+import usageRoutes from './usage.routes.js';
+import leadRoutes from './leads.routes.js';
 
 // B2B API Routes
 router.use('/clients', clientRoutes);     // Gestión de clientes empresariales
@@ -41,4 +41,4 @@ router.get('/', (req, res) => {
   });
 });
 
-module.exports = router;
+export default router;
