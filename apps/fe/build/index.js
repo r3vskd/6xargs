@@ -43,7 +43,12 @@ import {
   ScrollRestoration,
   useLoaderData
 } from "@remix-run/react";
-import { json } from "@remix-run/node";
+import { json } from "@remix-run/server-runtime";
+
+// app/global.css?url
+var global_default = "/build/_assets/global-XTWRBON4.css?url";
+
+// app/root.tsx
 import { jsxDEV as jsxDEV2 } from "react/jsx-dev-runtime";
 var links = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -55,6 +60,10 @@ var links = () => [
   {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+  },
+  {
+    rel: "stylesheet",
+    href: global_default
   }
 ];
 async function loader({ request }) {
@@ -71,147 +80,147 @@ function Layout({ children }) {
     /* @__PURE__ */ jsxDEV2("head", { children: [
       /* @__PURE__ */ jsxDEV2("meta", { charSet: "utf-8" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 43,
+        lineNumber: 47,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 44,
+        lineNumber: 48,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { name: "description", content: "6xargs - Revolutionizing Bug Bounty and Pentesting with AI-powered Triage" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 45,
+        lineNumber: 49,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { name: "keywords", content: "bug bounty, pentesting, security, AI, triage, vulnerability assessment" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 46,
+        lineNumber: 50,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { name: "author", content: "6xargs Team" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 47,
+        lineNumber: 51,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { property: "og:type", content: "website" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 50,
+        lineNumber: 54,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { property: "og:title", content: "6xargs - AI-Powered Security Platform" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 51,
+        lineNumber: 55,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { property: "og:description", content: "Revolutionizing Bug Bounty and Pentesting with AI-powered Triage and Air Gapped CLI" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 52,
+        lineNumber: 56,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { property: "og:image", content: "/og-image.png" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 53,
+        lineNumber: 57,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { property: "twitter:card", content: "summary_large_image" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 56,
+        lineNumber: 60,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { property: "twitter:title", content: "6xargs - AI-Powered Security Platform" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 57,
+        lineNumber: 61,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { property: "twitter:description", content: "Revolutionizing Bug Bounty and Pentesting with AI-powered Triage and Air Gapped CLI" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 58,
+        lineNumber: 62,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("meta", { property: "twitter:image", content: "/og-image.png" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 59,
+        lineNumber: 63,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("link", { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 62,
+        lineNumber: 66,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("link", { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 63,
+        lineNumber: 67,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("link", { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 64,
+        lineNumber: 68,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2("link", { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 65,
+        lineNumber: 69,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(Meta, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 67,
+        lineNumber: 71,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(Links, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 68,
+        lineNumber: 72,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 42,
+      lineNumber: 46,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV2("body", { className: "h-full bg-gray-50 dark:bg-gray-900", children: [
       children,
       /* @__PURE__ */ jsxDEV2(ScrollRestoration, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 72,
+        lineNumber: 76,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(Scripts, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 73,
+        lineNumber: 77,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(
         "script",
         {
           dangerouslySetInnerHTML: {
-            __html: `window.ENV = ${JSON.stringify(data.ENV)}`
+            __html: `window.ENV = ${JSON.stringify(data?.ENV || {})}`
           }
         },
         void 0,
         !1,
         {
           fileName: "app/root.tsx",
-          lineNumber: 74,
+          lineNumber: 78,
           columnNumber: 9
         },
         this
       )
     ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 70,
+      lineNumber: 74,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/root.tsx",
-    lineNumber: 41,
+    lineNumber: 45,
     columnNumber: 5
   }, this);
 }
 function App() {
   return /* @__PURE__ */ jsxDEV2(Outlet, {}, void 0, !1, {
     fileName: "app/root.tsx",
-    lineNumber: 85,
+    lineNumber: 89,
     columnNumber: 10
   }, this);
 }
@@ -220,34 +229,34 @@ function ErrorBoundary() {
     /* @__PURE__ */ jsxDEV2("head", { children: [
       /* @__PURE__ */ jsxDEV2("title", { children: "Oops! Something went wrong" }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 92,
+        lineNumber: 96,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(Meta, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 93,
+        lineNumber: 97,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(Links, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 94,
+        lineNumber: 98,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 91,
+      lineNumber: 95,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV2("body", { className: "h-full bg-gray-50 dark:bg-gray-900", children: [
       /* @__PURE__ */ jsxDEV2("div", { className: "min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxDEV2("div", { className: "sm:mx-auto sm:w-full sm:max-w-md", children: /* @__PURE__ */ jsxDEV2("div", { className: "bg-white dark:bg-gray-800 py-8 px-4 shadow sm:rounded-lg sm:px-10", children: /* @__PURE__ */ jsxDEV2("div", { className: "text-center", children: [
         /* @__PURE__ */ jsxDEV2("h1", { className: "text-2xl font-bold text-gray-900 dark:text-white mb-4", children: "Oops! Something went wrong" }, void 0, !1, {
           fileName: "app/root.tsx",
-          lineNumber: 101,
+          lineNumber: 105,
           columnNumber: 17
         }, this),
         /* @__PURE__ */ jsxDEV2("p", { className: "text-gray-600 dark:text-gray-400 mb-6", children: "We're sorry, but something unexpected happened. Please try refreshing the page." }, void 0, !1, {
           fileName: "app/root.tsx",
-          lineNumber: 104,
+          lineNumber: 108,
           columnNumber: 17
         }, this),
         /* @__PURE__ */ jsxDEV2(
@@ -261,41 +270,41 @@ function ErrorBoundary() {
           !1,
           {
             fileName: "app/root.tsx",
-            lineNumber: 107,
+            lineNumber: 111,
             columnNumber: 17
           },
           this
         )
       ] }, void 0, !0, {
         fileName: "app/root.tsx",
-        lineNumber: 100,
+        lineNumber: 104,
         columnNumber: 15
       }, this) }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 99,
+        lineNumber: 103,
         columnNumber: 13
       }, this) }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 98,
+        lineNumber: 102,
         columnNumber: 11
       }, this) }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 97,
+        lineNumber: 101,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ jsxDEV2(Scripts, {}, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 117,
+        lineNumber: 121,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 96,
+      lineNumber: 100,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/root.tsx",
-    lineNumber: 90,
+    lineNumber: 94,
     columnNumber: 5
   }, this);
 }
@@ -2243,1200 +2252,1018 @@ function Dashboard() {
 // app/routes/_index.tsx
 var index_exports = {};
 __export(index_exports, {
-  default: () => Index,
-  meta: () => meta5
+  default: () => HomePage
 });
-import { useState as useState6, useEffect as useEffect3 } from "react";
-
-// app/components/Navigation.tsx
-import { useState as useState3 } from "react";
-import { Link as Link4 } from "@remix-run/react";
 import { jsxDEV as jsxDEV7 } from "react/jsx-dev-runtime";
-var Navigation = () => {
-  let [isMenuOpen, setIsMenuOpen] = useState3(!1);
-  return /* @__PURE__ */ jsxDEV7("nav", { className: `navbar ${isMenuOpen ? "responsive" : ""}`, children: /* @__PURE__ */ jsxDEV7("div", { className: "nav-container", children: [
-    /* @__PURE__ */ jsxDEV7(Link4, { to: "/", className: "nav-logo", children: [
-      /* @__PURE__ */ jsxDEV7("img", { src: "/images/6xargs.svg", alt: "6xargs", className: "logo-img" }, void 0, !1, {
-        fileName: "app/components/Navigation.tsx",
-        lineNumber: 24,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV7("span", { className: "logo-text", children: "6xargs" }, void 0, !1, {
-        fileName: "app/components/Navigation.tsx",
-        lineNumber: 25,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/components/Navigation.tsx",
-      lineNumber: 23,
-      columnNumber: 9
+function HomePage() {
+  return /* @__PURE__ */ jsxDEV7("div", { children: [
+    /* @__PURE__ */ jsxDEV7("div", { className: "grid-background" }, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 4,
+      columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV7("div", { className: "menu-icon", onClick: () => {
-      setIsMenuOpen(!isMenuOpen);
-    }, children: [
-      /* @__PURE__ */ jsxDEV7("span", {}, void 0, !1, {
-        fileName: "app/components/Navigation.tsx",
-        lineNumber: 29,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV7("span", {}, void 0, !1, {
-        fileName: "app/components/Navigation.tsx",
-        lineNumber: 30,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV7("span", {}, void 0, !1, {
-        fileName: "app/components/Navigation.tsx",
-        lineNumber: 31,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/components/Navigation.tsx",
-      lineNumber: 28,
-      columnNumber: 9
+    /* @__PURE__ */ jsxDEV7("div", { className: "silhouettes-container" }, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 5,
+      columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV7("ul", { className: `nav-menu ${isMenuOpen ? "active" : ""}`, children: [
-      { href: "/", text: "Home", dataText: "Home" },
-      { href: "/about", text: "About", dataText: "About" },
-      { href: "/services", text: "Services", dataText: "Services" },
-      { href: "/contact", text: "Contact", dataText: "Contact" },
-      { href: "/login", text: "Login", dataText: "Login" },
-      { href: "/register", text: "Register", dataText: "Register" }
-    ].map((link, index) => /* @__PURE__ */ jsxDEV7("li", { className: "nav-item", children: /* @__PURE__ */ jsxDEV7(
-      Link4,
-      {
-        to: link.href,
-        className: "nav-link glitch-effect",
-        "data-text": link.dataText,
-        onClick: () => setIsMenuOpen(!1),
-        children: link.text
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/components/Navigation.tsx",
-        lineNumber: 37,
-        columnNumber: 15
-      },
-      this
-    ) }, index, !1, {
-      fileName: "app/components/Navigation.tsx",
-      lineNumber: 36,
-      columnNumber: 13
-    }, this)) }, void 0, !1, {
-      fileName: "app/components/Navigation.tsx",
-      lineNumber: 34,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/Navigation.tsx",
-    lineNumber: 22,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/Navigation.tsx",
-    lineNumber: 21,
-    columnNumber: 5
-  }, this);
-}, Navigation_default = Navigation;
-
-// app/components/TerminalAnimation.tsx
-import { useState as useState4, useEffect, useRef } from "react";
-import { jsxDEV as jsxDEV8 } from "react/jsx-dev-runtime";
-var TerminalAnimation = () => {
-  let [isClient, setIsClient] = useState4(!1);
-  return useEffect(() => {
-    setIsClient(!0);
-  }, []), isClient ? /* @__PURE__ */ jsxDEV8(TerminalAnimationClient, {}, void 0, !1, {
-    fileName: "app/components/TerminalAnimation.tsx",
-    lineNumber: 23,
-    columnNumber: 10
-  }, this) : /* @__PURE__ */ jsxDEV8("div", { className: "bg-gray-900 rounded-lg p-6 font-mono text-green-400 h-96 flex items-center justify-center", children: /* @__PURE__ */ jsxDEV8("div", { children: "Loading terminal..." }, void 0, !1, {
-    fileName: "app/components/TerminalAnimation.tsx",
-    lineNumber: 19,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/TerminalAnimation.tsx",
-    lineNumber: 18,
-    columnNumber: 12
-  }, this);
-}, TerminalAnimationClient = () => {
-  let [currentLineIndex, setCurrentLineIndex] = useState4(0), [isAnimating, setIsAnimating] = useState4(!1), [displayedLines, setDisplayedLines] = useState4([]), terminalRef = useRef(null), sequence = [
-    {
-      type: "command",
-      content: "$ search for open ports with nmap based on the target program and use case toggling technique with awesome-waf on 6xargs.com",
-      typewriter: !0,
-      delay: 2
-    },
-    {
-      type: "output",
-      content: "Initializing network scanner...",
-      delay: 500
-    },
-    {
-      type: "output",
-      content: "Loading security modules...",
-      delay: 500
-    },
-    {
-      type: "output",
-      content: "Starting reconnaissance phase...",
-      delay: 500
-    },
-    {
-      type: "output",
-      content: "\u2713 Port scanning completed",
-      delay: 500
-    },
-    {
-      type: "output",
-      content: "\u2713 Service enumeration finished",
-      delay: 500
-    },
-    {
-      type: "output",
-      content: "Initializing Anti-WAF scanner on each service...",
-      delay: 1e3
-    },
-    {
-      type: "output",
-      content: "\u2713 Found 3 potential vulnerabilities",
-      delay: 500
-    },
-    {
-      type: "output",
-      content: "Generating penetration test report...",
-      delay: 1200
-    },
-    {
-      type: "table",
-      content: [
-        "+--------------------------------------------------+",
-        "| PENTEST REPORT - TARGET: 6xargs.com             |",
-        "+--------------------------------------------------+",
-        "| Date: 08/11/2025 | Type: Grey Box Testing       |",
-        "+--------------------------------------------------+",
-        "| VULNERABILITIES FOUND                           |",
-        "+--------------------------------------------------+",
-        "| [!] SQL Injection - /product?id= (CRITICAL)     |",
-        "| [!] Stored XSS - comments field (HIGH)          |",
-        "| [!] CSRF - password form (MEDIUM)               |",
-        "+--------------------------------------------------+"
-      ],
-      delay: 200
-    }
-  ], sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms)), typewriterEffect = async (text, speed = 2) => {
-    let chars = [];
-    for (let i = 0; i < text.length; i++)
-      chars.push(text.slice(0, i + 1)), await sleep(speed);
-    return chars;
-  }, createTerminalLine = (type, content, key) => /* @__PURE__ */ jsxDEV8("div", { className: `terminal-line ${type}`, children: /* @__PURE__ */ jsxDEV8("span", { className: "line-content", children: content }, void 0, !1, {
-    fileName: "app/components/TerminalAnimation.tsx",
-    lineNumber: 112,
-    columnNumber: 9
-  }, this) }, key, !1, {
-    fileName: "app/components/TerminalAnimation.tsx",
-    lineNumber: 111,
-    columnNumber: 7
-  }, this), startAnimation = async () => {
-    if (!isAnimating) {
-      setIsAnimating(!0), setDisplayedLines([]), setCurrentLineIndex(0);
-      for (let i = 0; i < sequence.length; i++) {
-        let item = sequence[i];
-        if (item.type === "table" && Array.isArray(item.content))
-          for (let j = 0; j < item.content.length; j++)
-            await sleep(item.delay), setDisplayedLines((prev) => [
-              ...prev,
-              createTerminalLine("output", item.content[j], i * 100 + j)
-            ]);
-        else if (item.typewriter && typeof item.content == "string") {
-          let chars = await typewriterEffect(item.content, item.delay);
-          for (let char of chars)
-            setDisplayedLines((prev) => {
-              let newLines = [...prev], lastIndex = newLines.length - 1;
-              return lastIndex >= 0 && newLines[lastIndex].props.className.includes(item.type) ? newLines[lastIndex] = createTerminalLine(item.type, char, i) : newLines.push(createTerminalLine(item.type, char, i)), newLines;
-            }), await sleep(10);
-        } else
-          await sleep(item.delay), setDisplayedLines((prev) => [
-            ...prev,
-            createTerminalLine(item.type, item.content, i)
-          ]);
-        setCurrentLineIndex(i + 1);
-      }
-      setIsAnimating(!1);
-    }
-  }, restartAnimation = () => {
-    setDisplayedLines([]), setCurrentLineIndex(0), setTimeout(startAnimation, 500);
-  };
-  return useEffect(() => {
-    let timer = setTimeout(startAnimation, 1e3);
-    return () => clearTimeout(timer);
-  }, []), /* @__PURE__ */ jsxDEV8("div", { className: "terminal-container", children: [
-    /* @__PURE__ */ jsxDEV8("div", { className: "terminal-header", children: [
-      /* @__PURE__ */ jsxDEV8("div", { className: "terminal-buttons", children: [
-        /* @__PURE__ */ jsxDEV8("span", { className: "terminal-button close" }, void 0, !1, {
-          fileName: "app/components/TerminalAnimation.tsx",
-          lineNumber: 178,
+    /* @__PURE__ */ jsxDEV7("nav", { children: [
+      /* @__PURE__ */ jsxDEV7("img", { src: "/6xargs-logo-purple-tech.jpg", alt: "6xargs Logo", className: "logo" }, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 8,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV7("div", { className: "menu-icon", children: /* @__PURE__ */ jsxDEV7("i", { className: "fa fa-bars fa-2x" }, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 10,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 9,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV7("ul", { className: "menu", children: [
+        /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "#home", children: "Home" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 14,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 13,
           columnNumber: 11
         }, this),
-        /* @__PURE__ */ jsxDEV8("span", { className: "terminal-button minimize" }, void 0, !1, {
-          fileName: "app/components/TerminalAnimation.tsx",
-          lineNumber: 179,
+        /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "#about", children: "About" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 17,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 16,
           columnNumber: 11
         }, this),
-        /* @__PURE__ */ jsxDEV8("span", { className: "terminal-button maximize" }, void 0, !1, {
-          fileName: "app/components/TerminalAnimation.tsx",
-          lineNumber: 180,
+        /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "#services", children: "Services" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 20,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 19,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "#contact", children: "Contact" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 23,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 22,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "https://www.discord.com/", children: "Community" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 26,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 25,
           columnNumber: 11
         }, this)
       ] }, void 0, !0, {
-        fileName: "app/components/TerminalAnimation.tsx",
-        lineNumber: 177,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ jsxDEV8("div", { className: "terminal-title", children: "6xargs CLI - Penetration Testing" }, void 0, !1, {
-        fileName: "app/components/TerminalAnimation.tsx",
-        lineNumber: 182,
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 12,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
-      fileName: "app/components/TerminalAnimation.tsx",
-      lineNumber: 176,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV8(
-      "div",
-      {
-        ref: terminalRef,
-        id: "terminal-output",
-        className: "terminal-output",
-        children: [
-          displayedLines,
-          /* @__PURE__ */ jsxDEV8("div", { className: "terminal-cursor", children: "_" }, void 0, !1, {
-            fileName: "app/components/TerminalAnimation.tsx",
-            lineNumber: 190,
-            columnNumber: 9
-          }, this)
-        ]
-      },
-      void 0,
-      !0,
-      {
-        fileName: "app/components/TerminalAnimation.tsx",
-        lineNumber: 184,
-        columnNumber: 7
-      },
-      this
-    ),
-    /* @__PURE__ */ jsxDEV8(
-      "button",
-      {
-        onClick: restartAnimation,
-        className: "restart-btn",
-        disabled: isAnimating,
-        children: isAnimating ? "Running..." : "Restart Demo"
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/components/TerminalAnimation.tsx",
-        lineNumber: 192,
-        columnNumber: 7
-      },
-      this
-    )
-  ] }, void 0, !0, {
-    fileName: "app/components/TerminalAnimation.tsx",
-    lineNumber: 175,
-    columnNumber: 5
-  }, this);
-}, TerminalAnimation_default = TerminalAnimation;
-
-// app/components/ThreeScene.tsx
-import { useEffect as useEffect2, useRef as useRef2, useState as useState5 } from "react";
-import * as THREE from "three";
-import { jsxDEV as jsxDEV9 } from "react/jsx-dev-runtime";
-var ThreeScene = () => {
-  let [isClient, setIsClient] = useState5(!1);
-  return useEffect2(() => {
-    setIsClient(!0);
-  }, []), isClient ? /* @__PURE__ */ jsxDEV9(ThreeSceneClient, {}, void 0, !1, {
-    fileName: "app/components/ThreeScene.tsx",
-    lineNumber: 17,
-    columnNumber: 10
-  }, this) : /* @__PURE__ */ jsxDEV9("div", { className: "w-full h-96 bg-gray-900 rounded-lg flex items-center justify-center", children: /* @__PURE__ */ jsxDEV9("div", { className: "text-white", children: "Loading 3D Scene..." }, void 0, !1, {
-    fileName: "app/components/ThreeScene.tsx",
-    lineNumber: 13,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/ThreeScene.tsx",
-    lineNumber: 12,
-    columnNumber: 12
-  }, this);
-}, ThreeSceneClient = () => {
-  let mountRef = useRef2(null), sceneRef = useRef2(null), rendererRef = useRef2(null), animationIdRef = useRef2(null);
-  return useEffect2(() => {
-    if (!mountRef.current)
-      return;
-    let scene = new THREE.Scene();
-    sceneRef.current = scene;
-    let camera = new THREE.PerspectiveCamera(
-      75,
-      mountRef.current.clientWidth / mountRef.current.clientHeight,
-      0.1,
-      1e3
-    );
-    camera.position.z = 5;
-    let renderer = new THREE.WebGLRenderer({ antialias: !0, alpha: !0 });
-    renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight), renderer.setClearColor(0, 0), mountRef.current.appendChild(renderer.domElement), rendererRef.current = renderer;
-    let halfHeight = 2 / 5, radius = 1, increasedDistance = 2, vertices = new Float32Array([
-      // Bottom hexagon vertices (z = -halfHeight)
-      radius,
-      0,
-      -halfHeight,
-      radius / 2,
-      Math.sqrt(3) / 2 * radius * increasedDistance,
-      -halfHeight,
-      -radius / 2,
-      Math.sqrt(3) / 2 * radius,
-      -halfHeight,
-      -radius,
-      0,
-      -halfHeight,
-      -radius / 2,
-      -Math.sqrt(3) / 2 * radius * increasedDistance,
-      -halfHeight,
-      radius / 2,
-      -Math.sqrt(3) / 2 * radius,
-      -halfHeight,
-      // Top hexagon vertices (z = halfHeight)
-      radius,
-      0,
-      halfHeight,
-      radius / 2,
-      Math.sqrt(3) / 2 * radius * increasedDistance,
-      halfHeight,
-      -radius / 2,
-      Math.sqrt(3) / 2 * radius,
-      halfHeight,
-      -radius,
-      0,
-      halfHeight,
-      -radius / 2,
-      -Math.sqrt(3) / 2 * radius * increasedDistance,
-      halfHeight,
-      radius / 2,
-      -Math.sqrt(3) / 2 * radius,
-      halfHeight
-    ]), indices = [
-      // Bottom hexagon faces
-      0,
-      1,
-      2,
-      0,
-      2,
-      3,
-      0,
-      3,
-      4,
-      0,
-      4,
-      5,
-      // Top hexagon faces
-      6,
-      7,
-      8,
-      6,
-      8,
-      9,
-      6,
-      9,
-      10,
-      6,
-      10,
-      11,
-      // Side faces
-      0,
-      1,
-      7,
-      0,
-      7,
-      6,
-      1,
-      2,
-      8,
-      1,
-      8,
-      7,
-      2,
-      3,
-      9,
-      2,
-      9,
-      8,
-      3,
-      4,
-      10,
-      3,
-      10,
-      9,
-      4,
-      5,
-      11,
-      4,
-      11,
-      10,
-      5,
-      0,
-      6,
-      5,
-      6,
-      11
-    ], geometry = new THREE.BufferGeometry();
-    geometry.setAttribute("position", new THREE.BufferAttribute(vertices, 3)), geometry.setIndex(indices), geometry.computeVertexNormals();
-    let material = new THREE.MeshNormalMaterial(), elongatedHexagon = new THREE.Mesh(geometry, material);
-    scene.add(elongatedHexagon);
-    let eyeGeometry = new THREE.SphereGeometry(0.4, 32, 32), eyeMaterial = new THREE.MeshBasicMaterial({ color: 0 }), eye1 = new THREE.Mesh(eyeGeometry, eyeMaterial), eye2 = new THREE.Mesh(eyeGeometry, eyeMaterial);
-    eye1.position.set(0, 0, -halfHeight - 0.1), eye2.position.set(0, 0, halfHeight + 0.1);
-    let irisGeometry1 = new THREE.SphereGeometry(0.03, 32, 32), irisMaterial1 = new THREE.MeshBasicMaterial({ color: 16777215 }), iris1 = new THREE.Mesh(irisGeometry1, irisMaterial1), pupilGeometry1 = new THREE.SphereGeometry(0.01, 32, 32), pupilMaterial1 = new THREE.MeshBasicMaterial({ color: 16777215 }), pupil1 = new THREE.Mesh(pupilGeometry1, pupilMaterial1);
-    iris1.position.set(0.02, 0.02, -halfHeight - 0.08), pupil1.position.set(0.03, 0.03, -halfHeight - 0.06), eye1.add(iris1), eye1.add(pupil1);
-    let irisGeometry2 = new THREE.SphereGeometry(0.03, 32, 32), irisMaterial2 = new THREE.MeshBasicMaterial({ color: 16777215 }), iris2 = new THREE.Mesh(irisGeometry2, irisMaterial2), pupilGeometry2 = new THREE.SphereGeometry(0.01, 32, 32), pupilMaterial2 = new THREE.MeshBasicMaterial({ color: 16777215 }), pupil2 = new THREE.Mesh(pupilGeometry2, pupilMaterial2);
-    iris2.position.set(0.02, 0.02, halfHeight + 0.08), pupil2.position.set(0.03, 0.03, halfHeight + 0.06), eye2.add(iris2), eye2.add(pupil2), scene.add(eye1), scene.add(eye2);
-    let animate = () => {
-      animationIdRef.current = requestAnimationFrame(animate), elongatedHexagon.rotation.x += 0.01, elongatedHexagon.rotation.y += 0.01, eye1.rotation.x += 5e-3, eye1.rotation.y += 5e-3, eye2.rotation.x += 5e-3, eye2.rotation.y += 5e-3, renderer.render(scene, camera);
-    };
-    animate();
-    let handleResize = () => {
-      if (!mountRef.current || !renderer)
-        return;
-      let width = mountRef.current.clientWidth, height2 = mountRef.current.clientHeight;
-      camera.aspect = width / height2, camera.updateProjectionMatrix(), renderer.setSize(width, height2);
-    };
-    return window.addEventListener("resize", handleResize), () => {
-      window.removeEventListener("resize", handleResize), animationIdRef.current && cancelAnimationFrame(animationIdRef.current), mountRef.current && renderer.domElement && mountRef.current.removeChild(renderer.domElement), renderer.dispose(), geometry.dispose(), material.dispose(), eyeGeometry.dispose(), eyeMaterial.dispose();
-    };
-  }, []), /* @__PURE__ */ jsxDEV9(
-    "div",
-    {
-      ref: mountRef,
-      className: "three-scene-container",
-      style: { width: "100%", height: "400px" }
-    },
-    void 0,
-    !1,
-    {
-      fileName: "app/components/ThreeScene.tsx",
-      lineNumber: 210,
-      columnNumber: 5
-    },
-    this
-  );
-}, ThreeScene_default = ThreeScene;
-
-// app/routes/_index.tsx
-import { jsxDEV as jsxDEV10 } from "react/jsx-dev-runtime";
-var meta5 = () => [
-  { title: "6xargs | AI Assisted Bug Bounty Platform" },
-  { name: "description", content: "White label AI layer. Agentic-AI Powered Hacking. Faster Pentesting. Faster Triage times. Easier than ever. Protect the internet with us." }
-];
-function Index() {
-  let [isMenuOpen, setIsMenuOpen] = useState6(!1);
-  useEffect3(() => {
-    let heroTitle = document.getElementById("hero-title");
-    if (heroTitle) {
-      let text = heroTitle.textContent;
-      if (text) {
-        let lines = text.trim().split(`
-`), wrappedHTML = "";
-        lines.forEach((line) => {
-          if (line.trim() !== "") {
-            let trimmedLine = line.trim(), lineHTML = '<div class="title-line">';
-            for (let i = 0; i < trimmedLine.length; i++) {
-              let char = trimmedLine[i];
-              char === " " ? lineHTML += '<span class="space"> </span>' : lineHTML += `<span class="letter">${char}</span>`;
-            }
-            lineHTML += "</div>", wrappedHTML += lineHTML;
-          }
-        }), heroTitle.innerHTML = wrappedHTML;
-      }
-    }
-    let heroSubtitle = document.getElementById("hero-subtitle");
-    if (heroSubtitle) {
-      let text = heroSubtitle.textContent;
-      if (text) {
-        let wrappedText = "";
-        for (let i = 0; i < text.length; i++) {
-          let char = text[i];
-          char === " " ? wrappedText += '<span class="space"> </span>' : char === `
-` || char === "\r" ? wrappedText += "<br>" : wrappedText += `<span class="letter">${char}</span>`;
-        }
-        heroSubtitle.innerHTML = wrappedText;
-      }
-    }
-  }, []);
-  let goToIndex = () => {
-    window.location.href = "/";
-  };
-  return /* @__PURE__ */ jsxDEV10("div", { className: "min-h-screen bg-black text-white font-varela overflow-x-hidden", children: [
-    /* @__PURE__ */ jsxDEV10("div", { className: "grid-background fixed top-0 left-0 w-full h-full opacity-5 pointer-events-none z-0" }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 88,
+      lineNumber: 7,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV10(Navigation_default, {}, void 0, !1, {
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 91,
+      lineNumber: 31,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV10("header", { className: "h-screen flex justify-left items-center relative overflow-hidden pr-96", children: /* @__PURE__ */ jsxDEV10("div", { className: "container max-w-7xl mx-auto px-4", children: [
-      /* @__PURE__ */ jsxDEV10(
-        "h1",
-        {
-          className: "hero-title-hover text-6xl font-bold leading-tight mb-6 text-left",
-          id: "hero-title",
-          children: "White label AI layer"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 96,
-          columnNumber: 11
-        },
-        this
-      ),
-      /* @__PURE__ */ jsxDEV10(
-        "h2",
-        {
-          className: "hero-subtitle text-xl font-bold text-gray-400 leading-relaxed -ml-64",
-          id: "hero-subtitle",
-          children: [
-            "Agentic-AI Powered Hacking.",
-            `
-`,
-            "Faster Pentesting.",
-            `
-`,
-            "Faster Triage times.",
-            `
-`,
-            "Easier than ever.",
-            `
-`,
-            "Protect the internet with us."
-          ]
-        },
-        void 0,
-        !0,
-        {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 103,
-          columnNumber: 11
-        },
-        this
-      ),
-      /* @__PURE__ */ jsxDEV10("div", { className: "absolute top-0 right-0 w-1/2 h-full", children: /* @__PURE__ */ jsxDEV10(ThreeScene_default, {}, void 0, !1, {
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 32,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("header", { children: /* @__PURE__ */ jsxDEV7("div", { className: "container", children: [
+      /* @__PURE__ */ jsxDEV7("h1", { className: "hero-title-hover", id: "hero-title", children: "White label AI layer" }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 116,
-        columnNumber: 13
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 115,
+        lineNumber: 36,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ jsxDEV10(
-        "img",
-        {
-          src: "/images/6xargs_logo.jpg",
-          alt: "6xargs Logo",
-          className: "hero-logo absolute top-1/2 right-1/4 transform -translate-y-1/2 w-80 h-auto opacity-100 rounded-3xl border-4 border-dashed border-purple-500 transition-all duration-300 hover:opacity-100 hover:cursor-pointer filter contrast-125 brightness-110 z-15"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 120,
-          columnNumber: 11
-        },
-        this
-      ),
-      /* @__PURE__ */ jsxDEV10("div", { className: "mental-map-container absolute top-0 left-0 w-full h-full pointer-events-none", children: [
-        /* @__PURE__ */ jsxDEV10("div", { className: "mental-map-card absolute opacity-0 animate-fade-in pointer-events-auto cursor-pointer", "data-position": "top-left", style: { top: "20%", left: "calc(32% + 35rem)", animationDelay: "0s" }, children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-title text-base font-semibold text-white text-center mb-2", children: "Community Driven" }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV7("h2", { className: "hero-subtitle", id: "hero-subtitle", children: "Agentic-AI Powered Hacking. Faster Pentesting. Faster Triage times. Easier than ever. Protect the internet with us." }, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 40,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV7("img", { src: "/6xargs-logo-cybersecurity-ai-tech-purple.jpg", alt: "6xargs Logo", className: "hero-logo" }, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 45,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-container", children: [
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-card", "data-position": "top-left", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-title", children: "Community Driven" }, void 0, !1, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 130,
+            lineNumber: 50,
             columnNumber: 15
           }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-content text-sm text-gray-300 text-center leading-snug", children: "Growing network of ethical hackers and security experts" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-content", children: "Growing network of ethical hackers and security experts" }, void 0, !1, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 131,
+            lineNumber: 51,
             columnNumber: 15
           }, this)
         ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 49,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-card", "data-position": "top-right", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-title", children: "API" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 56,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-content", children: "Connect your own platform with the world first Ethical Hacking Agentic AI" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 57,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 55,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-card", "data-position": "center-left", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-title", children: "HITL" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 64,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-content", children: "Human In The Loop reduces response time by 50%" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 65,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 63,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-card", "data-position": "center-right", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-title", children: "AI-Powered Security" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 70,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-content", children: "CAI WEB CLI - World First AI Powered Web Application Security Agent" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 71,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 69,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-card", "data-position": "bottom-left", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-title", children: "Enterprise Solutions" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 76,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-content", children: "Scalable security solutions for organizations of all sizes" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 77,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 75,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-card", "data-position": "bottom-right", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-title", children: "Real-time Analysis" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 82,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV7("div", { className: "card-content", children: "Instant vulnerability assessment and prioritization" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 83,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 81,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-arrow", "data-connect": "top-left", children: /* @__PURE__ */ jsxDEV7("svg", { viewBox: "0 0 120 80", style: { transform: "rotate(30deg)", transformOrigin: "center" }, children: /* @__PURE__ */ jsxDEV7(
+          "path",
+          {
+            d: "M 10 40 Q 50 20 90 25 Q 110 30 120 40",
+            stroke: "#6450ff",
+            strokeWidth: "3",
+            fill: "none",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeDasharray: "8 4"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 89,
+            columnNumber: 17
+          },
+          this
+        ) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 88,
+          columnNumber: 15
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 87,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-arrow", "data-connect": "top-right", children: /* @__PURE__ */ jsxDEV7("svg", { viewBox: "0 0 120 80", style: { transform: "rotate(118deg)", transformOrigin: "center" }, children: /* @__PURE__ */ jsxDEV7(
+          "path",
+          {
+            d: "M 10 40 Q 50 20 90 25 Q 110 30 120 40",
+            stroke: "#6450ff",
+            strokeWidth: "3",
+            fill: "none",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeDasharray: "8 4"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 103,
+            columnNumber: 17
+          },
+          this
+        ) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 102,
+          columnNumber: 15
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 101,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-arrow", "data-connect": "center-left", children: /* @__PURE__ */ jsxDEV7("svg", { viewBox: "0 0 100 60", children: /* @__PURE__ */ jsxDEV7(
+          "path",
+          {
+            d: "M 0 30 Q 30 30 60 30 Q 80 30 100 30",
+            stroke: "#6450ff",
+            strokeWidth: "3",
+            fill: "none",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeDasharray: "8 4"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 117,
+            columnNumber: 17
+          },
+          this
+        ) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 116,
+          columnNumber: 15
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 115,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-arrow", "data-connect": "center-right", children: /* @__PURE__ */ jsxDEV7("svg", { viewBox: "0 0 120 80", style: { transform: "rotate(-10deg)", transformOrigin: "center" }, children: /* @__PURE__ */ jsxDEV7(
+          "path",
+          {
+            d: "M 10 40 Q 50 50 90 45 Q 110 40 120 30",
+            stroke: "#6450ff",
+            strokeWidth: "3",
+            fill: "none",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeDasharray: "8 4"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 131,
+            columnNumber: 17
+          },
+          this
+        ) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 130,
+          columnNumber: 15
+        }, this) }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
           lineNumber: 129,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "mental-map-card absolute opacity-0 animate-fade-in pointer-events-auto cursor-pointer", "data-position": "top-right", style: { top: "20%", right: "calc(22% - 20rem)", animationDelay: "0s" }, children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-title text-base font-semibold text-white text-center mb-2", children: "API" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 135,
-            columnNumber: 15
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-content text-sm text-gray-300 text-center leading-snug", children: "Connect your own platform with the world first Ethical Hacking Agentic AI" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 136,
-            columnNumber: 15
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 134,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "mental-map-card absolute opacity-0 animate-fade-in pointer-events-auto cursor-pointer", "data-position": "center-left", style: { top: "50%", left: "calc(22% + 37rem)", transform: "translateY(-50%)", animationDelay: "0s" }, children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-title text-base font-semibold text-white text-center mb-2", children: "HITL" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 140,
-            columnNumber: 15
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-content text-sm text-gray-300 text-center leading-snug", children: "Human In The Loop reduces response time by 50%" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 141,
-            columnNumber: 15
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 139,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "mental-map-card absolute opacity-0 animate-fade-in pointer-events-auto cursor-pointer", "data-position": "center-right", style: { top: "50%", right: "calc(22% - 25.5rem)", transform: "translateY(-50%)", animationDelay: "0s" }, children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-title text-base font-semibold text-white text-center mb-2", children: "AI-Powered Security" }, void 0, !1, {
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-arrow", "data-connect": "bottom-left", children: /* @__PURE__ */ jsxDEV7("svg", { viewBox: "0 0 120 80", style: { transform: "rotate(-20deg)", transformOrigin: "center" }, children: /* @__PURE__ */ jsxDEV7(
+          "path",
+          {
+            d: "M 10 40 Q 50 50 90 45 Q 110 40 120 30",
+            stroke: "#6450ff",
+            strokeWidth: "3",
+            fill: "none",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeDasharray: "8 4"
+          },
+          void 0,
+          !1,
+          {
             fileName: "app/routes/_index.tsx",
             lineNumber: 145,
-            columnNumber: 15
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-content text-sm text-gray-300 text-center leading-snug", children: "CAI WEB CLI - World First AI Powered Web Application Security Agent" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 146,
-            columnNumber: 15
-          }, this)
-        ] }, void 0, !0, {
+            columnNumber: 17
+          },
+          this
+        ) }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
           lineNumber: 144,
+          columnNumber: 15
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 143,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "mental-map-card absolute opacity-0 animate-fade-in pointer-events-auto cursor-pointer", "data-position": "bottom-left", style: { bottom: "20%", left: "calc(32% + 35rem)", animationDelay: "0s" }, children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-title text-base font-semibold text-white text-center mb-2", children: "Enterprise Solutions" }, void 0, !1, {
+        /* @__PURE__ */ jsxDEV7("div", { className: "mental-map-arrow", "data-connect": "bottom-right", children: /* @__PURE__ */ jsxDEV7("svg", { viewBox: "0 0 120 80", style: { transform: "rotate(50deg)", transformOrigin: "center" }, children: /* @__PURE__ */ jsxDEV7(
+          "path",
+          {
+            d: "M 10 40 Q 50 20 90 25 Q 110 30 120 40",
+            stroke: "#6450ff",
+            strokeWidth: "3",
+            fill: "none",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeDasharray: "8 4"
+          },
+          void 0,
+          !1,
+          {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 150,
-            columnNumber: 15
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-content text-sm text-gray-300 text-center leading-snug", children: "Scalable security solutions for organizations of all sizes" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 151,
-            columnNumber: 15
-          }, this)
-        ] }, void 0, !0, {
+            lineNumber: 159,
+            columnNumber: 17
+          },
+          this
+        ) }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 149,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "mental-map-card absolute opacity-0 animate-fade-in pointer-events-auto cursor-pointer", "data-position": "bottom-right", style: { bottom: "20%", right: "calc(22% - 20rem)", animationDelay: "0s" }, children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-title text-base font-semibold text-white text-center mb-2", children: "Real-time Analysis" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 155,
-            columnNumber: 15
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "card-content text-sm text-gray-300 text-center leading-snug", children: "Instant vulnerability assessment and prioritization" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 156,
-            columnNumber: 15
-          }, this)
-        ] }, void 0, !0, {
+          lineNumber: 158,
+          columnNumber: 15
+        }, this) }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 154,
+          lineNumber: 157,
           columnNumber: 13
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 127,
+        lineNumber: 47,
         columnNumber: 11
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 95,
+      lineNumber: 35,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 94,
+      lineNumber: 34,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV10("section", { className: "how-it-works-section bg-black p-8 max-w-7xl mx-auto my-8 rounded-2xl border-2 border-gray-700 shadow-2xl flex justify-left items-center", children: /* @__PURE__ */ jsxDEV10("div", { className: "how-it-works-container max-w-full flex gap-12 items-center justify-between", children: [
-      /* @__PURE__ */ jsxDEV10("div", { className: "how-it-works-card flex-2 bg-gray-900/70 rounded-2xl p-8 transition-all duration-300 overflow-hidden shadow-lg border border-gray-800/30 min-h-80 max-w-4xl flex items-center justify-center hover:bg-gray-800/70 hover:shadow-xl hover:border-white/10", children: /* @__PURE__ */ jsxDEV10("div", { className: "workflow-container w-full flex justify-center items-center", children: /* @__PURE__ */ jsxDEV10("div", { className: "workflow-steps grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6", children: [
-        /* @__PURE__ */ jsxDEV10("div", { className: "workflow-step", children: /* @__PURE__ */ jsxDEV10("div", { className: "workflow-box bg-gray-800/50 p-6 rounded-xl border border-gray-700", children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-number bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold mb-4", children: "1" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 174,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 175,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 176,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 177,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 178,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("section", { className: "how-it-works-section", children: /* @__PURE__ */ jsxDEV7("div", { className: "how-it-works-container", children: [
+      /* @__PURE__ */ jsxDEV7("div", { className: "how-it-works-card", children: /* @__PURE__ */ jsxDEV7("div", { className: "workflow-container", children: [
+        /* @__PURE__ */ jsxDEV7("div", { className: "workflow-step", "data-step": "1", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "workflow-box", children: [
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-number", children: "1" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 186,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-title", children: "API Integration" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 187,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-description", children: "Platforms like HackerOne or Bugcrowd connect the CAI API with their own programs and security policies." }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 188,
+              columnNumber: 19
+            }, this)
+          ] }, void 0, !0, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 170,
-            columnNumber: 21
+            lineNumber: 185,
+            columnNumber: 17
           }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-title text-lg font-semibold text-white mb-2", children: "API Integration" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 171,
-            columnNumber: 21
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-description text-sm text-gray-300 leading-relaxed", children: "Platforms like HackerOne or Bugcrowd connect the CAI API with their own programs and security policies." }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 172,
-            columnNumber: 21
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 169,
-          columnNumber: 19
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 168,
-          columnNumber: 17
-        }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "workflow-step", children: /* @__PURE__ */ jsxDEV10("div", { className: "workflow-box bg-gray-800/50 p-6 rounded-xl border border-gray-700", children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-number bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold mb-4", children: "2" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 178,
-            columnNumber: 21
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-title text-lg font-semibold text-white mb-2", children: "CLI Access for Hackers" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 179,
-            columnNumber: 21
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-description text-sm text-gray-300 leading-relaxed", children: "Hackers use a web-based CLI inside the platform, powered by CAI Agentic AI." }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 180,
-            columnNumber: 21
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 177,
-          columnNumber: 19
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 176,
-          columnNumber: 17
-        }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "workflow-step", children: /* @__PURE__ */ jsxDEV10("div", { className: "workflow-box bg-gray-800/50 p-6 rounded-xl border border-gray-700", children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-number bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold mb-4", children: "3" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 186,
-            columnNumber: 21
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-title text-lg font-semibold text-white mb-2", children: "Secure Command Execution" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 187,
-            columnNumber: 21
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-description text-sm text-gray-300 leading-relaxed", children: "Hackers can run commands or prompts. CAI enforces program-specific restrictions and safety controls." }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 188,
-            columnNumber: 21
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 185,
-          columnNumber: 19
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 184,
-          columnNumber: 17
-        }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "workflow-step", children: /* @__PURE__ */ jsxDEV10("div", { className: "workflow-box bg-gray-800/50 p-6 rounded-xl border border-gray-700", children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-number bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold mb-4", children: "4" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV7("div", { className: "workflow-arrow", "data-from": "1", children: /* @__PURE__ */ jsxDEV7("svg", { viewBox: "0 0 250 60", children: [
+            /* @__PURE__ */ jsxDEV7("path", { d: "M 10 30 Q 80 15 140 30 Q 200 45 240 30" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 195,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV7("polygon", { points: "235,25 245,30 235,35" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 196,
+              columnNumber: 21
+            }, this)
+          ] }, void 0, !0, {
             fileName: "app/routes/_index.tsx",
             lineNumber: 194,
-            columnNumber: 21
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-title text-lg font-semibold text-white mb-2", children: "Validation & Logs" }, void 0, !1, {
+            columnNumber: 19
+          }, this) }, void 0, !1, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 195,
-            columnNumber: 21
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-description text-sm text-gray-300 leading-relaxed", children: "Every action is validated and stored in secure, auditable logs (Railway + PostgreSQL)." }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 196,
-            columnNumber: 21
+            lineNumber: 193,
+            columnNumber: 17
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 193,
-          columnNumber: 19
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 192,
-          columnNumber: 17
+          lineNumber: 184,
+          columnNumber: 15
         }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "workflow-step", children: /* @__PURE__ */ jsxDEV10("div", { className: "workflow-box bg-gray-800/50 p-6 rounded-xl border border-gray-700", children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-number bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold mb-4", children: "5" }, void 0, !1, {
+        /* @__PURE__ */ jsxDEV7("div", { className: "workflow-step", "data-step": "2", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "workflow-box", children: [
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-number", children: "2" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 203,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-title", children: "CLI Access for Hackers" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 204,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-description", children: "Hackers use a web-based CLI inside the platform, powered by CAI Agentic AI." }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 205,
+              columnNumber: 19
+            }, this)
+          ] }, void 0, !0, {
             fileName: "app/routes/_index.tsx",
             lineNumber: 202,
-            columnNumber: 21
+            columnNumber: 17
           }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-title text-lg font-semibold text-white mb-2", children: "Insights & Reporting" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV7("div", { className: "workflow-arrow", "data-from": "2", children: /* @__PURE__ */ jsxDEV7("svg", { viewBox: "0 0 250 60", children: [
+            /* @__PURE__ */ jsxDEV7("path", { d: "M 10 30 Q 80 45 140 30 Q 200 15 240 30" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 211,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV7("polygon", { points: "235,25 245,30 235,35" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 212,
+              columnNumber: 21
+            }, this)
+          ] }, void 0, !0, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 203,
-            columnNumber: 21
-          }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "step-description text-sm text-gray-300 leading-relaxed", children: "Results are summarized and shared directly in the company's triage workflow." }, void 0, !1, {
+            lineNumber: 210,
+            columnNumber: 19
+          }, this) }, void 0, !1, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 204,
-            columnNumber: 21
+            lineNumber: 209,
+            columnNumber: 17
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/_index.tsx",
           lineNumber: 201,
-          columnNumber: 19
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 200,
-          columnNumber: 17
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 167,
-        columnNumber: 15
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 166,
-        columnNumber: 13
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 165,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV10("div", { className: "how-it-works-text flex-1 flex flex-col gap-6 max-w-4xl", children: [
-        /* @__PURE__ */ jsxDEV10("h2", { className: "text-4xl font-semibold tracking-wide relative inline-block mb-4", children: "How the API Works" }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 211,
-          columnNumber: 13
+          columnNumber: 15
         }, this),
-        /* @__PURE__ */ jsxDEV10("p", { className: "text-xl text-gray-300 leading-relaxed", children: "With CAI API, any bug bounty platform can empower hackers with an AI-driven CLI directly in their workflow. Built-in security policies, command restrictions, and audit-ready logs streamline the vulnerability research and reporting process." }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 212,
-          columnNumber: 13
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 210,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 164,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 163,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV10("section", { className: "agent-sneak-peek-section bg-black p-20 max-w-7xl mx-auto my-20 rounded-2xl border-2 border-gray-700 shadow-2xl flex justify-center items-center", children: /* @__PURE__ */ jsxDEV10("div", { className: "agent-sneak-peek-container max-w-6xl flex gap-16 items-center justify-center", children: [
-      /* @__PURE__ */ jsxDEV10("div", { className: "agent-sneak-peek-card flex-1 bg-gray-900/70 rounded-xl p-8 transition-all duration-300 overflow-hidden shadow-lg border border-white/5 flex justify-center items-center hover:bg-gray-800/85 hover:shadow-xl hover:border-purple-500/20", children: /* @__PURE__ */ jsxDEV10("div", { className: "cli-container w-full flex justify-center items-center", children: /* @__PURE__ */ jsxDEV10("div", { className: "terminal-container bg-gray-900 rounded-lg overflow-hidden shadow-2xl border border-gray-700 max-w-2xl w-full", children: [
-        /* @__PURE__ */ jsxDEV10("div", { className: "terminal-header bg-gray-800 px-4 py-3 flex items-center justify-between", children: [
-          /* @__PURE__ */ jsxDEV10("div", { className: "terminal-controls flex space-x-2", children: [
-            /* @__PURE__ */ jsxDEV10("div", { className: "control-button w-3 h-3 rounded-full bg-red-500" }, void 0, !1, {
+        /* @__PURE__ */ jsxDEV7("div", { className: "workflow-step", "data-step": "3", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "workflow-box", children: [
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-number", children: "3" }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 225,
-              columnNumber: 21
+              lineNumber: 219,
+              columnNumber: 19
             }, this),
-            /* @__PURE__ */ jsxDEV10("div", { className: "control-button w-3 h-3 rounded-full bg-yellow-500" }, void 0, !1, {
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-title", children: "Secure Command Execution" }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 226,
-              columnNumber: 21
+              lineNumber: 220,
+              columnNumber: 19
             }, this),
-            /* @__PURE__ */ jsxDEV10("div", { className: "control-button w-3 h-3 rounded-full bg-green-500" }, void 0, !1, {
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-description", children: "Hackers can run commands or prompts. CAI enforces program-specific restrictions and safety controls." }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 221,
+              columnNumber: 19
+            }, this)
+          ] }, void 0, !0, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 218,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ jsxDEV7("div", { className: "workflow-arrow", "data-from": "3", children: /* @__PURE__ */ jsxDEV7("svg", { viewBox: "0 0 120 55", children: [
+            /* @__PURE__ */ jsxDEV7("path", { d: "M 2 70 Q 130 2 120 40" }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
               lineNumber: 227,
               columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV7("polygon", { points: "105,25 115,30 105,35 105,60 115,65" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 228,
+              columnNumber: 21
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 224,
+            lineNumber: 226,
+            columnNumber: 19
+          }, this) }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 225,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 217,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "workflow-step", "data-step": "4", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "workflow-box", children: [
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-number", children: "4" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 235,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-title", children: "Validation & Logs" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 236,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV7("div", { className: "step-description", children: "Every action is validated and stored in secure, auditable logs (Railway + PostgreSQL)." }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 237,
+              columnNumber: 19
+            }, this)
+          ] }, void 0, !0, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 234,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ jsxDEV7("div", { className: "workflow-arrow", "data-from": "4", children: /* @__PURE__ */ jsxDEV7("svg", { viewBox: "0 10 250 50", children: [
+            /* @__PURE__ */ jsxDEV7("path", { d: "M 240 30 Q 160 10 120 30 Q 60 50 5 30" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 243,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV7("polygon", { points: "10,25 0,30 10,35" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 244,
+              columnNumber: 21
+            }, this)
+          ] }, void 0, !0, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 242,
+            columnNumber: 19
+          }, this) }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 241,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 233,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "workflow-step", "data-step": "5", children: /* @__PURE__ */ jsxDEV7("div", { className: "workflow-box", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "step-number", children: "5" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 251,
             columnNumber: 19
           }, this),
-          /* @__PURE__ */ jsxDEV10("div", { className: "terminal-title text-gray-300 text-sm font-mono", children: "6xargs CLI - AI Security Agent" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV7("div", { className: "step-title", children: "Insights & Reporting" }, void 0, !1, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 229,
+            lineNumber: 252,
+            columnNumber: 19
+          }, this),
+          /* @__PURE__ */ jsxDEV7("div", { className: "step-description", children: "Results are summarized and shared directly in the company's triage workflow." }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 253,
             columnNumber: 19
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 223,
+          lineNumber: 250,
           columnNumber: 17
-        }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "terminal-body bg-black p-4 font-mono text-sm", children: /* @__PURE__ */ jsxDEV10(TerminalAnimation_default, {}, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 232,
-          columnNumber: 19
         }, this) }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 231,
-          columnNumber: 17
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 222,
-        columnNumber: 15
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 221,
-        columnNumber: 13
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 220,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ jsxDEV10("div", { className: "agent-sneak-peek-text flex-1 flex flex-col gap-6", children: [
-        /* @__PURE__ */ jsxDEV10("h2", { className: "text-4xl font-semibold tracking-wide text-purple-400 mb-4", children: "AI Agent CLI Demo" }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 238,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ jsxDEV10("p", { className: "text-xl text-gray-300 leading-relaxed", children: "Experience our AI-powered security CLI in action. This interactive terminal demonstrates the power of automated vulnerability scanning and intelligent threat analysis." }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 239,
-          columnNumber: 13
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 237,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 219,
-      columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/_index.tsx",
-      lineNumber: 218,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ jsxDEV10("main", { className: "py-52 px-52 flex justify-center items-center", children: /* @__PURE__ */ jsxDEV10("section", { className: "cards-section max-w-5xl flex gap-16 items-center justify-center", children: [
-      /* @__PURE__ */ jsxDEV10("div", { className: "section-left flex-1 flex flex-col gap-16", onClick: () => {
-        window.location.href = "/login";
-      }, children: /* @__PURE__ */ jsxDEV10("div", { className: "card form-card relative bg-gray-900/70 rounded-xl p-12 transition-all duration-300 text-center overflow-hidden shadow-lg border border-white/5 max-h-48 hover:bg-black/85 hover:shadow-xl hover:cursor-pointer hover:border-white/10 hover:-translate-y-1", children: [
-        /* @__PURE__ */ jsxDEV10("h2", { className: "text-3xl font-semibold mb-3 relative inline-block", children: "Hackers" }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
           lineNumber: 249,
           columnNumber: 15
-        }, this),
-        /* @__PURE__ */ jsxDEV10("p", { className: "subtitle text-xl text-gray-400 transition-colors", children: "Search for a bug bounty program" }, void 0, !1, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 250,
-          columnNumber: 15
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 248,
+        lineNumber: 183,
         columnNumber: 13
       }, this) }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 247,
+        lineNumber: 182,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ jsxDEV10("div", { className: "section-right flex-1 flex flex-col gap-16", onClick: () => {
-        window.location.href = "/contact";
-      }, children: /* @__PURE__ */ jsxDEV10("div", { className: "card business-card relative bg-gray-900/70 rounded-xl p-12 transition-all duration-300 text-center overflow-hidden shadow-lg border border-white/5 max-h-48 hover:bg-black/85 hover:shadow-xl hover:cursor-pointer hover:border-white/10 hover:-translate-y-1", children: [
-        /* @__PURE__ */ jsxDEV10("h2", { className: "text-3xl font-semibold mb-3 relative inline-block", children: "Enterprises" }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV7("div", { className: "how-it-works-text", children: [
+        /* @__PURE__ */ jsxDEV7("h2", { children: "How the API Works" }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 255,
-          columnNumber: 15
+          lineNumber: 261,
+          columnNumber: 13
         }, this),
-        /* @__PURE__ */ jsxDEV10("p", { className: "subtitle text-xl text-gray-400 transition-colors", children: "Register with us" }, void 0, !1, {
+        /* @__PURE__ */ jsxDEV7("p", { children: "With CAI API, any bug bounty platform can empower hackers with an AI-driven CLI directly in their workflow. Built-in security policies, command restrictions, and audit-ready logs streamline the vulnerability research and reporting process." }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 256,
-          columnNumber: 15
+          lineNumber: 262,
+          columnNumber: 13
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 254,
-        columnNumber: 13
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/_index.tsx",
-        lineNumber: 253,
+        lineNumber: 260,
         columnNumber: 11
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 246,
+      lineNumber: 181,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 245,
+      lineNumber: 180,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ jsxDEV10("footer", { className: "border-t border-gray-800/30 pt-12 bg-black/20", children: [
-      /* @__PURE__ */ jsxDEV10("div", { className: "footer-content flex justify-around flex-wrap max-w-7xl mx-auto px-4", children: [
-        /* @__PURE__ */ jsxDEV10("div", { className: "footer-section mb-8 ml-10", children: [
-          /* @__PURE__ */ jsxDEV10("h3", { className: "text-white mb-4 text-lg font-semibold", children: "Social Media" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 266,
-            columnNumber: 13
-          }, this),
-          /* @__PURE__ */ jsxDEV10("ul", { className: "horizontal-list flex flex-wrap gap-4 text-center", children: [
-            /* @__PURE__ */ jsxDEV10("li", { children: /* @__PURE__ */ jsxDEV10("a", { href: "https://twitter.com/", className: "text-gray-400 hover:text-purple-400 transition-colors", children: "Twitter" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 271,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 272,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 273,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 274,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("br", {}, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 275,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("section", { className: "agent-sneak-peek-section", children: /* @__PURE__ */ jsxDEV7("div", { className: "agent-sneak-peek-container", children: [
+      /* @__PURE__ */ jsxDEV7("div", { className: "agent-sneak-peek-card", children: /* @__PURE__ */ jsxDEV7("div", { className: "cli-container", children: /* @__PURE__ */ jsxDEV7("div", { className: "terminal-container", children: [
+        /* @__PURE__ */ jsxDEV7("div", { className: "terminal-header", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "terminal-controls", children: [
+            /* @__PURE__ */ jsxDEV7("div", { className: "control-button close" }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 268,
-              columnNumber: 19
-            }, this) }, void 0, !1, {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 268,
-              columnNumber: 15
+              lineNumber: 284,
+              columnNumber: 21
             }, this),
-            /* @__PURE__ */ jsxDEV10("li", { children: /* @__PURE__ */ jsxDEV10("a", { href: "https://www.discord.com/", className: "text-gray-400 hover:text-purple-400 transition-colors", children: "Discord" }, void 0, !1, {
+            /* @__PURE__ */ jsxDEV7("div", { className: "control-button minimize" }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 269,
-              columnNumber: 19
-            }, this) }, void 0, !1, {
+              lineNumber: 285,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV7("div", { className: "control-button maximize" }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 269,
-              columnNumber: 15
+              lineNumber: 286,
+              columnNumber: 21
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 267,
-            columnNumber: 13
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 265,
-          columnNumber: 11
-        }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "footer-section mb-8 ml-10", children: [
-          /* @__PURE__ */ jsxDEV10("h3", { className: "text-white mb-4 text-lg font-semibold", children: "Menu" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 273,
-            columnNumber: 13
-          }, this),
-          /* @__PURE__ */ jsxDEV10("ul", { className: "horizontal-list flex flex-wrap gap-4 text-center", children: [
-            /* @__PURE__ */ jsxDEV10("li", { children: /* @__PURE__ */ jsxDEV10("a", { href: "/about", className: "text-gray-400 hover:text-purple-400 transition-colors", children: "About Us" }, void 0, !1, {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 275,
-              columnNumber: 19
-            }, this) }, void 0, !1, {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 275,
-              columnNumber: 15
-            }, this),
-            /* @__PURE__ */ jsxDEV10("li", { children: /* @__PURE__ */ jsxDEV10("a", { href: "https://www.discord.com/", className: "text-gray-400 hover:text-purple-400 transition-colors", children: "Community" }, void 0, !1, {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 276,
-              columnNumber: 19
-            }, this) }, void 0, !1, {
-              fileName: "app/routes/_index.tsx",
-              lineNumber: 276,
-              columnNumber: 15
-            }, this)
-          ] }, void 0, !0, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 274,
-            columnNumber: 13
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/_index.tsx",
-          lineNumber: 272,
-          columnNumber: 11
-        }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "footer-section mb-8 ml-10", children: [
-          /* @__PURE__ */ jsxDEV10("h3", { className: "text-white mb-4 text-lg font-semibold", children: "Support" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 280,
-            columnNumber: 13
-          }, this),
-          /* @__PURE__ */ jsxDEV10("ul", { className: "horizontal-list flex flex-wrap gap-4 text-center", children: /* @__PURE__ */ jsxDEV10("li", { children: /* @__PURE__ */ jsxDEV10("a", { href: "/contact", className: "text-gray-400 hover:text-purple-400 transition-colors", children: "Contact 6xargs" }, void 0, !1, {
-            fileName: "app/routes/_index.tsx",
-            lineNumber: 282,
+            lineNumber: 283,
             columnNumber: 19
+          }, this),
+          /* @__PURE__ */ jsxDEV7("div", { className: "terminal-title", children: "6xargs CLI - AI Security Agent" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 288,
+            columnNumber: 19
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 282,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "terminal-body", id: "terminal-output", children: [
+          /* @__PURE__ */ jsxDEV7("div", { className: "terminal-line output" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 291,
+            columnNumber: 19
+          }, this),
+          /* @__PURE__ */ jsxDEV7("div", { className: "terminal-input-line", children: [
+            /* @__PURE__ */ jsxDEV7("span", { className: "prompt", children: "$" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 293,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV7("span", { className: "cursor", children: "|" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 294,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV7("input", { type: "text", className: "terminal-input", placeholder: " ", readOnly: !0 }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 295,
+              columnNumber: 21
+            }, this)
+          ] }, void 0, !0, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 292,
+            columnNumber: 19
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 290,
+          columnNumber: 17
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 281,
+        columnNumber: 15
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 280,
+        columnNumber: 13
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 279,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV7("div", { className: "agent-sneak-peek-text", children: [
+        /* @__PURE__ */ jsxDEV7("h2", { children: "AI Agent CLI Demo" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 302,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV7("p", { children: "Experience our AI-powered security CLI in action. This interactive terminal demonstrates the power of automated vulnerability scanning and intelligent threat analysis." }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 303,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 301,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 278,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 277,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("main", { children: /* @__PURE__ */ jsxDEV7("section", { className: "cards-section", children: [
+      /* @__PURE__ */ jsxDEV7("div", { className: "section-left", children: /* @__PURE__ */ jsxDEV7("div", { className: "card form-card", children: [
+        /* @__PURE__ */ jsxDEV7("h2", { children: "Hackers" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 315,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV7("p", { className: "subtitle", children: "Search for a bug bounty program" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 316,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 314,
+        columnNumber: 13
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 313,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV7("div", { className: "section-right", children: /* @__PURE__ */ jsxDEV7("div", { className: "card business-card", children: [
+        /* @__PURE__ */ jsxDEV7("h2", { children: "Enterprises" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 321,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV7("p", { className: "subtitle", children: "Register with us" }, void 0, !1, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 322,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 320,
+        columnNumber: 13
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/_index.tsx",
+        lineNumber: 319,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 312,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/_index.tsx",
+      lineNumber: 311,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV7("footer", { children: [
+      /* @__PURE__ */ jsxDEV7("div", { className: "footer-content", children: [
+        /* @__PURE__ */ jsxDEV7("div", { className: "footer-section", children: [
+          /* @__PURE__ */ jsxDEV7("h3", { children: "Social Media" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 331,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV7("ul", { className: "horizontal-list", children: [
+            /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "https://twitter.com/", children: "Twitter" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 334,
+              columnNumber: 17
+            }, this) }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 333,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "https://www.discord.com/", children: "Discord" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 337,
+              columnNumber: 17
+            }, this) }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 336,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, !0, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 332,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 330,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "footer-section", children: [
+          /* @__PURE__ */ jsxDEV7("h3", { children: "Menu" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 342,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV7("ul", { className: "horizontal-list", children: [
+            /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "#about", children: "About Us" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 345,
+              columnNumber: 17
+            }, this) }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 344,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "https://www.discord.com/", children: "Community" }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 348,
+              columnNumber: 17
+            }, this) }, void 0, !1, {
+              fileName: "app/routes/_index.tsx",
+              lineNumber: 347,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, !0, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 343,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/_index.tsx",
+          lineNumber: 341,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV7("div", { className: "footer-section", children: [
+          /* @__PURE__ */ jsxDEV7("h3", { children: "Support" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 353,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV7("ul", { className: "horizontal-list", children: /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "#contact", children: "Contact 6xargs" }, void 0, !1, {
+            fileName: "app/routes/_index.tsx",
+            lineNumber: 356,
+            columnNumber: 17
           }, this) }, void 0, !1, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 282,
+            lineNumber: 355,
             columnNumber: 15
           }, this) }, void 0, !1, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 281,
+            lineNumber: 354,
             columnNumber: 13
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 279,
+          lineNumber: 352,
           columnNumber: 11
         }, this),
-        /* @__PURE__ */ jsxDEV10("div", { className: "footer-section mb-8 ml-10", children: [
-          /* @__PURE__ */ jsxDEV10("h3", { className: "text-white mb-4 text-lg font-semibold", children: "Resources" }, void 0, !1, {
+        /* @__PURE__ */ jsxDEV7("div", { className: "footer-section", children: [
+          /* @__PURE__ */ jsxDEV7("h3", { children: "Resources" }, void 0, !1, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 286,
+            lineNumber: 361,
             columnNumber: 13
           }, this),
-          /* @__PURE__ */ jsxDEV10("ul", { className: "horizontal-list flex flex-wrap gap-4 text-center", children: [
-            /* @__PURE__ */ jsxDEV10("li", { children: /* @__PURE__ */ jsxDEV10("a", { href: "https://www.github.com/", className: "text-gray-400 hover:text-purple-400 transition-colors", children: "GitHub" }, void 0, !1, {
+          /* @__PURE__ */ jsxDEV7("ul", { className: "horizontal-list", children: [
+            /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "https://www.github.com/", children: "GitHub" }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 288,
-              columnNumber: 19
+              lineNumber: 364,
+              columnNumber: 17
             }, this) }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 288,
+              lineNumber: 363,
               columnNumber: 15
             }, this),
-            /* @__PURE__ */ jsxDEV10("li", { children: /* @__PURE__ */ jsxDEV10("a", { href: "/terms-and-conditions", className: "text-gray-400 hover:text-purple-400 transition-colors", children: "Terms and Conditions" }, void 0, !1, {
+            /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "#terms", children: "Terms and Conditions" }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 289,
-              columnNumber: 19
+              lineNumber: 367,
+              columnNumber: 17
             }, this) }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 289,
+              lineNumber: 366,
               columnNumber: 15
             }, this),
-            /* @__PURE__ */ jsxDEV10("li", { children: /* @__PURE__ */ jsxDEV10("a", { href: "/privacy-policy", className: "text-gray-400 hover:text-purple-400 transition-colors", children: "Privacy & Policy" }, void 0, !1, {
+            /* @__PURE__ */ jsxDEV7("li", { children: /* @__PURE__ */ jsxDEV7("a", { href: "#privacy", children: "Privacy & Policy" }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 290,
-              columnNumber: 19
+              lineNumber: 370,
+              columnNumber: 17
             }, this) }, void 0, !1, {
               fileName: "app/routes/_index.tsx",
-              lineNumber: 290,
+              lineNumber: 369,
               columnNumber: 15
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/_index.tsx",
-            lineNumber: 287,
+            lineNumber: 362,
             columnNumber: 13
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 285,
+          lineNumber: 360,
           columnNumber: 11
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 264,
+        lineNumber: 329,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV10("div", { className: "footer-bottom text-center py-8 border-t border-white/10 justify-center items-center", children: /* @__PURE__ */ jsxDEV10("p", { className: "text-gray-400", children: "\xA92025 6xargs All rights reserved" }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV7("div", { className: "footer-bottom", children: /* @__PURE__ */ jsxDEV7("p", { children: "\xA92025 6xargs All rights reserved" }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 295,
+        lineNumber: 376,
         columnNumber: 11
       }, this) }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 294,
+        lineNumber: 375,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 263,
+      lineNumber: 328,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/_index.tsx",
-    lineNumber: 86,
+    lineNumber: 3,
     columnNumber: 5
   }, this);
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-ZJ2ZU6MR.js", imports: ["/build/_shared/chunk-2PVEFZQQ.js", "/build/_shared/chunk-U7WQEECF.js", "/build/_shared/chunk-OUXMQCSK.js", "/build/_shared/chunk-ZIPKILLR.js", "/build/_shared/chunk-V5CWULKU.js", "/build/_shared/chunk-2LCIGNNS.js", "/build/_shared/chunk-V6BBPW4V.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-53YDZFPS.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !0 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-EPA454TF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/auth.login": { id: "routes/auth.login", parentId: "root", path: "auth/login", index: void 0, caseSensitive: void 0, module: "/build/routes/auth.login-D3QAA64X.js", imports: void 0, hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/auth.logout": { id: "routes/auth.logout", parentId: "root", path: "auth/logout", index: void 0, caseSensitive: void 0, module: "/build/routes/auth.logout-B5SKEBEN.js", imports: void 0, hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/auth.register": { id: "routes/auth.register", parentId: "root", path: "auth/register", index: void 0, caseSensitive: void 0, module: "/build/routes/auth.register-NLS627G2.js", imports: void 0, hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard": { id: "routes/dashboard", parentId: "root", path: "dashboard", index: void 0, caseSensitive: void 0, module: "/build/routes/dashboard-STLQJK7Z.js", imports: ["/build/_shared/chunk-JSCKBFOW.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard._index": { id: "routes/dashboard._index", parentId: "routes/dashboard", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/dashboard._index-ASTZXW2U.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "cf142d8f", hmr: { runtime: "/build/_shared\\chunk-OUXMQCSK.js", timestamp: 1757439672192 }, url: "/build/manifest-CF142D8F.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-SZWLKC6B.js", imports: ["/build/_shared/chunk-2PVEFZQQ.js", "/build/_shared/chunk-2MSOHTIK.js", "/build/_shared/chunk-V5CWULKU.js", "/build/_shared/chunk-OUXMQCSK.js", "/build/_shared/chunk-ZIPKILLR.js", "/build/_shared/chunk-2LCIGNNS.js", "/build/_shared/chunk-V6BBPW4V.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-IVLUC4ZU.js", imports: void 0, hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !0 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ZJXNJDEC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/auth.login": { id: "routes/auth.login", parentId: "root", path: "auth/login", index: void 0, caseSensitive: void 0, module: "/build/routes/auth.login-R6DYHD6M.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/auth.logout": { id: "routes/auth.logout", parentId: "root", path: "auth/logout", index: void 0, caseSensitive: void 0, module: "/build/routes/auth.logout-B5SKEBEN.js", imports: void 0, hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/auth.register": { id: "routes/auth.register", parentId: "root", path: "auth/register", index: void 0, caseSensitive: void 0, module: "/build/routes/auth.register-2KQVCAPT.js", imports: ["/build/_shared/chunk-G7CHZRZX.js"], hasAction: !0, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard": { id: "routes/dashboard", parentId: "root", path: "dashboard", index: void 0, caseSensitive: void 0, module: "/build/routes/dashboard-NJ5THY27.js", imports: ["/build/_shared/chunk-JSCKBFOW.js", "/build/_shared/chunk-G7CHZRZX.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/dashboard._index": { id: "routes/dashboard._index", parentId: "routes/dashboard", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/dashboard._index-FROVLOA4.js", imports: void 0, hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "27c8eccc", hmr: { runtime: "/build/_shared\\chunk-OUXMQCSK.js", timestamp: 1758173678685 }, url: "/build/manifest-27C8ECCC.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = { v3_fetcherPersist: !0, v3_relativeSplatPath: !0, v3_throwAbortReason: !0, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
