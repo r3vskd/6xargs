@@ -1,0 +1,252 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  username  String   @unique
+  password  String
+  firstName String?
+  lastName  String?
+  avatar    String?
+  role      UserRole @default(HACKER)
+  isActive  Boolean  @default(true)
+  isVerified Boolean @default(false)
+  
+  companyId String?
+  company   Company? @relation(fields: [companyId], references: [id])
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lastLogin DateTime?
+  
+  reports       Report[]
+  triages       Triage[]
+  caiSessions   CAISession[]
+  programUsers  ProgramUser[]
+  notifications Notification[]
+  
+  @@map("users")
+}
+
+model Company {
+  id          String  @id @default(cuid())
+  name        String  @unique
+  domain      String? @unique
+  website     String?
+  description String?
+  logo        String?
+  isActive    Boolean @default(true)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  users    User[]
+  programs Program[]
+  
+  @@map("companies")
+}
+
+model Program {
+  id          String        @id @default(cuid())
+  name        String
+  description String?
+  isActive    Boolean       @default(true)
+  isPublic    Boolean       @default(false)
+  status      ProgramStatus @default(DRAFT)
+  
+  scope       Json? 
+  rules       Json? 
+  rewards     Json? 
+  
+  companyId String
+  company   Company @relation(fields: [companyId], references: [id])
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  startDate DateTime?
+  endDate   DateTime?
+  
+  reports      Report[]
+  programUsers ProgramUser[]
+  caiSessions  CAISession[]
+  
+  @@map("programs")
+}
+
+model ProgramUser {
+  id        String   @id @default(cuid())
+  userId    String
+  programId String
+  joinedAt  DateTime @default(now())
+  
+  user    User    @relation(fields: [userId], references: [id])
+  program Program @relation(fields: [programId], references: [id])
+  
+  @@unique([userId, programId])
+  @@map("program_users")
+}
+
+model Report {
+  id          String       @id @default(cuid())
+  title       String
+  description String
+  severity    Severity
+  status      ReportStatus @default(SUBMITTED)
+  
+  stepsToReproduce String?
+  impact           String?
+  proofOfConcept   String?
+  affectedUrls     String[] 
+  attachments Json? 
+  reporterId String
+  reporter   User    @relation(fields: [reporterId], references: [id])
+  
+  programId String
+  program   Program @relation(fields: [programId], references: [id])
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  triage Triage?
+  
+  @@map("reports")
+}
+
+model Triage {
+  id         String        @id @default(cuid())
+  reportId   String        @unique
+  status     TriageStatus  @default(PENDING)
+  priority   Priority      @default(MEDIUM)
+  confidence Float?        // AI confidence score (0-1)
+  
+  aiAnalysis Json?
+  
+  reviewerId String?
+  reviewer   User?   @relation(fields: [reviewerId], references: [id])
+  
+  // Decision and feedback
+  decision String? // ACCEPT, REJECT, NEEDS_MORE_INFO
+  feedback String?
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  report Report @relation(fields: [reportId], references: [id])
+  
+  @@map("triages")
+}
+
+model CAISession {
+  id           String           @id @default(cuid())
+  sessionId    String           @unique
+  status       CAISessionStatus @default(INITIALIZING)
+  
+  config Json?
+  
+  progress     Int?     @default(0) // 0-100
+  currentPhase String?
+  
+  results Json?
+  error   String?
+  
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+  
+  programId String?
+  program   Program? @relation(fields: [programId], references: [id])
+  
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  startedAt   DateTime?
+  completedAt DateTime?
+  
+  @@map("cai_sessions")
+}
+
+model Notification {
+  id      String           @id @default(cuid())
+  title   String
+  message String
+  type    NotificationType @default(INFO)
+  isRead  Boolean          @default(false)
+  
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+  
+  metadata Json?
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("notifications")
+}
+
+enum UserRole {
+  ADMIN
+  COMPANY_ADMIN
+  HACKER
+}
+
+enum ProgramStatus {
+  DRAFT
+  ACTIVE
+  PAUSED
+  COMPLETED
+  ARCHIVED
+}
+
+enum Severity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum ReportStatus {
+  SUBMITTED
+  IN_TRIAGE
+  ACCEPTED
+  REJECTED
+  NEEDS_MORE_INFO
+  RESOLVED
+  DUPLICATE
+}
+
+enum TriageStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  FAILED
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum CAISessionStatus {
+  INITIALIZING
+  RUNNING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+enum NotificationType {
+  INFO
+  SUCCESS
+  WARNING
+  ERROR
+  REPORT_UPDATE
+  TRIAGE_COMPLETE
+  SCAN_COMPLETE
+}
