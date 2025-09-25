@@ -8,6 +8,5 @@
 [bold blue]     \|_______/__/ /\ __\    \|__|\|__|\|__|\|__|\|_______|\_________\
 [bold blue]               |__|/ \|__|                                 \|_________|
                                                                                                                                         
-[bold blue]                              Cybersecurity AI (CAI), v{version}[/bold blue]
-[white]                                  Bug bounty-ready AI[/white]
+[bold blue]                              Cybersecurity AI (CAI Engine Based), v{version}[/bold blue]
     """
